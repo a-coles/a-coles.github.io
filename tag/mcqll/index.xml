@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MCQLL | Arlie Coles</title>
+    <link>https://a-coles.github.io/tag/mcqll/</link>
+      <atom:link href="https://a-coles.github.io/tag/mcqll/index.xml" rel="self" type="application/rss+xml" />
+    <description>MCQLL</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://a-coles.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>MCQLL</title>
+      <link>https://a-coles.github.io/tag/mcqll/</link>
+    </image>
+    
+    <item>
+      <title>ISCAN: A system for integrated phonetic analyses across speech corpora</title>
+      <link>https://a-coles.github.io/publication/iscan/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/publication/iscan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forced Phonetic Alignment by Neural Network</title>
+      <link>https://a-coles.github.io/publication/mfa/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/publication/mfa/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

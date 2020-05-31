@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arlie Coles</title>
+    <link>https://a-coles.github.io/author/arlie-coles/</link>
+      <atom:link href="https://a-coles.github.io/author/arlie-coles/index.xml" rel="self" type="application/rss+xml" />
+    <description>Arlie Coles</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://a-coles.github.io/author/arlie-coles/avatar_hu4b3583fb51557b5455309f33fcaf34d1_562870_270x270_fill_q90_lanczos_center.jpg</url>
+      <title>Arlie Coles</title>
+      <link>https://a-coles.github.io/author/arlie-coles/</link>
+    </image>
+    
+    <item>
+      <title>ISCAN: A system for integrated phonetic analyses across speech corpora</title>
+      <link>https://a-coles.github.io/publication/iscan/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/publication/iscan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forced Phonetic Alignment by Neural Network</title>
+      <link>https://a-coles.github.io/publication/mfa/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/publication/mfa/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
