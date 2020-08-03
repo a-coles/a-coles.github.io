@@ -3,17 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://a-coles.github.io/courses/example/example1/</loc>
+    <loc>https://a-coles.github.io/docs/bcp-latex/introduction/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://a-coles.github.io/courses/example/</loc>
+    <loc>https://a-coles.github.io/docs/bcp-latex/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://a-coles.github.io/courses/example/example2/</loc>
+    <loc>https://a-coles.github.io/docs/bcp-latex/environments/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://a-coles.github.io/docs/bcp-latex/installation/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://a-coles.github.io/docs/bcp-latex/example2/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://a-coles.github.io/docs/bcp-latex/text_formatting/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://a-coles.github.io/docs/bcp-latex/usage/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
@@ -73,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://a-coles.github.io/courses/</loc>
+    <loc>https://a-coles.github.io/docs/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   

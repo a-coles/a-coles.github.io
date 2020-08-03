@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bcp-latex | Arlie Coles</title>
+    <link>https://a-coles.github.io/docs/bcp-latex/</link>
+      <atom:link href="https://a-coles.github.io/docs/bcp-latex/index.xml" rel="self" type="application/rss+xml" />
+    <description>bcp-latex</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://a-coles.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>bcp-latex</title>
+      <link>https://a-coles.github.io/docs/bcp-latex/</link>
+    </image>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://a-coles.github.io/docs/bcp-latex/introduction/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://a-coles.github.io/docs/bcp-latex/introduction/</guid>
+      <description>&lt;p&gt;&lt;code&gt;bcp-latex&lt;/code&gt; is a LaTeX package for liturgical documents in the style of the 1979 Book of Common Prayer, including support for inline musical notation. It is designed for use with a LaTeX document preparation system.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-latex&#34;&gt;What is LaTeX?&lt;/h2&gt;
+&lt;p&gt;LaTeX is a document preparation system, like Microsoft Word or Adobe InDesign. It is often used by academics to prepare theses and by publishers to prepare books. LaTeX is different than Word and InDesign in several key ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LaTeX is free and eternal.&lt;/strong&gt; There are no software packages to buy, no licensing fees or expirations, and no compatibility-breaking updates. LaTeX has existed in more or less its current form since the early 1990s, and is distributed with a free software license. Someone will be able to revise a document made with LaTeX today in 10, 20, or 30 years.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Presentation is separated from content.&lt;/strong&gt; In Word or InDesign, users edit a final document directly, and must manage presentation (document formatting, etc.) and content simultaneously. In LaTeX, document content is written in one file, and document formatting is defined in another. This means that small changes in content can be made without worrying about formatting issues, and formatting rules can be written or changed to apply to the entire document content at once.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LaTeX works on any computer, for anyone.&lt;/strong&gt; It can be run on Windows, Mac, or Unix, and does not take up a lot of space. The files LaTeX works with are most often simple text files, which are human-readable (unlike special &lt;code&gt;.docx&lt;/code&gt; or &lt;code&gt;.indd&lt;/code&gt; formats) and can be opened and manipulated by anyone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A general workflow for a document prepared with LaTeX involves making changes to the content of a text file and using LaTeX to &lt;em&gt;compile&lt;/em&gt; that file into a final, formatted &lt;code&gt;.pdf&lt;/code&gt;. This means that in our text files we must tell LaTeX what to do. We do this using a simple &lt;em&gt;markup language&lt;/em&gt;. As a very simple example, let&amp;rsquo;s say we would like our final document to be the words &amp;ldquo;Hello, world!&amp;rdquo; in bold. Our text file would contain those words, wrapped in the markup for bolding:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\textbf{Hello, world!}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, we can compile this text file using LaTeX to get our final document, which would contain text like this:&lt;/p&gt;
+&lt;p&gt;$\textbf{Hello, world!}$&lt;/p&gt;
+&lt;p&gt;You do not need to know LaTeX&amp;rsquo;s 
+&lt;a href=&#34;https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Bold.2C_italics_and_underlining&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;markup commands&lt;/a&gt; to follow this documentation, but an understanding of this paradigm will be helpful.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-bcp-latex&#34;&gt;What is &lt;code&gt;bcp-latex&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;bcp-latex&lt;/code&gt; is a &lt;em&gt;package&lt;/em&gt; for LaTeX. It provides special typesetting tools for common liturgical situations (e.g. versicle and response, longer prayers, etc.) as well as formatting specifications for an entire document (e.g. font face, section headers, margins, etc.). The package is contained in a special file that we will point to from our liturgical document.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Environments</title>
+      <link>https://a-coles.github.io/docs/bcp-latex/environments/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://a-coles.github.io/docs/bcp-latex/environments/</guid>
+      <description>&lt;p&gt;Several environments are available in &lt;code&gt;bcp-latex&lt;/code&gt;. These are used for common formatting blocks, such as versicle-and-response exchanges or longer prayers.&lt;/p&gt;
+&lt;p&gt;Environments have names, and begin with a &lt;code&gt;\begin{name}&lt;/code&gt; command and end with an &lt;code&gt;\end{name}&lt;/code&gt; command. To produce the formatted output, you must place your text between these commands. The text inside these commands also often must be formatted in a certain way, which will be shown in the following examples.&lt;/p&gt;
+&lt;h2 id=&#34;named-responses&#34;&gt;Named responses&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;responses&lt;/code&gt; environment typesets response exchanges from named roles. This environment is useful for e.g. exchanges between the priest and the people. One named role and the text associated with it must be provided per line. The named role will be italicized and the text associated with that role will be spaced rightward.&lt;/p&gt;
+&lt;p&gt;Supported roles are &lt;code&gt;priest&lt;/code&gt;, &lt;code&gt;deacon&lt;/code&gt;, &lt;code&gt;officiant&lt;/code&gt;, &lt;code&gt;servers&lt;/code&gt;, and &lt;code&gt;people&lt;/code&gt;. Support for roles in French is also available (as &lt;code&gt;pretre&lt;/code&gt;, &lt;code&gt;diacre&lt;/code&gt;, &lt;code&gt;officiant&lt;/code&gt;, &lt;code&gt;servants&lt;/code&gt;, and &lt;code&gt;peuple&lt;/code&gt; respectively). The text associated with the &lt;code&gt;people&lt;/code&gt;/&lt;code&gt;peuple&lt;/code&gt; role is always bolded.&lt;/p&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;LaTeX code&lt;/th&gt;
+		&lt;th&gt;Formatted output&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td width=50%&gt;
+			&lt;pre&gt;
+\begin{responses}
+	\priest{The priest can speak.}
+	\deacon{The deacon too.}
+	\officiant{So can an officiant.}
+	\servers{The servers too.}
+	\people{The people can respond.}
+	&lt;br&gt;
+	\pretre{Le prêtre parle.}
+	\diacre{Le diacre aussi.}
+	\officiant{L&#39;officiant parle aussi.}
+	\servants{Les servants aussi.}
+	\peuple{Le peuple repond.}
+\end{responses}
+			&lt;/pre&gt;
+		&lt;/td&gt;
+		&lt;td&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/responses.png&#34;&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;versicle-response-responses&#34;&gt;Versicle-response responses&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;vresponses&lt;/code&gt; environment typesets versicle-response exchanges. This environment works the same way as the &lt;code&gt;responses&lt;/code&gt; environment, but does not include named roles. Instead, turns in the exchange are headed by ℣ and ℟ characters, and we indicate which turn we are on by using &lt;code&gt;V&lt;/code&gt; and &lt;code&gt;R&lt;/code&gt; (as we might have used &lt;code&gt;priest&lt;/code&gt; in the &lt;code&gt;responses&lt;/code&gt; environment). The text associated with the response is always bolded.&lt;/p&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;LaTeX code&lt;/th&gt;
+		&lt;th&gt;Formatted output&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td width=50%&gt;
+			&lt;pre&gt;
+\begin{vresponses}
+	\V{Here is the versicle.}
+	\R{Here is the response.}
+\end{vresponses}
+			&lt;/pre&gt;
+		&lt;/td&gt;
+		&lt;td&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/vresponses.png&#34;&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;long-responses&#34;&gt;Long responses&lt;/h3&gt;
+&lt;p&gt;Sometimes, if the response is long, we might want to format it further. We can do this by placing the response inside of an &lt;code&gt;\rlong{}&lt;/code&gt; bracketing. We can then use line breaks (&lt;code&gt;\\&lt;/code&gt;) and tabs (&lt;code&gt;\tab&lt;/code&gt;) to format the response as we like.&lt;/p&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;LaTeX code&lt;/th&gt;
+		&lt;th&gt;Formatted output&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td width=50%&gt;
+			&lt;pre&gt;
+\begin{vresponses}
+	\V{Our Father,}
+	\R{\rlong{
+		Who art in heaven, \\
+		\tab hallowed be thy name. \\
+		Thy Kingdom come; \\
+		\tab thy will be done \\
+		\tab on earth as it is in heaven.
+		} 
+	}
+\end{vresponses}
+			&lt;/pre&gt;
+		&lt;/td&gt;
+		&lt;td&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/vresponseslong.png&#34;&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;prayers&#34;&gt;Prayers&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;prayer&lt;/code&gt; environment typesets longer prayers that you may desire to format. As in the &lt;code&gt;vresponses&lt;/code&gt; environment, you can use &lt;code&gt;\tab&lt;/code&gt; to indent, but you do not need to use &lt;code&gt;\\&lt;/code&gt; for a line break. If the prayer is to be said by everyone, you may wish to surround it with a &lt;code&gt;\textbf{}&lt;/code&gt; to bold it.&lt;/p&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;LaTeX code&lt;/th&gt;
+		&lt;th&gt;Formatted output&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td width=50%&gt;
+			&lt;pre&gt;
+\begin{prayer}
+	\textbf{
+	Almighty God,
+	\tab Father of our Lord Jesus Christ,
+	\tab Maker of all things, Judge of all men:
+	}
+\end{vresponses}
+			&lt;/pre&gt;
+		&lt;/td&gt;
+		&lt;td&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/prayer.png&#34;&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;two-column-prayers&#34;&gt;Two-column prayers&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;twocolprayer&lt;/code&gt; environment typesets prayers in two-columns. This is useful for side-by-side texts in e.g. Latin and English. You can indicate a switch in column with the &lt;code&gt;&amp;amp;&lt;/code&gt; character.&lt;/p&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;LaTeX code&lt;/th&gt;
+		&lt;th&gt;Formatted output&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td width=50%&gt;
+			&lt;pre&gt;
+\begin{twocolprayer}
+	Sanctus, sanctus, sanctus, &amp;
+		Holy, holy, holy, \\
+	Dominus, Deus sabaoth. &amp;
+		Lord God of hosts.
+\end{twocolprayer}
+			&lt;/pre&gt;
+		&lt;/td&gt;
+		&lt;td&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/twocolprayer.png&#34;&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>https://a-coles.github.io/docs/bcp-latex/installation/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://a-coles.github.io/docs/bcp-latex/installation/</guid>
+      <description>&lt;h2 id=&#34;installing-a-latex-environment&#34;&gt;Installing a LaTeX environment&lt;/h2&gt;
+&lt;p&gt;If you have never worked with LaTeX before, or even if you have, you may want to look over the below instructions for making sure you have all the needed software to use &lt;code&gt;bcp-latex&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To prepare our environment to work on LaTeX files, we need to install a few pieces of software. We will need the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A LaTeX &lt;em&gt;distribution&lt;/em&gt;, which will provide the mechanism for converting our LaTeX files into final &lt;code&gt;.pdf&lt;/code&gt; files. We will use 
+&lt;a href=&#34;https://yihui.org/tinytex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TinyTeX&lt;/a&gt;, a lightweight LaTeX distribution. We will also install some &lt;em&gt;packages&lt;/em&gt; into our distribution, which add extra functionality.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;em&gt;text editor&lt;/em&gt;, which will make it easy to read and edit our LaTeX files. We will use 
+&lt;a href=&#34;https://www.sublimetext.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sublime Text&lt;/a&gt; and install a plugin called 
+&lt;a href=&#34;https://latextools.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeXTools&lt;/a&gt; that makes working with LaTeX files especially easy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;em&gt;music engraving&lt;/em&gt; program, which will allow us to integrate musical scores into our LaTeX files. We will use 
+&lt;a href=&#34;https://lilypond.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LilyPond&lt;/a&gt;, which is designed for this purpose.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is an installation script that aims to set up each of these automatically. You can find the installation script appropriate for your operating system (Windows, Mac, or Linux) at the latest release 
+&lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex/-/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Click on the script corresponding to your operating system and download it somewhere on your computer. Then, double click on the downloaded script to launch it.&lt;/p&gt;
+&lt;h2 id=&#34;installing-bcp-latex&#34;&gt;Installing &lt;code&gt;bcp-latex&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;bcp-latex&lt;/code&gt; package lives in a 
+&lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitLab repository&lt;/a&gt;. You can clone the repository to your computer this way:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/cwtc/bcp-latex.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To use the package, ensure that &lt;code&gt;bcp.sty&lt;/code&gt; is in the same directory as your TeX document. If your project includes inline music, you should also ensure that &lt;code&gt;common_liturgy.ly&lt;/code&gt; is in the same directory as your TeX document.&lt;/p&gt;
+&lt;h2 id=&#34;installing-fonts&#34;&gt;Installing fonts&lt;/h2&gt;
+&lt;p&gt;For best results imitating the style of the 1979 BCP, you can also install the 
+&lt;a href=&#34;https://www.myfonts.com/fonts/linotype/sabon/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sabon&lt;/a&gt; and 
+&lt;a href=&#34;https://www.fontsquirrel.com/fonts/junicode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Junicode&lt;/a&gt; fonts. The latter is free, while the former is copyrighted and cannot be distributed here. (It can be found online from many other sources, however.)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Special symbols and commands</title>
+      <link>https://a-coles.github.io/docs/bcp-latex/example2/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://a-coles.github.io/docs/bcp-latex/example2/</guid>
+      <description>&lt;h2 id=&#34;special-symbols&#34;&gt;Special symbols&lt;/h2&gt;
+&lt;p&gt;Some special symbols are available that can be used inline with text:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;LaTeX code&lt;/th&gt;
+&lt;th&gt;Formatted output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\versicle&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;℣&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\response&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;℟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\cross&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✠&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\scross&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\gl&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;«&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\gr&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;special-commands&#34;&gt;Special commands&lt;/h2&gt;
+&lt;p&gt;There are also some special commands to fine-tune formatting when needed (usually these are controlled by LaTeX, so the below should be used sparingly):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\blankline&lt;/code&gt; forces a blank line&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\deleteline&lt;/code&gt; deletes an empty line&amp;rsquo;s space&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\tab&lt;/code&gt; forces an indent&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Text formatting</title>
+      <link>https://a-coles.github.io/docs/bcp-latex/text_formatting/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://a-coles.github.io/docs/bcp-latex/text_formatting/</guid>
+      <description>&lt;p&gt;Several text formatting bracketings are available.&lt;/p&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;\instruct{}&lt;/code&gt; will format the contents as instructions, i.e. italicized and slightly smaller font size than the body text.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\instruct{Here are some instructions.}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/instructions.png&#34; alt=&#34;instructions&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\instructsmall{}&lt;/code&gt; does the same, but at an even smaller font size.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/instructsmall.png&#34; alt=&#34;instructions&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bible-verses&#34;&gt;Bible verses&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;\bibleref{}&lt;/code&gt; will format a Bible reference (chapter and verse) in a small font in small-caps:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\bibleref{John 3:16}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/bibleref.png&#34; alt=&#34;instructions&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;\bibleverse{}{}&lt;/code&gt; takes two arguments: the text of the Bible verse, and its reference (chapter and verse). It formats the former in standard body text, and the latter is formatted in a small font in small caps, right-justified.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/bibleverse.PNG&#34; alt=&#34;instructions&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h2&gt;
+&lt;p&gt;It is conventional to typset the current monarch&amp;rsquo;s name (if any) in all caps, italicized. We can do this with &lt;code&gt;\monarch{}&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\monarch{ELIZABETH}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/monarch.png&#34; alt=&#34;monarch&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To put a box around some text, and italicize the text inside, we can use &lt;code&gt;\boxaround{}&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\boxaround{A box.}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/bcp-latex/box.png&#34; alt=&#34;box&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Usage</title>
+      <link>https://a-coles.github.io/docs/bcp-latex/usage/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://a-coles.github.io/docs/bcp-latex/usage/</guid>
+      <description>&lt;h2 id=&#34;general-usage&#34;&gt;General usage&lt;/h2&gt;
+&lt;p&gt;After setting up your environment and installing &lt;code&gt;bcp-latex&lt;/code&gt;, you can use it in your TeX documents. First, make sure that &lt;code&gt;bcp.sty&lt;/code&gt; is in the same directory as your TeX document. You can then import it into your document this way, in the preamble:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\usepackage{bcp}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, the macros of bcp-latex will be available to you for use in your document. You can compile your document as you usually would. (In Sublime with LaTeXTools, you can launch compilation by pressing &lt;code&gt;Ctrl+B&lt;/code&gt;.)&lt;/p&gt;
+&lt;h2 id=&#34;music-with-lilypond&#34;&gt;Music with LilyPond&lt;/h2&gt;
+&lt;p&gt;If you would like to include inline music, ensure that &lt;code&gt;common_liturgy.ly&lt;/code&gt; is in the same directory as your TeX document. You should rename the extension of your TeX document from &lt;code&gt;.tex&lt;/code&gt; to &lt;code&gt;.lytex&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you write a LilyPond music file called e.g. &lt;code&gt;music.ly&lt;/code&gt;, you can insert it inline into your TeX document this way (changing the staff size and line width parameters as you wish):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\lilypondfile[staffsize=14,line-width=11.75\cm]{music.ly}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can then compile your document with &lt;code&gt;compile.bat&lt;/code&gt; (for Windows) or &lt;code&gt;compile.sh&lt;/code&gt; for Mac/Unix. If your document is called &lt;code&gt;document.lytex&lt;/code&gt;, you can compile it with either script this way:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./compile.sh document
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will generate your document completely from scratch. If you would like to save time by keeping intermediate files during document creation and therefore not having to regenerate them from scratch next time, you can pass the &lt;code&gt;debug&lt;/code&gt; argument:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./compile.sh debug
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
