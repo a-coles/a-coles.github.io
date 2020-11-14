@@ -1,0 +1,1510 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Arlie Coles">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Cet article est une traduction de The Illustrated Transformer par Jay Alamar.
+Dans l&rsquo;article précédent, on a vu l&#39;attention &ndash; une méthode omniprésente dans les modèles modernes de deep learning. L&rsquo;attention est un concept qui a amélioré la performance des applications de neural machine translation.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://a-coles.github.io/post/transformer-illustre/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700%7CRoboto+Mono:400&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://a-coles.github.io/post/transformer-illustre/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Arlie Coles">
+  <meta property="og:url" content="https://a-coles.github.io/post/transformer-illustre/">
+  <meta property="og:title" content="Le transformer illustré | Arlie Coles">
+  <meta property="og:description" content="Cet article est une traduction de The Illustrated Transformer par Jay Alamar.
+Dans l&rsquo;article précédent, on a vu l&#39;attention &ndash; une méthode omniprésente dans les modèles modernes de deep learning. L&rsquo;attention est un concept qui a amélioré la performance des applications de neural machine translation."><meta property="og:image" content="https://a-coles.github.io/post/transformer-illustre/featured.jpg">
+  <meta property="twitter:image" content="https://a-coles.github.io/post/transformer-illustre/featured.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-07-12T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-07-12T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://a-coles.github.io/post/transformer-illustre/"
+  },
+  "headline": "Le transformer illustré",
+  
+  "image": [
+    "https://a-coles.github.io/post/transformer-illustre/featured.jpg"
+  ],
+  
+  "datePublished": "2019-07-12T00:00:00Z",
+  "dateModified": "2019-07-12T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Arlie Coles"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arlie Coles",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Cet article est une traduction de The Illustrated Transformer par Jay Alamar.\nDans l\u0026rsquo;article précédent, on a vu l'attention \u0026ndash; une méthode omniprésente dans les modèles modernes de deep learning. L\u0026rsquo;attention est un concept qui a amélioré la performance des applications de neural machine translation."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Le transformer illustré | Arlie Coles</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+    <script>window.wcDarkLightEnabled = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Arlie Coles</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Arlie Coles</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/"><span>Docs</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Le transformer illustré</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 12, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    20 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><strong>Cet article est une traduction de <a href="http://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener">The Illustrated Transformer</a> par Jay Alamar.</strong></p>
+<p>Dans <a href="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/" target="_blank" rel="noopener">l&rsquo;article précédent, on a vu l'<em>attention</em></a> &ndash; une méthode omniprésente dans les modèles modernes de <em>deep learning</em>. L&rsquo;attention est un concept qui a amélioré la performance des applications de <em>neural machine translation</em>. Dans cet article, on va regarder le <em>transformer</em> &ndash; un modèle qui utilise l&rsquo;attention afin d&rsquo;augmenter la vitesse avec laquelle ces modèles peuvent être entraînés. Le <em>transformer</em> surpasse le modèle <em>Neural Machine Translation</em> de Google pour des tâches spécifiques. Le bénéfice principale, pourtant, vient de la manière dont le <em>transformer</em> peut être parallelisé. En fait, Google Cloud recommande d&rsquo;utiliser le <em>transformer</em> comme modèle de référence pour <a href="https://cloud.google.com/tpu/" target="_blank" rel="noopener">leur produit de Cloud TPU</a>. Alors, essayons de demonter le modèle pour voir comment ça fonctionne.</p>
+<p>Le <em>transformer</em> a été proposé dans l&rsquo;article <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention is All You Need</a>. Une implémentation en TensorFlow est disponible comme partie du package <a href="https://github.com/tensorflow/tensor2tensor" target="_blank" rel="noopener">Tensor2Tensor</a>. Le groupe NLP de Harvard a crée <a href="http://nlp.seas.harvard.edu/2018/04/03/attention.html" target="_blank" rel="noopener">une guide annotant le papier avec une implémentation PyTorch</a>. Dans cet article, on va essayer de sur-simplifier les choses un peu et présenter les concepts un à la fois, afin de les rendre plus compréhensibles pour ceux et celles qui n&rsquo;ont pas une connaissance profonde du sujet.</p>
+<h1 id="une-vue-plongeante">Une vue plongeante</h1>
+<p>Commençons en regardant le modèle comme une simple boîte noire. Pour une application de traduction à la machine, il prendrait à l&rsquo;entrée une phrase dans une langue, et il sortirait sa traduction dans une autre langue.</p>
+<p><img src="/img/illustrated-transformer/the_transformer_3.png" alt="Le transformer"></p>
+<p>En ouvrant ce modèle qui rappelle Optimus Prime, on voit un composant d&rsquo;encodage, un composant de décodage, et les connexions entre les deux.</p>
+<p><img src="/img/illustrated-transformer/The_transformer_encoders_decoders.png" alt="Encodeur-decodeur"></p>
+<p>Le composant d&rsquo;encodage est une pile d&rsquo;encodeurs (l&rsquo;article en empile six &ndash; il n&rsquo;y a rien de magique à propos du numéro six; on peut absolument expérimenter avec des autres arrangements). Le composant de décodage est une pile de décodeurs du même numéro.</p>
+<p><img src="/img/illustrated-transformer/The_transformer_encoder_decoder_stack.png" alt="Pile"></p>
+<p>Les encodeurs sont tous idéntiques en structure (mais ils ne partagent pas de poids). Chaque encodeur comprend deux sous-couches:</p>
+<p><img src="/img/illustrated-transformer/Transformer_encoder.png" alt="Encodeur"></p>
+<p>Les données à l&rsquo;entrée de l&rsquo;encodeur coulent d&rsquo;abord dans une couche de <em>self-attention</em> &ndash; c&rsquo;est une couche qui aide l&rsquo;encodeur à regarder les autres mots de la phrase d&rsquo;entrée au fur et à mésure qu&rsquo;il encode un mot spécifique. On examinera la couche <em>self-attention</em> de plus près plus tard.</p>
+<p>Les données de sortie de la couche <em>self-attention</em> sont dirigées ensuite à un réseau neuronale <em>feed-forward</em>. C&rsquo;est ce même réseau <em>feed-forward</em> qui va s&rsquo;appliquer independamment à chaque position.</p>
+<p>Le décodeur a ces deux couches, mais entre elles, il y a une couche d&rsquo;attention qui aide le décodeur à se concentrer sur les parties pertinentes de la phrase d&rsquo;entrée (l&rsquo;attention fait quelque chose de similaire dans les <a href="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/" target="_blank" rel="noopener">modèles seq2seq</a>.)</p>
+<p><img src="/img/illustrated-transformer/Transformer_decoder.png" alt="Décodeur"></p>
+<h1 id="rajoutons-les-tenseurs">Rajoutons les tenseurs</h1>
+<p>Maintenant que l&rsquo;on a vu les composants majeurs du modèle, regardons les multiples vecteurs et tenseurs et la manière dont ils coulent entre ces composants, afin de transformer les données à l&rsquo;entrée d&rsquo;un modèle entraîné en des données de sortie.</p>
+<p>Comme on fait habituellement pour les applications en NLP, on commence par transformer chaque mot à l&rsquo;entrée en vecteur via un <a href="https://medium.com/deeper-learning/glossary-of-deep-learning-word-embedding-f90c3cec34ca" target="_blank" rel="noopener">algorithme d'<em>embedding</em></a>.</p>
+<p><img src="/img/illustrated-transformer/embeddings.png" alt="Embeddings"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Chaque mot a un embedding, un vecteur de taille 512. On va représenter ces vecteurs avec ces boîtes simples.</th>
+</tr>
+</thead>
+</table>
+<p>Le processus d'<em>embedding</em> n&rsquo;arrive que dans l&rsquo;encodeur le plus bas. L&rsquo;abstraction commune de tous les encodeurs, c&rsquo;est qu&rsquo;ils reçoivent tous une liste de vecteurs, chacun de taille 512. Dans l&rsquo;encodeur le plus bas, cette liste est les <em>embeddings</em>, mais dans les autres encodeurs, c&rsquo;est la sortie de l&rsquo;encodeur précédent. On peut changer la taille de cette liste comme hyperparamètre. En gros, ce serait la longueur de la phrase la plus longue dans nos données d&rsquo;entraînement.</p>
+<p>Après que l&rsquo;on fait les <em>embeddings</em> de nos mots à l&rsquo;entrée, chaque <em>embedding</em> coule dans les deux couches de l&rsquo;encodeur.</p>
+<p><img src="/img/illustrated-transformer/encoder_with_tensors.png" alt="Encodeur avec tenseurs"></p>
+<p>Ici on commence à voir une propriété clé du <em>transformer</em>: le mot à chaque position coule dans son propre chemin dans l&rsquo;encodeur. Il y a des dépendances entre ces chemins dans la couche <em>self-attention</em>. La couche <em>feed-forward</em> n&rsquo;a pas ces dépendences, pourtant, et donc ces multiples chemins peuvent être exécutés en parallèle pendant qu&rsquo;ils coulent dans la couche <em>feed-forward</em>.</p>
+<p>Ensuite, on va échanger notre exemple pour une exemple plus court, et on verra ce qui arrive dans chaque sous-couche de l&rsquo;encodeur.</p>
+<h1 id="là-on-encode">Là on encode!</h1>
+<p>Comme on a déjà dit, un encodeur reçoit une liste de vecteurs à l&rsquo;entrée. Il traite cette liste en passant ces vecteurs à une couche <em>self-attention</em>, puis à un réseau <em>feed-forward</em>, et finalement il envoit les données de sortie en haut, au prochain encodeur.</p>
+<p><img src="/img/illustrated-transformer/encoder_with_tensors_2.png" alt="Encodeur avec tenseurs 2"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Le mot à chaque position passe dans un processus de self-attention. Ensuite, ils passent chacun dans un réseau feed-forward &ndash; exactement le même réseau pour chaque vecteur, qui y coulent séparément.</th>
+</tr>
+</thead>
+</table>
+<h1 id="self-attention-dun-haut-niveau">Self-attention d&rsquo;un haut niveau</h1>
+<p>Ne vous laissez pas duper à croire que tout le monde sait déjà c&rsquo;est quoi, le <em>self-attention</em>. Personellement, je n&rsquo;avais jamais vu le concept avant de lire l&rsquo;article Attention is All You Need. Voyons comment ça marche.</p>
+<p>Disons que la phrase suivante est une phrase d&rsquo;entrée qu&rsquo;on aimerait traduire:</p>
+<pre><code class="language-text">The animal didn't cross the street because it was too tired
+</code></pre>
+<p>ou en français,</p>
+<pre><code class="language-text">L'animal n'a pas traversé le boulevard parce qu'il était trop fatigué
+</code></pre>
+<p>À quoi <em>it</em> (ou <em>il</em>) se réfère-t-il? Cela se réfère-t-il au boulevard (<em>street</em>) ou à l&rsquo;animal (<em>animal</em>)? C&rsquo;est une question simple pour un être humain, mais une question difficile pour un algorithme.</p>
+<p>Quand le modèle traite le mot <em>it</em> (ou <em>il</em>), la <em>self-attention</em> permet une association entre <em>it</em> (ou <em>il</em>) et <em>animal</em>.</p>
+<p>Au fur et à mesure que le modèle traite chaque mot (à chaque position dans la phrase d&rsquo;entrée), la <em>self-attention</em> lui permet de regarder des autres positions dans la phrase d&rsquo;entrée qui peuvent mener à un meilleur encodage pour ce mot.</p>
+<p>Si vous connaissez les RNN (<em>recurrent neural network</em>), envisagez comment son entretien d&rsquo;un état caché permet à un RNN d&rsquo;incorporer sa représentation des mots/vecteurs précédents déjà traités avec le mot/vecteur qu&rsquo;il traite actuellement. <em>Self-attention</em> est la méthode du <em>transformer</em> qui intégre la &ldquo;compréhension&rdquo; des autres mots pertinents dans le traitement du mot actuel.</p>
+<p><img src="/img/illustrated-transformer/transformer_self-attention_visualization.png" alt="Self-attention"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Pendant que l&rsquo;on encode le mot <em>it</em> dans l&rsquo;encodeur #5 (l&rsquo;encoder le plus haut dans la pile), une partie du mécanisme d&rsquo;attention se concentrait sur <em>the animal</em>, et a integré une partie de sa représentation dans l&rsquo;encodage de <em>it</em>.</th>
+</tr>
+</thead>
+</table>
+<p>Jetez un coup d&rsquo;œil au <a href="https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb" target="_blank" rel="noopener">notebook Tensor2Tensor</a> où l&rsquo;on peut télécharger un modèle <em>transformer</em> et l&rsquo;examiner via une visualisation interactive.</p>
+<h1 id="self-attention-en-détail">Self-attention en détail</h1>
+<p>Regardons d&rsquo;abord comment calculer la <em>self-attention</em> avec des vecteurs, et ensuite comment l&rsquo;implémenter en vrai &ndash; avec des matrices.</p>
+<p>La <strong>première étape</strong> dans le calcul de la <em>self-attention</em>, c&rsquo;est créer trois vecteurs de chaque vecteur d&rsquo;entrée de l&rsquo;encodeur (en ce cas, c&rsquo;est l'<em>embedding</em> de chaque mot). Pour chaque mot, on crée un vecteur <em>Query</em>, un vecteur <em>Key</em>, et un vecteur <em>Value</em>. Ces vecteurs sont crées en multipliant l'<em>embedding</em> par trois matrices que l&rsquo;on a déjà entraîné.</p>
+<p>Ces nouveaux vecteurs sont plus petits en dimension que le vecteur d'<em>embedding</em>. Leur dimensionalité est 64, tandis que les vecteurs d&rsquo;entrée/sortie ainsi que les vecteurs d'<em>embedding</em> ont une dimensionalité de 512. Ce n&rsquo;est pas nécessaire qu&rsquo;ils soient plus petits; ceci est un choix d&rsquo;architecture pour rendre le calcul de la <em>multiheaded attention</em> constante (pour la plupart).</p>
+<p><img src="/img/illustrated-transformer/transformer_self_attention_vectors.png" alt="Self-attention vectors"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">La multiplication de $x_{1}$ par la matrice de poids $WQ$ produit $q_{1}$, le vecteur *Query* qui s&rsquo;associe avec ce mot. On finit par créer des projections *Query*, *Key*, et *Value* pour chaque mot dans la phrase d&rsquo;entrée.</th>
+</tr>
+</thead>
+</table>
+<p>Quels sont les vecteurs <em>Query</em>, <em>Key</em>, et <em>Value</em>?</p>
+<p>Ils sont des abstractions qui sont utiles pour le calcul et la compréhension de l&rsquo;attention. Après avoir lu à propos du calcul, vous allez savoir tout ce qui est nécessaire pour comprendre le rôle que chaque vecteur joue.</p>
+<p>La <strong>deuxième étape</strong> dans le calcul de la <em>self-attention</em>. Disons que l&rsquo;on fait le calcul de la <em>self-attention</em> pour la première mot dans cet exemple, <em>Thinking</em>. Il faut donner un score à chaque mot de la phrase d&rsquo;entrée, comparé à ce mot. Ce score détermine combien de concentration à mettre sur des autres parties de la phrase d&rsquo;entrée pendant que l&rsquo;on encode un mot à une certaine position.</p>
+<p>Ce score se calcule en prenant le produit scalaire du vecteur <em>Query</em> et le vecteur <em>Key</em> du mot que l&rsquo;on encode. Si on traite la <em>self-attention</em> pour la mot à position #1, le premier score serait le produit scalaire de $q_{1}$ et $k_{1}$. Le deuxième score serait le produit scalaire de $q_{1}$ et $k_{2}$.</p>
+<p><img src="/img/illustrated-transformer/transformer_self_attention_score.png" alt="Self-attention score"></p>
+<p>Les <strong>troisième et quatrième étapes</strong> sont de diviser les scores par 8 (la racine carrée de la dimension des vecteurs <em>Key</em> dans l&rsquo;article &ndash; 64. Cette stratégie mène aux gradients plus stables. On pourrait avoir des autres valeurs ici, mais ceci est le défaut), ensuite de passer le resultat dans une opération softmax. Le softmax normalise les scores pour qu&rsquo;ils soient tous positifs et qu&rsquo;ils se somment à 1.</p>
+<p><img src="/img/illustrated-transformer/self-attention_softmax.png" alt="Self-attention softmax"></p>
+<p>Ce score softmax détermine combien que chaque mot va être exprimé à cette position. Clairement, le mot à cette position va avoir le score softmax le plus haut, mais quelquefois il est utile de faire attention à un autre mot qui est pertinent au mot actuel.</p>
+<p>La <strong>cinquième étape</strong> est de multiplier chaque vecteur <em>Value</em> par le score softmax (en préparation de les sommer). L&rsquo;intuition ici est de garder intacts les valeurs des mots sur lesquels on veut se concentrer, et de noyer les mots sans rapport (en les multipliant par des petits chiffres comme 0.001, par exemple).</p>
+<p>La <strong>sixième étape</strong> est de sommer les vecteurs <em>Value</em> pondérés. Ceci produit la sortie de la couche <em>self-attention</em> à cette position (pour le premier mot).</p>
+<p><img src="/img/illustrated-transformer/self-attention-output.png" alt="Self-attention output"></p>
+<p>Ceci conclut le calcul de la <em>self-attention</em>. Le vecteur résultant est un vecteur que l&rsquo;on peut envoyer au réseau <em>feed-forward</em>. Dans la vraie implémentation, pourtant, ce calcul se fait en forme matricielle pour un traitement plus rapide. Regardons comment ça fonctionne, maintenant que l&rsquo;on a vu l&rsquo;intuition du calcul sur le niveau de mot.</p>
+<h1 id="calcul-matriciel-de-la-self-attention">Calcul matriciel de la self-attention</h1>
+<p>La <strong>première étape</strong> est de calculer les matrices <em>Query</em>, <em>Key</em>, et <em>Value</em>. On fait ça en emballant nos <em>embeddings</em> dans une matrice $X$, et la multipliant par les matrices de poids que l&rsquo;on a entraîné ($W^{Q}$, $W^{K}$, et $W^{V}$).</p>
+<p><img src="/img/illustrated-transformer/self-attention-matrix-calculation.png" alt="Self-attention matrix"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Chaque rangée dans la matrice $X$ correspond à un mot dans la phrase d&rsquo;entrée. On voit encore la différence de taille du vecteur <em>embedding</em> (512, ou 4 carrés dans la figure), et les vecteurs $q$/$k$/$v$ (64, ou 3 carrés dans la figure).</th>
+</tr>
+</thead>
+</table>
+<p><strong>Au final</strong>, vu que l&rsquo;on travaille avec des matrices, on peut combiner les étapes deux jusqu&rsquo;à six dans une formule pour le calcul de la sortie de la couche <em>self-attention</em>.</p>
+<p><img src="/img/illustrated-transformer/self-attention-matrix-calculation-2.png" alt="Self-attention matrix"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Le calcul de la <em>self-attention</em> en forme matricielle.</th>
+</tr>
+</thead>
+</table>
+<h1 id="la-bête-aux-multiples-têtes">La bête aux multiples têtes</h1>
+<p>L&rsquo;article a raffiné la couche <em>self-attention</em> en rajoutant un mécanisme qui s&rsquo;appelle <em>multi-headed attention</em> (l&rsquo;attention aux multiples têtes). Ce mécanisme améliore la performance de la couche d&rsquo;attention de deux façons:</p>
+<ol>
+<li>
+<p>Il étend la capacité du modèle de se concentrer sur des multiples positions. Oui, dans l&rsquo;exemple précédent, $z_{1}$ contient un peu de chaque autre encodage, mais il pourrait être dominé par le mot actuel en soi. Ce serait utile si on traduit une phrase comme *l&rsquo;animal n&rsquo;a pas traversé le boulevard parce qu&rsquo;il était trop fatigué*, on aimerait savoir à quel mot *il* se réfère.</p>
+</li>
+<li>
+<p>Il donne à la couche d&rsquo;attention des multiples &ldquo;sous-espaces de représentation&rdquo;. Comme on va voir prochainement, quand on utilise la <em>multi-headed attention</em>, on a plusieurs ensembles de matrices de poids <em>Query</em>/<em>Key</em>/<em>Value</em> (le <em>transformer</em> utilise huit têtes d&rsquo;attention, alors on finit avec huit ensembles pour chaque encodeur/décodeur). Chaque ensemble s&rsquo;initialise de manière aléatoire. Ensuite, après l&rsquo;entraînement, chaque ensemble s&rsquo;utilise pour faire une projection des <em>embeddings</em> à l&rsquo;entrée (ou des vecteurs des encodeurs/décodeurs plus bas) dans une autre sous-espace de représentation.</p>
+</li>
+</ol>
+<p><img src="/img/illustrated-transformer/transformer_attention_heads_qkv.png" alt="Attention heads"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Avec la <em>multi-headed attention</em>, on maintient plusieurs matrices de poids $W^{Q}$/$W^{K}$/$W^{V}$ pour chaque tête, donnant des différentes matrices $Q$/$K$/$V$ comme résultat. Comme avant, on multiplie $X$ par les matrices $W^{Q}$/$W^{K}$/$W^{V}$ pour produire les matrices $Q$/$K$/$V$.</th>
+</tr>
+</thead>
+</table>
+<p>Si l&rsquo;on fait le même calcul de <em>self-attention</em> que l&rsquo;on vient d&rsquo;expliquer, huit fois différentes avec des différentes matrices de poids, on finit avec huit matrices $Z$ différentes.</p>
+<p><img src="/img/illustrated-transformer/transformer_attention_heads_z.png" alt="Attention heads Z"></p>
+<p>Cela nous laisse avec un défi. La couche <em>feed-forward</em> ne s&rsquo;attend pas à huit matrices &ndash; elle s&rsquo;attend à une seule matrice (un vecteur pour chaque mot). Il nous faut une façon de combiner ces huites matrices en une matrice.</p>
+<p>Comment peut-on faire ça? On concatène les matrices, puis on les multiplient par une matrice de poids supplementaire, $W^{O}$.</p>
+<p><img src="/img/illustrated-transformer/transformer_attention_heads_weight_matrix_o.png" alt="Attention heads WO"></p>
+<p>C&rsquo;est pas mal tout pour le calcul de <em>multi-headed attention</em>. Je me rends compte que c&rsquo;est beaucoup de matrices. J&rsquo;essaie de les mettre toutes dans une figure pour que l&rsquo;on puisse tout voir à la fois:</p>
+<p><img src="/img/illustrated-transformer/transformer_multi-headed_self-attention-recap.png" alt="recap"></p>
+<p>Maintenant que l&rsquo;on a expliqué les multiples têtes d&rsquo;attention, regarderons de nouveau notre exemple précédent pour voir où les différentes têtes d&rsquo;attention se concentrent, pendant que l&rsquo;on encode le mot <em>it</em> (ou <em>il</em>) dans notre phrase:</p>
+<p><img src="/img/illustrated-transformer/transformer_self-attention_visualization_2.png" alt="viz2"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Pendant que l&rsquo;on encode le mot <em>it</em>, une tête d&rsquo;attention se concentre le plus sur <em>the animal</em>, tandis qu&rsquo;une autre tête se concentre sur <em>tired</em> &ndash; d&rsquo;une certaine façon, la représentation du modèle du mot <em>it</em> intègre une partie de la représentation de <em>animal</em> et de <em>tired</em>.</th>
+</tr>
+</thead>
+</table>
+<p>Si on rajoute toutes les têtes d&rsquo;attention à l&rsquo;image, pourtant, les choses deviennent plus difficiles à interpréter:</p>
+<p><img src="/img/illustrated-transformer/transformer_self-attention_visualization_3.png" alt="viz3"></p>
+<h1 id="représenter-lordre-de-la-séquence-avec-des-encodages-positionnels">Représenter l&rsquo;ordre de la séquence avec des encodages positionnels</h1>
+<p>Une chose qui manque du modèle selon notre explication actuelle, c&rsquo;est une façon de prendre l&rsquo;ordre des mots de la phrase d&rsquo;entrée en compte.</p>
+<p>Pour s&rsquo;adresser à ça, le <em>transformer</em> rajoute un vecteur à chaque <em>embedding</em> d&rsquo;entrée. Ces vecteurs suivent un motif spécifique que le modèle apprend, ce qui aide le modèle à determiner la position de chaque mot, ou la distance entre des mots différents de la séquence. L&rsquo;intuition ici est que rajouter ces valeurs aux <em>embeddings</em> fournit des distances significatives entre les vecteurs <em>embedding</em>, une fois qu&rsquo;ils sont projetté dans les vecteurs $Q$/$K$/$V$, et pendant l&rsquo;attention de produit scalaire.</p>
+<p><img src="/img/illustrated-transformer/transformer_positional_encoding_vectors.png" alt="positional_encode"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Pour donner au modèle un sens de l&rsquo;ordre des mots, on rajoute des vecteurs d&rsquo;encodage positionnel &ndash; les valeurs desquels suivent un motif spécifique.</th>
+</tr>
+</thead>
+</table>
+<p>Si l&rsquo;on suppose que l'<em>embedding</em> a une dimensionalité de 4, les vrais encodages positionnels ressembleraient à ça:</p>
+<p><img src="/img/illustrated-transformer/transformer_positional_encoding_example.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Un vrai exemple de l&rsquo;encodage positionnel, avec un taille d'<em>embedding</em> &ldquo;jouet&rdquo; de 4.</th>
+</tr>
+</thead>
+</table>
+<p>Ce motif ressemblerait-il à quoi?</p>
+<p>Dans la figure suivante, chaque rangée correspond à l&rsquo;encodage positionnel d&rsquo;un vecteur. La première rangée serait le vecteur que l&rsquo;on ajouterait à l'<em>embedding</em> du chaque mot dans la phrase d&rsquo;entrée. Chaque rangée contient 512 valeurs &ndash; chacun entre 1 et -1. On les montre en code couleur pour que le motif se voie.</p>
+<p><img src="/img/illustrated-transformer/transformer_positional_encoding_large_example.png" alt="encoding"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Un vrai exemple d&rsquo;encodage positionnel pour 20 mots (rangées) avec une taille d'<em>embedding</em> de 512 (colonnes). On peut voir que la figure parait être divisé verticalement au centre. C&rsquo;est parce que les valeurs de la moitié gauche sont générées par une fonction (qui utilise un sinus), et la moitié droite est générée par une autre fonction (qui utilise un cosinus). Elles sont ensuite concatenées pour formuler les vecteurs d&rsquo;encodage positionnel.</th>
+</tr>
+</thead>
+</table>
+<p>La formule pour l&rsquo;encodage positionnel se décrit dans l&rsquo;article (section 3.5). On peut voir le code pour la génération des encodages positionnels en <code>get_timing_signal_1d()</code>. Il n&rsquo;est pas la seule méthode possible pour l&rsquo;encodage positionnel. Pourtant, il a l&rsquo;avantage d&rsquo;être capable à étendre aux longeurs inconnues de séquence (e.g. si l&rsquo;on demande à notre modèle entraîné de traduire une phrase plus longue que ce qu&rsquo;il a vu dans l&rsquo;entraînement).</p>
+<p><strong>Mise à jour de juillet 2020:</strong> L&rsquo;encodage positionnel en haut vient de l&rsquo;implémentation Transformer2Transformer du <em>transformer</em>. La méthode de l&rsquo;article est en fait légèrement différent: il ne concatene pas directement; il interfolie plutôt les deux signaux. La figure suivante montre à quoi ça ressemble. <a href="https://github.com/jalammar/jalammar.github.io/blob/master/notebookes/transformer/transformer_positional_encoding_graph.ipynb" target="_blank" rel="noopener">Voilà le code pour la générer</a>.</p>
+<p><img src="/img/illustrated-transformer/attention-is-all-you-need-positional-encoding.png" alt="example"></p>
+<h1 id="les-résiduels">Les résiduels</h1>
+<p>Un détail dans l&rsquo;architecture de l&rsquo;encodeur qu&rsquo;il faut mentionner avant de continuer, c&rsquo;est que chaque sous-couche (la <em>self-attention</em> et le <em>feed-forward</em>) dans chaque encodeur a une connexion résiduelle qui l&rsquo;entoure, suivi par une étape de <a href="https://arxiv.org/abs/1607.06450" target="_blank" rel="noopener"><em>layer-normalization</em></a>.</p>
+<p><img src="/img/illustrated-transformer/transformer_resideual_layer_norm.png" alt="example"></p>
+<p>Si l&rsquo;on visualise les vecteurs et l&rsquo;operation <em>layer-norm</em> qui s&rsquo;associe avec la <em>self-attention</em>, il ressemblerait à ça:</p>
+<p><img src="/img/illustrated-transformer/transformer_resideual_layer_norm_2.png" alt="example"></p>
+<p>Ceci est vrai aussi pour les sous-couches du décodeur. Si l&rsquo;on envisage un <em>transformer</em> avec deux encodeurs et décodeurs empilés, il ressemblerait à ça:</p>
+<p><img src="/img/illustrated-transformer/transformer_resideual_layer_norm_3.png" alt="example"></p>
+<h1 id="le-côté-décodeur">Le côté décodeur</h1>
+<p>Maintenant que l&rsquo;on a expliqué la plupart des concepts sur le côte encodeur, on sait plus ou moins comment les composants du décodeur fonctionnent aussi. Mais regardons comment ils fonctionnent tous ensemble.</p>
+<p>L&rsquo;encodeur commence par le traitement de la séquence d&rsquo;entrée. Les données de sortie de l&rsquo;encodeur le plus haut se transforme ensuite en les vecteurs d&rsquo;attention $K$ et $V$. Ces vecteurs seront utilisés par chaque décodeur dans sa couche d&rsquo;attention encodeur-décodeur, ce qui aide le décodeur à se concentrer sur les positions appropriées dans la séquence d&rsquo;entrée.</p>
+<p><img src="/img/illustrated-transformer/transformer_decoding_1.gif" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Après la phase d&rsquo;encodage, on commence la phase de décodage. Chaque étape dans la phase de décodage sort un élément de la séquence de sortie (en ce cas, la traduction en anglais).</th>
+</tr>
+</thead>
+</table>
+<p>Les étapes suivantes répètent ce processus jusqu&rsquo;à ce qu&rsquo;un symbole spécial s&rsquo;atteigne, qui indique que le décodeur du <em>transformer</em> a fini. Les données de sortie de chaque étape sont passées au décodeur en bas à la prochaine étape dans le temps, et les décodeurs donnent leur resultats exactement comme les encodeurs. Et comme on a fait avec nos entrées à l&rsquo;encodeur, on fait un <em>embedding</em> et on rajoute de l&rsquo;encodage positionnel à ces entrées au décodeur, pour indiquer la position de chaque mot.</p>
+<p><img src="/img/illustrated-transformer/transformer_decoding_2.gif" alt="example"></p>
+<p>Les couches de <em>self-attention</em> dans le décodeur s&rsquo;opèrent de manière légèrement différente que celles dans l&rsquo;encodeur:</p>
+<p>Dans le décodeur, la couche de <em>self-attention</em> a le droit à faire attention seulement aux positions plus tôts dans la séquence de sortie. On fait ça en masquant les positions futures (en les mettant a <code>-inf</code>) avant l&rsquo;étape softmax dans le calcul de la <em>self-attention</em>.</p>
+<p>La couche d&rsquo;attention encodeur-décodeur fonctionne exactement comme la <em>self-attention</em> aux multiples têtes, sauf qu&rsquo;il crée sa matrice <em>Query</em> de la couche en bas, et il prend les matrices <em>Key</em> et <em>Value</em> de la sortie de la pile d&rsquo;encodeur.</p>
+<h1 id="la-couche-finale-linéaire-et-softmax">La couche finale (linéaire et softmax)</h1>
+<p>La pile de décodeur donne un vecteur de flottants comme sortie. Comment transforme-t-on cela en mot? C&rsquo;est la tâche de la couche finale lineare, qui se suit par une couche softmax.</p>
+<p>La couche linéare est un réseau <em>fully-connected</em> simple qui projette le vecteur donné par la pile de décodeur dans un vecteur beaucoup plus grand qui s&rsquo;appelle un vecteur de <em>logits</em>.</p>
+<p>Supposons que notre modèle connaît 10,000 mots uniques en anglais (le &ldquo;vocabulaire de sortie&rdquo; de notre modèle) qu&rsquo;il a appris de ses données d&rsquo;entraînement. Ceci donnerait un vecteur de <em>logits</em> de taille 10,000 &ndash; chaque cellule correspond au score d&rsquo;un mot unique. C&rsquo;est ainsi que l&rsquo;on interprète la sortie du modèle suivie par la couche linéaire.</p>
+<p>La couche softmax transforme ensuite les scores en probabilités (des numéros positifs qui somment à 1.0). La cellule avec la probabilité la plus haute est choisie, et le mot qui y est associé est produit comme la sortie pour cette étape dans le temps).</p>
+<p><img src="/img/illustrated-transformer/transformer_decoder_output_softmax.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Cette figure commence d&rsquo;en bas, avec le vecteur produit comme la sortie de la pile de décodeur. Il se transforme ensuite en mot de sortie.</th>
+</tr>
+</thead>
+</table>
+<h1 id="résumé-de-lentraînement">Résumé de l&rsquo;entraînement</h1>
+<p>Maintenant que l&rsquo;on a expliqué le processus entier du <em>forward pass</em> d&rsquo;un <em>transformer</em> entraîné, il serait utile de voir l&rsquo;intuition de l&rsquo;entraînement du modèle.</p>
+<p>Pendant l&rsquo;entraînement, un modèle non-entraîné ferait exactement le même <em>forward pass</em>. Mais vu que l&rsquo;on l&rsquo;entraîne sur des données étiquettées, on peut comparer ses sorties avec les vraies sorties correctes.</p>
+<p>Pour visualiser cela, supposons que notre vocabulaire de sortie ne contient que six mots (<em>a</em>, <em>am</em>, <em>I</em>, <em>thanks</em>, <em>student</em>, et <code>&lt;eos&gt;</code> pour <em>end of sentence</em>, la fin de la phrase).</p>
+<p><img src="/img/illustrated-transformer/vocabulary.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Le vocabulaire de sortie de notre modèle se crée pendant la phase <em>preprocessing</em>, avant que l&rsquo;on commence l&rsquo;entraînement.</th>
+</tr>
+</thead>
+</table>
+<p>Une fois que l&rsquo;on défine notre vocabulaire de sortie, on peut utiliser un vecteur de la même longeur pour indiquer chaque mot dans notre vocabulaire. On appelle ça du <em>one-hot encoding</em>. Par exemple, on peut indiquer le mot <em>am</em> avec le vecteur suivant:</p>
+<p><img src="/img/illustrated-transformer/one-hot-vocabulary-example.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Exemple: un <em>one-hot encoding</em> de notre vocabulaire de sortie.</th>
+</tr>
+</thead>
+</table>
+<p>Suivant ce résumé, discutons la fonction de perte de ce modèle &ndash; le mesure que l&rsquo;on optimise pendant la phase d&rsquo;entraînement pour donner un modèle entraîné et, avec un peu de chance, très juste.</p>
+<h1 id="la-fonction-de-perte">La fonction de perte</h1>
+<p>Disons que l&rsquo;on entraîne notre modèle. Disons que c&rsquo;est la première étape dans la phase d&rsquo;entraînement, et que l&rsquo;on l&rsquo;entraine sur un exemple simple &ndash; on va traduire <em>merci</em> en <em>thanks</em>.</p>
+<p>Ce que ça veut dire, c&rsquo;est que l&rsquo;on voudrait que la sortie soit une distribution de probabilité qui indique le mot <em>thanks</em>. Mais vu que ce modèle n&rsquo;est pas encore entraîné, il est peu probable que ça arrive maintenant.</p>
+<p><img src="/img/illustrated-transformer/transformer_logits_output_and_label.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Puisque les paramètres du modèle (ses poids) sont tous initialisés de manière aléatoire, le modèle (non-entraîné) produit une distribution de probabilité avec des valeurs arbitraires pour chaque cellule/mot. On peut comparer ça avec la vraie sortie, puis adjuster tous les poids du modèle avec la <em>backpropagation</em> pour rendre la sortie plus proche à la sortie désirée.</th>
+</tr>
+</thead>
+</table>
+<p>Comment peut-on comparer deux distributions de probabilité? Tout simplement, on soustrait l&rsquo;une de l&rsquo;autre. Pour plus de détails, voir la <a href="https://colah.github.io/posts/2015-09-Visual-Information/" target="_blank" rel="noopener"><em>cross-entropy</em></a> et le <a href="https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained" target="_blank" rel="noopener"><em>Kullback-Leibler divergence</em></a>.</p>
+<p>Mais notons que c&rsquo;est un exemple sur-simplifié. De manière plus réaliste, on va utiliser une phrase plus longue qu&rsquo;un seul mot. Par exemple, une entrée de <em>je suis étudiant</em> et sa sortie attendue, <em>I am a student</em>. Ce que ça veut dire vraiment, c&rsquo;est que l&rsquo;on veut que notre modèle produise en séquence des distributions de probabilité où:</p>
+<ul>
+<li>
+<p>Chaque distribtion de probabilité se représente par un vecteur de longeur <code>vocab_size</code> (6 dans notre exemple jouet, mais de manière plus réaliste, un chiffre comme 30,000 ou 50,000)</p>
+</li>
+<li>
+<p>La première distribution de probabilité a la probabilité la plus haut à la cellule associée au le mot <em>I</em></p>
+</li>
+<li>
+<p>La deuxième distribution a la probabilité a la probabilité la plus haut à la cellule associé au mot <em>am</em></p>
+</li>
+<li>
+<p>Et cetera, jusqu&rsquo;à ce que la cinquième distribution de probabilité indique le symbole <code>&lt;eos&gt;</code>, qui a aussi une cellule associée du vocabulaire de 10,000 éléments.</p>
+</li>
+</ul>
+<p><img src="/img/illustrated-transformer/output_target_probability_distributions.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Les distributions de probabilité ciblées, contre lesquelles on va entraîner notre modèle.</th>
+</tr>
+</thead>
+</table>
+<p>Après avoir entraîné le modèle pour assez de temps sur assez de données, on aimerait que les distributions de probabilité produites ressembleraient à ça:</p>
+<p><img src="/img/illustrated-transformer/output_trained_model_probability_distributions.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">On espère que après l&rsquo;entraînement, le modèle donnerait la bonne traduction. Bien sûr, ce n&rsquo;est pas une indice fiable si cette phrase faisait partie des données d&rsquo;entraînement (voir: la <em><a href="https://www.youtube.com/watch?v=TIgfjmp-4BA" target="_blank" rel="noopener">cross-validation</a></em>). Notons que chaque position reçoit un peu de probabilité, même s&rsquo;il est peu probable que ça soit la sortie de cette étape dans le temps &ndash; ceci est une propriété du softmax très utile pour le processus d&rsquo;entraînement.</th>
+</tr>
+</thead>
+</table>
+<p>Or, parce que le modèle produit les sorties une à la fois, on peut supposer que le modèle sélectionne le mot avec la probabilité la plus haute de cette distribution de probabilité, et qu&rsquo;il jète le reste. C&rsquo;est une stratégie possible (qui s&rsquo;appelle le <em>greedy decoding</em>, un décodage glouton). Une autre stratégie serait de garder, disons, les deux mots les plus probables (<em>I</em> et <em>a</em>, par exemple). Puis dans la prochaine étape, on roulerait le modèle deux fois: une fois en supposant que la première sortie était <em>I</em>, et une autre fois en supposant que la première sortie était <em>a</em>, et on garde la version qui a produit moins d&rsquo;erreur en considérant les deux positions. On répète ça pour la deuxième et troisième position, etc. Cette méthode s&rsquo;appelle un <em>beam-search</em>, où dans notre exemple, <code>beam_size</code> était deux (qui veut dire que en tout temps, deux hypothèses partielles, qui sont des traductions non-finies, sont gardées en mémoire), et <code>top_beams</code> est deux aussi (qui veut dire que l&rsquo;on va retourner deux traductions). Ces deux sont des hyperparamètres que l&rsquo;on peut adjuster.</p>
+<h1 id="allez-et-transformez">Allez et transformez</h1>
+<p>J&rsquo;espère que vous ayez trouvé cet article utile pour commencer à comprendre les concepts majeurs du <em>transformer</em>. Si vous voulez en aller plus profondément, je suggère ces étapes suivantes:</p>
+<ul>
+<li>
+<p>Lire l&rsquo;article <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention is All You Need</a>, le blog post sur le <em>transformer</em> (<a href="https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html" target="_blank" rel="noopener">Transformer: A Novel Neural Network Architecture for Language Understanding</a>), et <a href="https://ai.googleblog.com/2017/06/accelerating-deep-learning-research.html" target="_blank" rel="noopener">l&rsquo;annonce Tensor2Tensor</a>.</p>
+</li>
+<li>
+<p>Regarder <a href="https://www.youtube.com/watch?v=rBCqOTEfxvg" target="_blank" rel="noopener">la présentation de Łukasz Kaiser</a> qui montre les détails du modèle</p>
+</li>
+<li>
+<p>Jouer avec le <a href="https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb" target="_blank" rel="noopener">notebook Jupyter fourni avec Tensor2Tensor</a></p>
+</li>
+<li>
+<p>Explorer <a href="https://github.com/tensorflow/tensor2tensor" target="_blank" rel="noopener">Tensor2Tensor</a>.</p>
+</li>
+</ul>
+<p>Des œuvres suivants:</p>
+<ul>
+<li><a href="https://arxiv.org/abs/1706.03059" target="_blank" rel="noopener">Depthwise Separable Convolutions for Neural Machine Translation</a></li>
+<li><a href="https://arxiv.org/abs/1706.05137" target="_blank" rel="noopener">One Model To Learn Them All</a></li>
+<li><a href="https://arxiv.org/abs/1801.09797" target="_blank" rel="noopener">Discrete Autoencoders for Sequence Models</a></li>
+<li><a href="https://arxiv.org/abs/1801.10198" target="_blank" rel="noopener">Generating Wikipedia by Summarizing Long Sequences</a></li>
+<li><a href="https://arxiv.org/abs/1802.05751" target="_blank" rel="noopener">Image Transformer</a></li>
+<li><a href="https://arxiv.org/abs/1804.00247" target="_blank" rel="noopener">Training Tips for the Transformer Model</a></li>
+<li><a href="https://arxiv.org/abs/1803.02155" target="_blank" rel="noopener">Self-Attention with Relative Position Representations</a></li>
+<li><a href="https://arxiv.org/abs/1803.03382" target="_blank" rel="noopener">Fast Decoding in Sequence Models using Discrete Latent Variables</a></li>
+<li><a href="https://arxiv.org/abs/1804.04235" target="_blank" rel="noopener">Adafactor: Adaptive Learning Rates with Sublinear Memory Cost</a></li>
+</ul>
+<h1 id="remerciments">Remerciments</h1>
+<p>Merci à <a href="https://twitter.com/ilblackdragon" target="_blank" rel="noopener">Illia Polosukhin</a>, <a href="http://jakob.uszkoreit.net/" target="_blank" rel="noopener">Jakob Uszkoreit</a>, <a href="https://www.linkedin.com/in/llion-jones-9ab3064b" target="_blank" rel="noopener">Llion Jones</a>, <a href="https://ai.google/research/people/LukaszKaiser" target="_blank" rel="noopener">Lukasz Kaiser</a>, <a href="https://twitter.com/nikiparmar09" target="_blank" rel="noopener">Niki Parmar</a>, and <a href="https://dblp.org/pers/hd/s/Shazeer:Noam" target="_blank" rel="noopener">Noam Shazeer</a> pour avoir donné du feedback sur les versions initiales de cet article.</p>
+<p>Vous pouvez contacter l&rsquo;auteur sur <a href="https://twitter.com/JayAlammar" target="_blank" rel="noopener">Twitter</a> avec des corrections ou du feedback.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://a-coles.github.io/post/transformer-illustre/&amp;text=Le%20transformer%20illustr%c3%a9" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://a-coles.github.io/post/transformer-illustre/&amp;t=Le%20transformer%20illustr%c3%a9" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Le%20transformer%20illustr%c3%a9&amp;body=https://a-coles.github.io/post/transformer-illustre/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://a-coles.github.io/post/transformer-illustre/&amp;title=Le%20transformer%20illustr%c3%a9" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Le%20transformer%20illustr%c3%a9%20https://a-coles.github.io/post/transformer-illustre/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://a-coles.github.io/post/transformer-illustre/&amp;title=Le%20transformer%20illustr%c3%a9" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://a-coles.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/arlie-coles/avatar_hu4b3583fb51557b5455309f33fcaf34d1_562870_270x270_fill_q90_lanczos_center.jpg" alt="Arlie Coles"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://a-coles.github.io/">Arlie Coles</a></h5>
+      <h6 class="card-subtitle">Research Scientist</h6>
+      <p class="card-text">At the intersection of NLP, deep learning, and clean code.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?hl=en&amp;user=jHtUFE8AAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/a-coles" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://linkedin.com/in/arlie-coles" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © Arlie Coles 2020
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.0/mermaid.min.js" integrity="sha512-ja+hSBi4JDtjSqc4LTBsSwuBT3tdZ3oKYKd07lTVYmCnTCor56AnRql00ssqnTOR9Ss4gOP/ROGB3SfcJnZkeg==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.d9d80f811e95b4b4f6df1eaaf297b05f.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

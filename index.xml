@@ -5,9 +5,9 @@
     <link>https://a-coles.github.io/</link>
       <atom:link href="https://a-coles.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Arlie Coles</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://a-coles.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_512x512_fill_lanczos_center_2.png</url>
       <title>Arlie Coles</title>
       <link>https://a-coles.github.io/</link>
     </image>
@@ -36,8 +36,12 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then, we can compile this text file using LaTeX to get our final document, which would contain text like this:&lt;/p&gt;
 &lt;p&gt;$\textbf{Hello, world!}$&lt;/p&gt;
+<<<<<<< HEAD
 &lt;p&gt;You do not need to know LaTeX&amp;rsquo;s 
 &lt;a href=&#34;https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Bold.2C_italics_and_underlining&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;markup commands&lt;/a&gt; to follow this documentation, but an understanding of this paradigm will be helpful.&lt;/p&gt;
+=======
+&lt;p&gt;You do not need to know LaTeX&amp;rsquo;s &lt;a href=&#34;https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Bold.2C_italics_and_underlining&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;markup commands&lt;/a&gt; to follow this documentation, but an understanding of this paradigm will be helpful.&lt;/p&gt;
+>>>>>>> tmp
 &lt;h2 id=&#34;what-is-bcp-latex&#34;&gt;What is &lt;code&gt;bcp-latex&lt;/code&gt;?&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;bcp-latex&lt;/code&gt; is a &lt;em&gt;package&lt;/em&gt; for LaTeX. It provides special typesetting tools for common liturgical situations (e.g. versicle and response, longer prayers, etc.) as well as formatting specifications for an entire document (e.g. font face, section headers, margins, etc.). The package is contained in a special file that we will point to from our liturgical document.&lt;/p&gt;
 </description>
@@ -180,6 +184,7 @@
 &lt;p&gt;To prepare our environment to work on LaTeX files, we need to install a few pieces of software. We will need the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
+<<<<<<< HEAD
 &lt;p&gt;A LaTeX &lt;em&gt;distribution&lt;/em&gt;, which will provide the mechanism for converting our LaTeX files into final &lt;code&gt;.pdf&lt;/code&gt; files. We will use 
 &lt;a href=&#34;https://yihui.org/tinytex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TinyTeX&lt;/a&gt;, a lightweight LaTeX distribution. We will also install some &lt;em&gt;packages&lt;/em&gt; into our distribution, which add extra functionality.&lt;/p&gt;
 &lt;/li&gt;
@@ -199,13 +204,32 @@
 &lt;h2 id=&#34;installing-bcp-latex&#34;&gt;Installing &lt;code&gt;bcp-latex&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;bcp-latex&lt;/code&gt; package lives in a 
 &lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitLab repository&lt;/a&gt;. You can clone the repository to your computer this way:&lt;/p&gt;
+=======
+&lt;p&gt;A LaTeX &lt;em&gt;distribution&lt;/em&gt;, which will provide the mechanism for converting our LaTeX files into final &lt;code&gt;.pdf&lt;/code&gt; files. We will use &lt;a href=&#34;https://yihui.org/tinytex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TinyTeX&lt;/a&gt;, a lightweight LaTeX distribution. We will also install some &lt;em&gt;packages&lt;/em&gt; into our distribution, which add extra functionality.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;em&gt;text editor&lt;/em&gt;, which will make it easy to read and edit our LaTeX files. We will use &lt;a href=&#34;https://www.sublimetext.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sublime Text&lt;/a&gt; and install a plugin called &lt;a href=&#34;https://latextools.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeXTools&lt;/a&gt; that makes working with LaTeX files especially easy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;em&gt;music engraving&lt;/em&gt; program, which will allow us to integrate musical scores into our LaTeX files. We will use &lt;a href=&#34;https://lilypond.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LilyPond&lt;/a&gt;, which is designed for this purpose.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is an installation script that aims to set up each of these automatically. You can find the installation script appropriate for your operating system (Windows, Mac, or Linux) at the latest release &lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex/-/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Click on the script corresponding to your operating system and download it somewhere on your computer. Then, double click on the downloaded script to launch it.&lt;/p&gt;
+&lt;h2 id=&#34;installing-bcp-latex&#34;&gt;Installing &lt;code&gt;bcp-latex&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;bcp-latex&lt;/code&gt; package lives in a &lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitLab repository&lt;/a&gt;. You can clone the repository to your computer this way:&lt;/p&gt;
+>>>>>>> tmp
 &lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/cwtc/bcp-latex.git
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To use the package, ensure that &lt;code&gt;bcp.sty&lt;/code&gt; is in the same directory as your TeX document. If your project includes inline music, you should also ensure that &lt;code&gt;common_liturgy.ly&lt;/code&gt; is in the same directory as your TeX document.&lt;/p&gt;
 &lt;h2 id=&#34;installing-fonts&#34;&gt;Installing fonts&lt;/h2&gt;
+<<<<<<< HEAD
 &lt;p&gt;For best results imitating the style of the 1979 BCP, you can also install the 
 &lt;a href=&#34;https://www.myfonts.com/fonts/linotype/sabon/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sabon&lt;/a&gt; and 
 &lt;a href=&#34;https://www.fontsquirrel.com/fonts/junicode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Junicode&lt;/a&gt; fonts. The latter is free, while the former is copyrighted and cannot be distributed here. (It can be found online from many other sources, however.)&lt;/p&gt;
+=======
+&lt;p&gt;For best results imitating the style of the 1979 BCP, you can also install the &lt;a href=&#34;https://www.myfonts.com/fonts/linotype/sabon/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sabon&lt;/a&gt; and &lt;a href=&#34;https://www.fontsquirrel.com/fonts/junicode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Junicode&lt;/a&gt; fonts. The latter is free, while the former is copyrighted and cannot be distributed here. (It can be found online from many other sources, however.)&lt;/p&gt;
+>>>>>>> tmp
 </description>
     </item>
     
@@ -328,11 +352,9 @@
 &lt;/div&gt;
 &lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
@@ -355,236 +377,353 @@
     </item>
     
     <item>
-      <title>Writing technical content in Academic</title>
-      <link>https://a-coles.github.io/post/writing-technical-content/</link>
+      <title>BERT, ELMo, et cie, illustrés (Comment NLP a percé le mystère du transfer learning)</title>
+      <link>https://a-coles.github.io/post/bert-illustre/</link>
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://a-coles.github.io/post/writing-technical-content/</guid>
-      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```python
-import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$\gamma_{n} = \frac{ 
-\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
-\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
-{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\\\&lt;/code&gt; math linebreak:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\\\
-1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\&lt;br&gt;
-1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$&lt;/p&gt;
-&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
-&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-graph TD
-A[Hard] --&amp;gt;|Text| B(Round)
-B --&amp;gt; C{Decision}
-C --&amp;gt;|One| D[Result 1]
-C --&amp;gt;|Two| E[Result 2]
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
-A[Hard] --&amp;gt;|Text| B(Round)
-B --&amp;gt; C{Decision}
-C --&amp;gt;|One| D[Result 1]
-C --&amp;gt;|Two| E[Result 2]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-sequenceDiagram
-Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-loop Healthcheck
-    John-&amp;gt;&amp;gt;John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John--&amp;gt;&amp;gt;Alice: Great!
-John-&amp;gt;&amp;gt;Bob: How about you?
-Bob--&amp;gt;&amp;gt;John: Jolly good!
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
-Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-loop Healthcheck
-    John-&amp;gt;&amp;gt;John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John--&amp;gt;&amp;gt;Alice: Great!
-John-&amp;gt;&amp;gt;Bob: How about you?
-Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-classDiagram
-Class01 &amp;lt;|-- AveryLongClass : Cool
-&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
-Class09 --&amp;gt; C2 : Where am i?
-Class09 --* C3
-Class09 --|&amp;gt; Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
-  int id
-  size()
-}
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
-Class01 &amp;lt;|-- AveryLongClass : Cool
-&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
-Class09 --&amp;gt; C2 : Where am i?
-Class09 --* C3
-Class09 --|&amp;gt; Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
-  int id
-  size()
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-stateDiagram
-[*] --&amp;gt; Still
-Still --&amp;gt; [*]
-Still --&amp;gt; Moving
-Moving --&amp;gt; Still
-Moving --&amp;gt; Crash
-Crash --&amp;gt; [*]
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
-[*] --&amp;gt; Still
-Still --&amp;gt; [*]
-Still --&amp;gt; Moving
-Moving --&amp;gt; Still
-Moving --&amp;gt; Crash
-Crash --&amp;gt; [*]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
-&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
-- [x] Write diagram example
-- [ ] Do something else
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write math example&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write diagram example&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Do something else&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
-&lt;p&gt;Represent your data in tables:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
+      <guid>https://a-coles.github.io/post/bert-illustre/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Cet article est une traduction de &lt;a href=&#34;http://jalammar.github.io/illustrated-bert/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)&lt;/a&gt; par Jay Alamar.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;année 2018 a été un point d&amp;rsquo;inflexion pour les modèles de l&amp;rsquo;apprentissage automatique qui gèrent du texte (ou, plus précisément, le &lt;em&gt;Natural Language Processing&lt;/em&gt; &amp;ndash; NLP en abrégé). Notre compréhension conceptuelle de la meilleure façon de représenter des mots et des phrases pour capturer les significations et relations est en évolution rapide. De plus, la communauté NLP publie des composants très puissants que l&amp;rsquo;on peut télécharger gratuitement pour utiliser dans nos propres &lt;em&gt;pipelines&lt;/em&gt; et modèles. (On a appelé ce moment dans le domaine &amp;ldquo;&lt;a href=&#34;http://ruder.io/nlp-imagenet/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;le moment ImageNet de NLP&lt;/a&gt;&amp;rdquo;, une référence aux développements similaires dans le domaine de &lt;em&gt;computer vision&lt;/em&gt; il y a quelques années qui ont rapidement accéléré le progrès dans ce domaine-là.)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/transformer-ber-ulmfit-elmo.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;First Header&lt;/th&gt;
-&lt;th&gt;Second Header&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;(ULM-FiT n&amp;rsquo;a rien à voir avec &lt;a href=&#34;https://fr.wikipedia.org/wiki/Macaron_le_glouton&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Macaron le glouton&lt;/a&gt;, le &lt;em&gt;Cookie Monster&lt;/em&gt;. Mais j&amp;rsquo;avais du mal à choisir quelque chose d&amp;rsquo;autre comme image&amp;hellip;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;asides&#34;&gt;Asides&lt;/h3&gt;
-&lt;p&gt;Academic supports a 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for asides&lt;/a&gt;, also referred to as &lt;em&gt;notices&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% alert note %}} ... {{% /alert %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% alert note %}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{% /alert %}}
+&lt;p&gt;Un développement récent est la &lt;a href=&#34;https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sortie&lt;/a&gt; de &lt;a href=&#34;https://github.com/google-research/bert&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BERT&lt;/a&gt;, un événement &lt;a href=&#34;https://twitter.com/lmthang/status/1050543868041555969&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;décrit&lt;/a&gt; comme le début d&amp;rsquo;une nouvelle époque dans le NLP. BERT est un modèle qui battu plusieurs records pour la gestion de tâches basées sur le langage. Bientôt après la sortie de l&amp;rsquo;article décrivant le modèle, l&amp;rsquo;équipe a sortie le code de manière &lt;em&gt;open-source&lt;/em&gt;, et a publié aussi des versions du modèle déjà entraînés sur des données massives. Ceci est un énorme développement, puisqu&amp;rsquo;il permet à qui que ce soit qui construit un modèle lié au langage d&amp;rsquo;utiliser cette pile électrique comme composant déjà disponible &amp;ndash; permettant la conservation du temps, de l&amp;rsquo;énergie, de la connaissance, et des ressources qui auraient été dépensés dans l&amp;rsquo;entraînement d&amp;rsquo;un tel modèle à partir de rien.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-transfer-learning.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Les deux étapes du développement de BERT. On peut télécharger le modèle déjà entraîné en étape 1 (entraîné sur les données non-annotées, et comme ça on n&amp;rsquo;a qu&amp;rsquo;à faire du &lt;em&gt;fine-tuning&lt;/em&gt; en étape 2. [&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Documents_icon_-_noun_project_5020.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Image&lt;/a&gt; de livre]&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;BERT continue plusieurs idées intelligentes récentes de la communauté NLP &amp;ndash; y compris le &lt;a href=&#34;https://arxiv.org/abs/1511.01432&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Semi-supervised Sequence Learning&lt;/em&gt;&lt;/a&gt; (par &lt;a href=&#34;https://twitter.com/iamandrewdai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Dai&lt;/a&gt; et &lt;a href=&#34;https://twitter.com/quocleix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Quoc Le&lt;/a&gt;), &lt;a href=&#34;https://arxiv.org/abs/1802.05365&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ELMo&lt;/a&gt; (par &lt;a href=&#34;https://twitter.com/mattthemathman&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Matthew Peters&lt;/a&gt; et des chercheurs de [AI2]https://allenai.org/) et &lt;a href=&#34;https://www.engr.washington.edu/about/bldgs/cse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UW CSE&lt;/a&gt;), &lt;a href=&#34;https://arxiv.org/abs/1801.06146&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ULMFiT&lt;/a&gt; (par le fondateur de fast.ai &lt;a href=&#34;https://twitter.com/jeremyphoward&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jeremy Howard&lt;/a&gt; et &lt;a href=&#34;https://twitter.com/seb_ruder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sebastian Ruder&lt;/a&gt;), le &lt;a href=&#34;https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OpenAI transformer&lt;/a&gt; (par des chercheurs OpenAI &lt;a href=&#34;https://twitter.com/alecrad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Radford&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/karthik_r_n&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Narasimhan&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/timsalimans&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Salimans&lt;/a&gt;, et &lt;a href=&#34;https://twitter.com/ilyasut&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sutskever&lt;/a&gt;), et le &lt;em&gt;transformer&lt;/em&gt; (&lt;a href=&#34;https://arxiv.org/pdf/1706.03762.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vaswani et al.&lt;/a&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;exemple-une-classification-de-phrase&#34;&gt;Exemple: une classification de phrase&lt;/h1&gt;
+&lt;p&gt;La méthode la plus directe d&amp;rsquo;utiliser BERT, c&amp;rsquo;est de l&amp;rsquo;utiliser pour classifier un seul morceau de texte. Ce modèle ressemblerait à ça:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/BERT-classification-spam.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pour entraîner un tel modèle, on doit entraîner principalement le classificateur, avec des changements minimes comme conséquence au modèle BERT. Ce processus d&amp;rsquo;entraînement s&amp;rsquo;appelle du &lt;em&gt;fine-tuning&lt;/em&gt;, et il a des racines dans le &lt;a href=&#34;https://arxiv.org/abs/1511.01432&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Semi-supervised Sequence Learning&lt;/em&gt;&lt;/a&gt; et ULMFiT.&lt;/p&gt;
+&lt;p&gt;Pour ceux qui ne connaissent pas bien ce sujet, puisque l&amp;rsquo;on parle des classificateurs, on est dans le domaine de l&amp;rsquo;apprentissage automatique &lt;em&gt;supervisé&lt;/em&gt;. Ça veut dire que l&amp;rsquo;on aurait besoin des données étiquettées pour entraîner un modèle. Pour cet exemple d&amp;rsquo;un classificateur de spam, les données étiquettées serait une liste de messages courriels et leurs étiquettes (&amp;ldquo;spam&amp;rdquo; ou &amp;ldquo;pas spam&amp;rdquo; pour chaque message).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/spam-labeled-dataset.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Le transformer illustré</title>
+      <link>https://a-coles.github.io/post/transformer-illustre/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/post/transformer-illustre/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Cet article est une traduction de &lt;a href=&#34;http://jalammar.github.io/illustrated-transformer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Illustrated Transformer&lt;/a&gt; par Jay Alamar.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dans &lt;a href=&#34;https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;l&amp;rsquo;article précédent, on a vu l&#39;&lt;em&gt;attention&lt;/em&gt;&lt;/a&gt; &amp;ndash; une méthode omniprésente dans les modèles modernes de &lt;em&gt;deep learning&lt;/em&gt;. L&amp;rsquo;attention est un concept qui a amélioré la performance des applications de &lt;em&gt;neural machine translation&lt;/em&gt;. Dans cet article, on va regarder le &lt;em&gt;transformer&lt;/em&gt; &amp;ndash; un modèle qui utilise l&amp;rsquo;attention afin d&amp;rsquo;augmenter la vitesse avec laquelle ces modèles peuvent être entraînés. Le &lt;em&gt;transformer&lt;/em&gt; surpasse le modèle &lt;em&gt;Neural Machine Translation&lt;/em&gt; de Google pour des tâches spécifiques. Le bénéfice principale, pourtant, vient de la manière dont le &lt;em&gt;transformer&lt;/em&gt; peut être parallelisé. En fait, Google Cloud recommande d&amp;rsquo;utiliser le &lt;em&gt;transformer&lt;/em&gt; comme modèle de référence pour &lt;a href=&#34;https://cloud.google.com/tpu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;leur produit de Cloud TPU&lt;/a&gt;. Alors, essayons de demonter le modèle pour voir comment ça fonctionne.&lt;/p&gt;
+&lt;p&gt;Le &lt;em&gt;transformer&lt;/em&gt; a été proposé dans l&amp;rsquo;article &lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Attention is All You Need&lt;/a&gt;. Une implémentation en TensorFlow est disponible comme partie du package &lt;a href=&#34;https://github.com/tensorflow/tensor2tensor&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tensor2Tensor&lt;/a&gt;. Le groupe NLP de Harvard a crée &lt;a href=&#34;http://nlp.seas.harvard.edu/2018/04/03/attention.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;une guide annotant le papier avec une implémentation PyTorch&lt;/a&gt;. Dans cet article, on va essayer de sur-simplifier les choses un peu et présenter les concepts un à la fois, afin de les rendre plus compréhensibles pour ceux et celles qui n&amp;rsquo;ont pas une connaissance profonde du sujet.&lt;/p&gt;
+&lt;h1 id=&#34;une-vue-plongeante&#34;&gt;Une vue plongeante&lt;/h1&gt;
+&lt;p&gt;Commençons en regardant le modèle comme une simple boîte noire. Pour une application de traduction à la machine, il prendrait à l&amp;rsquo;entrée une phrase dans une langue, et il sortirait sa traduction dans une autre langue.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/the_transformer_3.png&#34; alt=&#34;Le transformer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;En ouvrant ce modèle qui rappelle Optimus Prime, on voit un composant d&amp;rsquo;encodage, un composant de décodage, et les connexions entre les deux.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/The_transformer_encoders_decoders.png&#34; alt=&#34;Encodeur-decodeur&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Le composant d&amp;rsquo;encodage est une pile d&amp;rsquo;encodeurs (l&amp;rsquo;article en empile six &amp;ndash; il n&amp;rsquo;y a rien de magique à propos du numéro six; on peut absolument expérimenter avec des autres arrangements). Le composant de décodage est une pile de décodeurs du même numéro.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/The_transformer_encoder_decoder_stack.png&#34; alt=&#34;Pile&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Les encodeurs sont tous idéntiques en structure (mais ils ne partagent pas de poids). Chaque encodeur comprend deux sous-couches:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/Transformer_encoder.png&#34; alt=&#34;Encodeur&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Les données à l&amp;rsquo;entrée de l&amp;rsquo;encodeur coulent d&amp;rsquo;abord dans une couche de &lt;em&gt;self-attention&lt;/em&gt; &amp;ndash; c&amp;rsquo;est une couche qui aide l&amp;rsquo;encodeur à regarder les autres mots de la phrase d&amp;rsquo;entrée au fur et à mésure qu&amp;rsquo;il encode un mot spécifique. On examinera la couche &lt;em&gt;self-attention&lt;/em&gt; de plus près plus tard.&lt;/p&gt;
+&lt;p&gt;Les données de sortie de la couche &lt;em&gt;self-attention&lt;/em&gt; sont dirigées ensuite à un réseau neuronale &lt;em&gt;feed-forward&lt;/em&gt;. C&amp;rsquo;est ce même réseau &lt;em&gt;feed-forward&lt;/em&gt; qui va s&amp;rsquo;appliquer independamment à chaque position.&lt;/p&gt;
+&lt;p&gt;Le décodeur a ces deux couches, mais entre elles, il y a une couche d&amp;rsquo;attention qui aide le décodeur à se concentrer sur les parties pertinentes de la phrase d&amp;rsquo;entrée (l&amp;rsquo;attention fait quelque chose de similaire dans les &lt;a href=&#34;https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;modèles seq2seq&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/Transformer_decoder.png&#34; alt=&#34;Décodeur&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;rajoutons-les-tenseurs&#34;&gt;Rajoutons les tenseurs&lt;/h1&gt;
+&lt;p&gt;Maintenant que l&amp;rsquo;on a vu les composants majeurs du modèle, regardons les multiples vecteurs et tenseurs et la manière dont ils coulent entre ces composants, afin de transformer les données à l&amp;rsquo;entrée d&amp;rsquo;un modèle entraîné en des données de sortie.&lt;/p&gt;
+&lt;p&gt;Comme on fait habituellement pour les applications en NLP, on commence par transformer chaque mot à l&amp;rsquo;entrée en vecteur via un &lt;a href=&#34;https://medium.com/deeper-learning/glossary-of-deep-learning-word-embedding-f90c3cec34ca&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;algorithme d&#39;&lt;em&gt;embedding&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/embeddings.png&#34; alt=&#34;Embeddings&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Chaque mot a un embedding, un vecteur de taille 512. On va représenter ces vecteurs avec ces boîtes simples.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Le processus d&#39;&lt;em&gt;embedding&lt;/em&gt; n&amp;rsquo;arrive que dans l&amp;rsquo;encodeur le plus bas. L&amp;rsquo;abstraction commune de tous les encodeurs, c&amp;rsquo;est qu&amp;rsquo;ils reçoivent tous une liste de vecteurs, chacun de taille 512. Dans l&amp;rsquo;encodeur le plus bas, cette liste est les &lt;em&gt;embeddings&lt;/em&gt;, mais dans les autres encodeurs, c&amp;rsquo;est la sortie de l&amp;rsquo;encodeur précédent. On peut changer la taille de cette liste comme hyperparamètre. En gros, ce serait la longueur de la phrase la plus longue dans nos données d&amp;rsquo;entraînement.&lt;/p&gt;
+&lt;p&gt;Après que l&amp;rsquo;on fait les &lt;em&gt;embeddings&lt;/em&gt; de nos mots à l&amp;rsquo;entrée, chaque &lt;em&gt;embedding&lt;/em&gt; coule dans les deux couches de l&amp;rsquo;encodeur.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/encoder_with_tensors.png&#34; alt=&#34;Encodeur avec tenseurs&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ici on commence à voir une propriété clé du &lt;em&gt;transformer&lt;/em&gt;: le mot à chaque position coule dans son propre chemin dans l&amp;rsquo;encodeur. Il y a des dépendances entre ces chemins dans la couche &lt;em&gt;self-attention&lt;/em&gt;. La couche &lt;em&gt;feed-forward&lt;/em&gt; n&amp;rsquo;a pas ces dépendences, pourtant, et donc ces multiples chemins peuvent être exécutés en parallèle pendant qu&amp;rsquo;ils coulent dans la couche &lt;em&gt;feed-forward&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Ensuite, on va échanger notre exemple pour une exemple plus court, et on verra ce qui arrive dans chaque sous-couche de l&amp;rsquo;encodeur.&lt;/p&gt;
+&lt;h1 id=&#34;là-on-encode&#34;&gt;Là on encode!&lt;/h1&gt;
+&lt;p&gt;Comme on a déjà dit, un encodeur reçoit une liste de vecteurs à l&amp;rsquo;entrée. Il traite cette liste en passant ces vecteurs à une couche &lt;em&gt;self-attention&lt;/em&gt;, puis à un réseau &lt;em&gt;feed-forward&lt;/em&gt;, et finalement il envoit les données de sortie en haut, au prochain encodeur.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/encoder_with_tensors_2.png&#34; alt=&#34;Encodeur avec tenseurs 2&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Le mot à chaque position passe dans un processus de self-attention. Ensuite, ils passent chacun dans un réseau feed-forward &amp;ndash; exactement le même réseau pour chaque vecteur, qui y coulent séparément.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;self-attention-dun-haut-niveau&#34;&gt;Self-attention d&amp;rsquo;un haut niveau&lt;/h1&gt;
+&lt;p&gt;Ne vous laissez pas duper à croire que tout le monde sait déjà c&amp;rsquo;est quoi, le &lt;em&gt;self-attention&lt;/em&gt;. Personellement, je n&amp;rsquo;avais jamais vu le concept avant de lire l&amp;rsquo;article Attention is All You Need. Voyons comment ça marche.&lt;/p&gt;
+&lt;p&gt;Disons que la phrase suivante est une phrase d&amp;rsquo;entrée qu&amp;rsquo;on aimerait traduire:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;The animal didn&#39;t cross the street because it was too tired
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;icons&#34;&gt;Icons&lt;/h3&gt;
-&lt;p&gt;Academic enables you to use a wide range of 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/#icons&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;icons from &lt;em&gt;Font Awesome&lt;/em&gt; and &lt;em&gt;Academicons&lt;/em&gt;&lt;/a&gt; in addition to 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#emojis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;emojis&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here are some examples using the &lt;code&gt;icon&lt;/code&gt; shortcode to render icons:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; icon name=&amp;quot;terminal&amp;quot; pack=&amp;quot;fas&amp;quot; &amp;gt;}} Terminal  
-{{&amp;lt; icon name=&amp;quot;python&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} Python  
-{{&amp;lt; icon name=&amp;quot;r-project&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} R
+&lt;p&gt;ou en français,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;L&#39;animal n&#39;a pas traversé le boulevard parce qu&#39;il était trop fatigué
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-terminal  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Terminal&lt;br&gt;
-
-  &lt;i class=&#34;fab fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Python&lt;br&gt;
-
-  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; R&lt;/p&gt;
-&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+&lt;p&gt;À quoi &lt;em&gt;it&lt;/em&gt; (ou &lt;em&gt;il&lt;/em&gt;) se réfère-t-il? Cela se réfère-t-il au boulevard (&lt;em&gt;street&lt;/em&gt;) ou à l&amp;rsquo;animal (&lt;em&gt;animal&lt;/em&gt;)? C&amp;rsquo;est une question simple pour un être humain, mais une question difficile pour un algorithme.&lt;/p&gt;
+&lt;p&gt;Quand le modèle traite le mot &lt;em&gt;it&lt;/em&gt; (ou &lt;em&gt;il&lt;/em&gt;), la &lt;em&gt;self-attention&lt;/em&gt; permet une association entre &lt;em&gt;it&lt;/em&gt; (ou &lt;em&gt;il&lt;/em&gt;) et &lt;em&gt;animal&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Au fur et à mesure que le modèle traite chaque mot (à chaque position dans la phrase d&amp;rsquo;entrée), la &lt;em&gt;self-attention&lt;/em&gt; lui permet de regarder des autres positions dans la phrase d&amp;rsquo;entrée qui peuvent mener à un meilleur encodage pour ce mot.&lt;/p&gt;
+&lt;p&gt;Si vous connaissez les RNN (&lt;em&gt;recurrent neural network&lt;/em&gt;), envisagez comment son entretien d&amp;rsquo;un état caché permet à un RNN d&amp;rsquo;incorporer sa représentation des mots/vecteurs précédents déjà traités avec le mot/vecteur qu&amp;rsquo;il traite actuellement. &lt;em&gt;Self-attention&lt;/em&gt; est la méthode du &lt;em&gt;transformer&lt;/em&gt; qui intégre la &amp;ldquo;compréhension&amp;rdquo; des autres mots pertinents dans le traitement du mot actuel.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_self-attention_visualization.png&#34; alt=&#34;Self-attention&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Pendant que l&amp;rsquo;on encode le mot &lt;em&gt;it&lt;/em&gt; dans l&amp;rsquo;encodeur #5 (l&amp;rsquo;encoder le plus haut dans la pile), une partie du mécanisme d&amp;rsquo;attention se concentrait sur &lt;em&gt;the animal&lt;/em&gt;, et a integré une partie de sa représentation dans l&amp;rsquo;encodage de &lt;em&gt;it&lt;/em&gt;.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Jetez un coup d&amp;rsquo;œil au &lt;a href=&#34;https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;notebook Tensor2Tensor&lt;/a&gt; où l&amp;rsquo;on peut télécharger un modèle &lt;em&gt;transformer&lt;/em&gt; et l&amp;rsquo;examiner via une visualisation interactive.&lt;/p&gt;
+&lt;h1 id=&#34;self-attention-en-détail&#34;&gt;Self-attention en détail&lt;/h1&gt;
+&lt;p&gt;Regardons d&amp;rsquo;abord comment calculer la &lt;em&gt;self-attention&lt;/em&gt; avec des vecteurs, et ensuite comment l&amp;rsquo;implémenter en vrai &amp;ndash; avec des matrices.&lt;/p&gt;
+&lt;p&gt;La &lt;strong&gt;première étape&lt;/strong&gt; dans le calcul de la &lt;em&gt;self-attention&lt;/em&gt;, c&amp;rsquo;est créer trois vecteurs de chaque vecteur d&amp;rsquo;entrée de l&amp;rsquo;encodeur (en ce cas, c&amp;rsquo;est l&#39;&lt;em&gt;embedding&lt;/em&gt; de chaque mot). Pour chaque mot, on crée un vecteur &lt;em&gt;Query&lt;/em&gt;, un vecteur &lt;em&gt;Key&lt;/em&gt;, et un vecteur &lt;em&gt;Value&lt;/em&gt;. Ces vecteurs sont crées en multipliant l&#39;&lt;em&gt;embedding&lt;/em&gt; par trois matrices que l&amp;rsquo;on a déjà entraîné.&lt;/p&gt;
+&lt;p&gt;Ces nouveaux vecteurs sont plus petits en dimension que le vecteur d&#39;&lt;em&gt;embedding&lt;/em&gt;. Leur dimensionalité est 64, tandis que les vecteurs d&amp;rsquo;entrée/sortie ainsi que les vecteurs d&#39;&lt;em&gt;embedding&lt;/em&gt; ont une dimensionalité de 512. Ce n&amp;rsquo;est pas nécessaire qu&amp;rsquo;ils soient plus petits; ceci est un choix d&amp;rsquo;architecture pour rendre le calcul de la &lt;em&gt;multiheaded attention&lt;/em&gt; constante (pour la plupart).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_self_attention_vectors.png&#34; alt=&#34;Self-attention vectors&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;La multiplication de $x_{1}$ par la matrice de poids $WQ$ produit $q_{1}$, le vecteur *Query* qui s&amp;rsquo;associe avec ce mot. On finit par créer des projections *Query*, *Key*, et *Value* pour chaque mot dans la phrase d&amp;rsquo;entrée.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Quels sont les vecteurs &lt;em&gt;Query&lt;/em&gt;, &lt;em&gt;Key&lt;/em&gt;, et &lt;em&gt;Value&lt;/em&gt;?&lt;/p&gt;
+&lt;p&gt;Ils sont des abstractions qui sont utiles pour le calcul et la compréhension de l&amp;rsquo;attention. Après avoir lu à propos du calcul, vous allez savoir tout ce qui est nécessaire pour comprendre le rôle que chaque vecteur joue.&lt;/p&gt;
+&lt;p&gt;La &lt;strong&gt;deuxième étape&lt;/strong&gt; dans le calcul de la &lt;em&gt;self-attention&lt;/em&gt;. Disons que l&amp;rsquo;on fait le calcul de la &lt;em&gt;self-attention&lt;/em&gt; pour la première mot dans cet exemple, &lt;em&gt;Thinking&lt;/em&gt;. Il faut donner un score à chaque mot de la phrase d&amp;rsquo;entrée, comparé à ce mot. Ce score détermine combien de concentration à mettre sur des autres parties de la phrase d&amp;rsquo;entrée pendant que l&amp;rsquo;on encode un mot à une certaine position.&lt;/p&gt;
+&lt;p&gt;Ce score se calcule en prenant le produit scalaire du vecteur &lt;em&gt;Query&lt;/em&gt; et le vecteur &lt;em&gt;Key&lt;/em&gt; du mot que l&amp;rsquo;on encode. Si on traite la &lt;em&gt;self-attention&lt;/em&gt; pour la mot à position #1, le premier score serait le produit scalaire de $q_{1}$ et $k_{1}$. Le deuxième score serait le produit scalaire de $q_{1}$ et $k_{2}$.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_self_attention_score.png&#34; alt=&#34;Self-attention score&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Les &lt;strong&gt;troisième et quatrième étapes&lt;/strong&gt; sont de diviser les scores par 8 (la racine carrée de la dimension des vecteurs &lt;em&gt;Key&lt;/em&gt; dans l&amp;rsquo;article &amp;ndash; 64. Cette stratégie mène aux gradients plus stables. On pourrait avoir des autres valeurs ici, mais ceci est le défaut), ensuite de passer le resultat dans une opération softmax. Le softmax normalise les scores pour qu&amp;rsquo;ils soient tous positifs et qu&amp;rsquo;ils se somment à 1.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/self-attention_softmax.png&#34; alt=&#34;Self-attention softmax&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ce score softmax détermine combien que chaque mot va être exprimé à cette position. Clairement, le mot à cette position va avoir le score softmax le plus haut, mais quelquefois il est utile de faire attention à un autre mot qui est pertinent au mot actuel.&lt;/p&gt;
+&lt;p&gt;La &lt;strong&gt;cinquième étape&lt;/strong&gt; est de multiplier chaque vecteur &lt;em&gt;Value&lt;/em&gt; par le score softmax (en préparation de les sommer). L&amp;rsquo;intuition ici est de garder intacts les valeurs des mots sur lesquels on veut se concentrer, et de noyer les mots sans rapport (en les multipliant par des petits chiffres comme 0.001, par exemple).&lt;/p&gt;
+&lt;p&gt;La &lt;strong&gt;sixième étape&lt;/strong&gt; est de sommer les vecteurs &lt;em&gt;Value&lt;/em&gt; pondérés. Ceci produit la sortie de la couche &lt;em&gt;self-attention&lt;/em&gt; à cette position (pour le premier mot).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/self-attention-output.png&#34; alt=&#34;Self-attention output&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ceci conclut le calcul de la &lt;em&gt;self-attention&lt;/em&gt;. Le vecteur résultant est un vecteur que l&amp;rsquo;on peut envoyer au réseau &lt;em&gt;feed-forward&lt;/em&gt;. Dans la vraie implémentation, pourtant, ce calcul se fait en forme matricielle pour un traitement plus rapide. Regardons comment ça fonctionne, maintenant que l&amp;rsquo;on a vu l&amp;rsquo;intuition du calcul sur le niveau de mot.&lt;/p&gt;
+&lt;h1 id=&#34;calcul-matriciel-de-la-self-attention&#34;&gt;Calcul matriciel de la self-attention&lt;/h1&gt;
+&lt;p&gt;La &lt;strong&gt;première étape&lt;/strong&gt; est de calculer les matrices &lt;em&gt;Query&lt;/em&gt;, &lt;em&gt;Key&lt;/em&gt;, et &lt;em&gt;Value&lt;/em&gt;. On fait ça en emballant nos &lt;em&gt;embeddings&lt;/em&gt; dans une matrice $X$, et la multipliant par les matrices de poids que l&amp;rsquo;on a entraîné ($W^{Q}$, $W^{K}$, et $W^{V}$).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/self-attention-matrix-calculation.png&#34; alt=&#34;Self-attention matrix&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Chaque rangée dans la matrice $X$ correspond à un mot dans la phrase d&amp;rsquo;entrée. On voit encore la différence de taille du vecteur &lt;em&gt;embedding&lt;/em&gt; (512, ou 4 carrés dans la figure), et les vecteurs $q$/$k$/$v$ (64, ou 3 carrés dans la figure).&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Au final&lt;/strong&gt;, vu que l&amp;rsquo;on travaille avec des matrices, on peut combiner les étapes deux jusqu&amp;rsquo;à six dans une formule pour le calcul de la sortie de la couche &lt;em&gt;self-attention&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/self-attention-matrix-calculation-2.png&#34; alt=&#34;Self-attention matrix&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Le calcul de la &lt;em&gt;self-attention&lt;/em&gt; en forme matricielle.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;la-bête-aux-multiples-têtes&#34;&gt;La bête aux multiples têtes&lt;/h1&gt;
+&lt;p&gt;L&amp;rsquo;article a raffiné la couche &lt;em&gt;self-attention&lt;/em&gt; en rajoutant un mécanisme qui s&amp;rsquo;appelle &lt;em&gt;multi-headed attention&lt;/em&gt; (l&amp;rsquo;attention aux multiples têtes). Ce mécanisme améliore la performance de la couche d&amp;rsquo;attention de deux façons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Il étend la capacité du modèle de se concentrer sur des multiples positions. Oui, dans l&amp;rsquo;exemple précédent, $z_{1}$ contient un peu de chaque autre encodage, mais il pourrait être dominé par le mot actuel en soi. Ce serait utile si on traduit une phrase comme *l&amp;rsquo;animal n&amp;rsquo;a pas traversé le boulevard parce qu&amp;rsquo;il était trop fatigué*, on aimerait savoir à quel mot *il* se réfère.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Il donne à la couche d&amp;rsquo;attention des multiples &amp;ldquo;sous-espaces de représentation&amp;rdquo;. Comme on va voir prochainement, quand on utilise la &lt;em&gt;multi-headed attention&lt;/em&gt;, on a plusieurs ensembles de matrices de poids &lt;em&gt;Query&lt;/em&gt;/&lt;em&gt;Key&lt;/em&gt;/&lt;em&gt;Value&lt;/em&gt; (le &lt;em&gt;transformer&lt;/em&gt; utilise huit têtes d&amp;rsquo;attention, alors on finit avec huit ensembles pour chaque encodeur/décodeur). Chaque ensemble s&amp;rsquo;initialise de manière aléatoire. Ensuite, après l&amp;rsquo;entraînement, chaque ensemble s&amp;rsquo;utilise pour faire une projection des &lt;em&gt;embeddings&lt;/em&gt; à l&amp;rsquo;entrée (ou des vecteurs des encodeurs/décodeurs plus bas) dans une autre sous-espace de représentation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_attention_heads_qkv.png&#34; alt=&#34;Attention heads&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Avec la &lt;em&gt;multi-headed attention&lt;/em&gt;, on maintient plusieurs matrices de poids $W^{Q}$/$W^{K}$/$W^{V}$ pour chaque tête, donnant des différentes matrices $Q$/$K$/$V$ comme résultat. Comme avant, on multiplie $X$ par les matrices $W^{Q}$/$W^{K}$/$W^{V}$ pour produire les matrices $Q$/$K$/$V$.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Si l&amp;rsquo;on fait le même calcul de &lt;em&gt;self-attention&lt;/em&gt; que l&amp;rsquo;on vient d&amp;rsquo;expliquer, huit fois différentes avec des différentes matrices de poids, on finit avec huit matrices $Z$ différentes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_attention_heads_z.png&#34; alt=&#34;Attention heads Z&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cela nous laisse avec un défi. La couche &lt;em&gt;feed-forward&lt;/em&gt; ne s&amp;rsquo;attend pas à huit matrices &amp;ndash; elle s&amp;rsquo;attend à une seule matrice (un vecteur pour chaque mot). Il nous faut une façon de combiner ces huites matrices en une matrice.&lt;/p&gt;
+&lt;p&gt;Comment peut-on faire ça? On concatène les matrices, puis on les multiplient par une matrice de poids supplementaire, $W^{O}$.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_attention_heads_weight_matrix_o.png&#34; alt=&#34;Attention heads WO&#34;&gt;&lt;/p&gt;
+&lt;p&gt;C&amp;rsquo;est pas mal tout pour le calcul de &lt;em&gt;multi-headed attention&lt;/em&gt;. Je me rends compte que c&amp;rsquo;est beaucoup de matrices. J&amp;rsquo;essaie de les mettre toutes dans une figure pour que l&amp;rsquo;on puisse tout voir à la fois:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_multi-headed_self-attention-recap.png&#34; alt=&#34;recap&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Maintenant que l&amp;rsquo;on a expliqué les multiples têtes d&amp;rsquo;attention, regarderons de nouveau notre exemple précédent pour voir où les différentes têtes d&amp;rsquo;attention se concentrent, pendant que l&amp;rsquo;on encode le mot &lt;em&gt;it&lt;/em&gt; (ou &lt;em&gt;il&lt;/em&gt;) dans notre phrase:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_self-attention_visualization_2.png&#34; alt=&#34;viz2&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Pendant que l&amp;rsquo;on encode le mot &lt;em&gt;it&lt;/em&gt;, une tête d&amp;rsquo;attention se concentre le plus sur &lt;em&gt;the animal&lt;/em&gt;, tandis qu&amp;rsquo;une autre tête se concentre sur &lt;em&gt;tired&lt;/em&gt; &amp;ndash; d&amp;rsquo;une certaine façon, la représentation du modèle du mot &lt;em&gt;it&lt;/em&gt; intègre une partie de la représentation de &lt;em&gt;animal&lt;/em&gt; et de &lt;em&gt;tired&lt;/em&gt;.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Si on rajoute toutes les têtes d&amp;rsquo;attention à l&amp;rsquo;image, pourtant, les choses deviennent plus difficiles à interpréter:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_self-attention_visualization_3.png&#34; alt=&#34;viz3&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;représenter-lordre-de-la-séquence-avec-des-encodages-positionnels&#34;&gt;Représenter l&amp;rsquo;ordre de la séquence avec des encodages positionnels&lt;/h1&gt;
+&lt;p&gt;Une chose qui manque du modèle selon notre explication actuelle, c&amp;rsquo;est une façon de prendre l&amp;rsquo;ordre des mots de la phrase d&amp;rsquo;entrée en compte.&lt;/p&gt;
+&lt;p&gt;Pour s&amp;rsquo;adresser à ça, le &lt;em&gt;transformer&lt;/em&gt; rajoute un vecteur à chaque &lt;em&gt;embedding&lt;/em&gt; d&amp;rsquo;entrée. Ces vecteurs suivent un motif spécifique que le modèle apprend, ce qui aide le modèle à determiner la position de chaque mot, ou la distance entre des mots différents de la séquence. L&amp;rsquo;intuition ici est que rajouter ces valeurs aux &lt;em&gt;embeddings&lt;/em&gt; fournit des distances significatives entre les vecteurs &lt;em&gt;embedding&lt;/em&gt;, une fois qu&amp;rsquo;ils sont projetté dans les vecteurs $Q$/$K$/$V$, et pendant l&amp;rsquo;attention de produit scalaire.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_positional_encoding_vectors.png&#34; alt=&#34;positional_encode&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Pour donner au modèle un sens de l&amp;rsquo;ordre des mots, on rajoute des vecteurs d&amp;rsquo;encodage positionnel &amp;ndash; les valeurs desquels suivent un motif spécifique.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Si l&amp;rsquo;on suppose que l&#39;&lt;em&gt;embedding&lt;/em&gt; a une dimensionalité de 4, les vrais encodages positionnels ressembleraient à ça:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_positional_encoding_example.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Un vrai exemple de l&amp;rsquo;encodage positionnel, avec un taille d&#39;&lt;em&gt;embedding&lt;/em&gt; &amp;ldquo;jouet&amp;rdquo; de 4.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Ce motif ressemblerait-il à quoi?&lt;/p&gt;
+&lt;p&gt;Dans la figure suivante, chaque rangée correspond à l&amp;rsquo;encodage positionnel d&amp;rsquo;un vecteur. La première rangée serait le vecteur que l&amp;rsquo;on ajouterait à l&#39;&lt;em&gt;embedding&lt;/em&gt; du chaque mot dans la phrase d&amp;rsquo;entrée. Chaque rangée contient 512 valeurs &amp;ndash; chacun entre 1 et -1. On les montre en code couleur pour que le motif se voie.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_positional_encoding_large_example.png&#34; alt=&#34;encoding&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Un vrai exemple d&amp;rsquo;encodage positionnel pour 20 mots (rangées) avec une taille d&#39;&lt;em&gt;embedding&lt;/em&gt; de 512 (colonnes). On peut voir que la figure parait être divisé verticalement au centre. C&amp;rsquo;est parce que les valeurs de la moitié gauche sont générées par une fonction (qui utilise un sinus), et la moitié droite est générée par une autre fonction (qui utilise un cosinus). Elles sont ensuite concatenées pour formuler les vecteurs d&amp;rsquo;encodage positionnel.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;La formule pour l&amp;rsquo;encodage positionnel se décrit dans l&amp;rsquo;article (section 3.5). On peut voir le code pour la génération des encodages positionnels en &lt;code&gt;get_timing_signal_1d()&lt;/code&gt;. Il n&amp;rsquo;est pas la seule méthode possible pour l&amp;rsquo;encodage positionnel. Pourtant, il a l&amp;rsquo;avantage d&amp;rsquo;être capable à étendre aux longeurs inconnues de séquence (e.g. si l&amp;rsquo;on demande à notre modèle entraîné de traduire une phrase plus longue que ce qu&amp;rsquo;il a vu dans l&amp;rsquo;entraînement).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mise à jour de juillet 2020:&lt;/strong&gt; L&amp;rsquo;encodage positionnel en haut vient de l&amp;rsquo;implémentation Transformer2Transformer du &lt;em&gt;transformer&lt;/em&gt;. La méthode de l&amp;rsquo;article est en fait légèrement différent: il ne concatene pas directement; il interfolie plutôt les deux signaux. La figure suivante montre à quoi ça ressemble. &lt;a href=&#34;https://github.com/jalammar/jalammar.github.io/blob/master/notebookes/transformer/transformer_positional_encoding_graph.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Voilà le code pour la générer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/attention-is-all-you-need-positional-encoding.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;les-résiduels&#34;&gt;Les résiduels&lt;/h1&gt;
+&lt;p&gt;Un détail dans l&amp;rsquo;architecture de l&amp;rsquo;encodeur qu&amp;rsquo;il faut mentionner avant de continuer, c&amp;rsquo;est que chaque sous-couche (la &lt;em&gt;self-attention&lt;/em&gt; et le &lt;em&gt;feed-forward&lt;/em&gt;) dans chaque encodeur a une connexion résiduelle qui l&amp;rsquo;entoure, suivi par une étape de &lt;a href=&#34;https://arxiv.org/abs/1607.06450&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;layer-normalization&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_resideual_layer_norm.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si l&amp;rsquo;on visualise les vecteurs et l&amp;rsquo;operation &lt;em&gt;layer-norm&lt;/em&gt; qui s&amp;rsquo;associe avec la &lt;em&gt;self-attention&lt;/em&gt;, il ressemblerait à ça:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_resideual_layer_norm_2.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ceci est vrai aussi pour les sous-couches du décodeur. Si l&amp;rsquo;on envisage un &lt;em&gt;transformer&lt;/em&gt; avec deux encodeurs et décodeurs empilés, il ressemblerait à ça:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_resideual_layer_norm_3.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;le-côté-décodeur&#34;&gt;Le côté décodeur&lt;/h1&gt;
+&lt;p&gt;Maintenant que l&amp;rsquo;on a expliqué la plupart des concepts sur le côte encodeur, on sait plus ou moins comment les composants du décodeur fonctionnent aussi. Mais regardons comment ils fonctionnent tous ensemble.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;encodeur commence par le traitement de la séquence d&amp;rsquo;entrée. Les données de sortie de l&amp;rsquo;encodeur le plus haut se transforme ensuite en les vecteurs d&amp;rsquo;attention $K$ et $V$. Ces vecteurs seront utilisés par chaque décodeur dans sa couche d&amp;rsquo;attention encodeur-décodeur, ce qui aide le décodeur à se concentrer sur les positions appropriées dans la séquence d&amp;rsquo;entrée.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_decoding_1.gif&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Après la phase d&amp;rsquo;encodage, on commence la phase de décodage. Chaque étape dans la phase de décodage sort un élément de la séquence de sortie (en ce cas, la traduction en anglais).&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Les étapes suivantes répètent ce processus jusqu&amp;rsquo;à ce qu&amp;rsquo;un symbole spécial s&amp;rsquo;atteigne, qui indique que le décodeur du &lt;em&gt;transformer&lt;/em&gt; a fini. Les données de sortie de chaque étape sont passées au décodeur en bas à la prochaine étape dans le temps, et les décodeurs donnent leur resultats exactement comme les encodeurs. Et comme on a fait avec nos entrées à l&amp;rsquo;encodeur, on fait un &lt;em&gt;embedding&lt;/em&gt; et on rajoute de l&amp;rsquo;encodage positionnel à ces entrées au décodeur, pour indiquer la position de chaque mot.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_decoding_2.gif&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Les couches de &lt;em&gt;self-attention&lt;/em&gt; dans le décodeur s&amp;rsquo;opèrent de manière légèrement différente que celles dans l&amp;rsquo;encodeur:&lt;/p&gt;
+&lt;p&gt;Dans le décodeur, la couche de &lt;em&gt;self-attention&lt;/em&gt; a le droit à faire attention seulement aux positions plus tôts dans la séquence de sortie. On fait ça en masquant les positions futures (en les mettant a &lt;code&gt;-inf&lt;/code&gt;) avant l&amp;rsquo;étape softmax dans le calcul de la &lt;em&gt;self-attention&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;La couche d&amp;rsquo;attention encodeur-décodeur fonctionne exactement comme la &lt;em&gt;self-attention&lt;/em&gt; aux multiples têtes, sauf qu&amp;rsquo;il crée sa matrice &lt;em&gt;Query&lt;/em&gt; de la couche en bas, et il prend les matrices &lt;em&gt;Key&lt;/em&gt; et &lt;em&gt;Value&lt;/em&gt; de la sortie de la pile d&amp;rsquo;encodeur.&lt;/p&gt;
+&lt;h1 id=&#34;la-couche-finale-linéaire-et-softmax&#34;&gt;La couche finale (linéaire et softmax)&lt;/h1&gt;
+&lt;p&gt;La pile de décodeur donne un vecteur de flottants comme sortie. Comment transforme-t-on cela en mot? C&amp;rsquo;est la tâche de la couche finale lineare, qui se suit par une couche softmax.&lt;/p&gt;
+&lt;p&gt;La couche linéare est un réseau &lt;em&gt;fully-connected&lt;/em&gt; simple qui projette le vecteur donné par la pile de décodeur dans un vecteur beaucoup plus grand qui s&amp;rsquo;appelle un vecteur de &lt;em&gt;logits&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Supposons que notre modèle connaît 10,000 mots uniques en anglais (le &amp;ldquo;vocabulaire de sortie&amp;rdquo; de notre modèle) qu&amp;rsquo;il a appris de ses données d&amp;rsquo;entraînement. Ceci donnerait un vecteur de &lt;em&gt;logits&lt;/em&gt; de taille 10,000 &amp;ndash; chaque cellule correspond au score d&amp;rsquo;un mot unique. C&amp;rsquo;est ainsi que l&amp;rsquo;on interprète la sortie du modèle suivie par la couche linéaire.&lt;/p&gt;
+&lt;p&gt;La couche softmax transforme ensuite les scores en probabilités (des numéros positifs qui somment à 1.0). La cellule avec la probabilité la plus haute est choisie, et le mot qui y est associé est produit comme la sortie pour cette étape dans le temps).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_decoder_output_softmax.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Cette figure commence d&amp;rsquo;en bas, avec le vecteur produit comme la sortie de la pile de décodeur. Il se transforme ensuite en mot de sortie.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;résumé-de-lentraînement&#34;&gt;Résumé de l&amp;rsquo;entraînement&lt;/h1&gt;
+&lt;p&gt;Maintenant que l&amp;rsquo;on a expliqué le processus entier du &lt;em&gt;forward pass&lt;/em&gt; d&amp;rsquo;un &lt;em&gt;transformer&lt;/em&gt; entraîné, il serait utile de voir l&amp;rsquo;intuition de l&amp;rsquo;entraînement du modèle.&lt;/p&gt;
+&lt;p&gt;Pendant l&amp;rsquo;entraînement, un modèle non-entraîné ferait exactement le même &lt;em&gt;forward pass&lt;/em&gt;. Mais vu que l&amp;rsquo;on l&amp;rsquo;entraîne sur des données étiquettées, on peut comparer ses sorties avec les vraies sorties correctes.&lt;/p&gt;
+&lt;p&gt;Pour visualiser cela, supposons que notre vocabulaire de sortie ne contient que six mots (&lt;em&gt;a&lt;/em&gt;, &lt;em&gt;am&lt;/em&gt;, &lt;em&gt;I&lt;/em&gt;, &lt;em&gt;thanks&lt;/em&gt;, &lt;em&gt;student&lt;/em&gt;, et &lt;code&gt;&amp;lt;eos&amp;gt;&lt;/code&gt; pour &lt;em&gt;end of sentence&lt;/em&gt;, la fin de la phrase).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/vocabulary.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Le vocabulaire de sortie de notre modèle se crée pendant la phase &lt;em&gt;preprocessing&lt;/em&gt;, avant que l&amp;rsquo;on commence l&amp;rsquo;entraînement.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Une fois que l&amp;rsquo;on défine notre vocabulaire de sortie, on peut utiliser un vecteur de la même longeur pour indiquer chaque mot dans notre vocabulaire. On appelle ça du &lt;em&gt;one-hot encoding&lt;/em&gt;. Par exemple, on peut indiquer le mot &lt;em&gt;am&lt;/em&gt; avec le vecteur suivant:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/one-hot-vocabulary-example.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Exemple: un &lt;em&gt;one-hot encoding&lt;/em&gt; de notre vocabulaire de sortie.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Suivant ce résumé, discutons la fonction de perte de ce modèle &amp;ndash; le mesure que l&amp;rsquo;on optimise pendant la phase d&amp;rsquo;entraînement pour donner un modèle entraîné et, avec un peu de chance, très juste.&lt;/p&gt;
+&lt;h1 id=&#34;la-fonction-de-perte&#34;&gt;La fonction de perte&lt;/h1&gt;
+&lt;p&gt;Disons que l&amp;rsquo;on entraîne notre modèle. Disons que c&amp;rsquo;est la première étape dans la phase d&amp;rsquo;entraînement, et que l&amp;rsquo;on l&amp;rsquo;entraine sur un exemple simple &amp;ndash; on va traduire &lt;em&gt;merci&lt;/em&gt; en &lt;em&gt;thanks&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Ce que ça veut dire, c&amp;rsquo;est que l&amp;rsquo;on voudrait que la sortie soit une distribution de probabilité qui indique le mot &lt;em&gt;thanks&lt;/em&gt;. Mais vu que ce modèle n&amp;rsquo;est pas encore entraîné, il est peu probable que ça arrive maintenant.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/transformer_logits_output_and_label.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Puisque les paramètres du modèle (ses poids) sont tous initialisés de manière aléatoire, le modèle (non-entraîné) produit une distribution de probabilité avec des valeurs arbitraires pour chaque cellule/mot. On peut comparer ça avec la vraie sortie, puis adjuster tous les poids du modèle avec la &lt;em&gt;backpropagation&lt;/em&gt; pour rendre la sortie plus proche à la sortie désirée.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Comment peut-on comparer deux distributions de probabilité? Tout simplement, on soustrait l&amp;rsquo;une de l&amp;rsquo;autre. Pour plus de détails, voir la &lt;a href=&#34;https://colah.github.io/posts/2015-09-Visual-Information/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;cross-entropy&lt;/em&gt;&lt;/a&gt; et le &lt;a href=&#34;https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Kullback-Leibler divergence&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mais notons que c&amp;rsquo;est un exemple sur-simplifié. De manière plus réaliste, on va utiliser une phrase plus longue qu&amp;rsquo;un seul mot. Par exemple, une entrée de &lt;em&gt;je suis étudiant&lt;/em&gt; et sa sortie attendue, &lt;em&gt;I am a student&lt;/em&gt;. Ce que ça veut dire vraiment, c&amp;rsquo;est que l&amp;rsquo;on veut que notre modèle produise en séquence des distributions de probabilité où:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Chaque distribtion de probabilité se représente par un vecteur de longeur &lt;code&gt;vocab_size&lt;/code&gt; (6 dans notre exemple jouet, mais de manière plus réaliste, un chiffre comme 30,000 ou 50,000)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La première distribution de probabilité a la probabilité la plus haut à la cellule associée au le mot &lt;em&gt;I&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La deuxième distribution a la probabilité a la probabilité la plus haut à la cellule associé au mot &lt;em&gt;am&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Et cetera, jusqu&amp;rsquo;à ce que la cinquième distribution de probabilité indique le symbole &lt;code&gt;&amp;lt;eos&amp;gt;&lt;/code&gt;, qui a aussi une cellule associée du vocabulaire de 10,000 éléments.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/output_target_probability_distributions.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Les distributions de probabilité ciblées, contre lesquelles on va entraîner notre modèle.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Après avoir entraîné le modèle pour assez de temps sur assez de données, on aimerait que les distributions de probabilité produites ressembleraient à ça:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-transformer/output_trained_model_probability_distributions.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;On espère que après l&amp;rsquo;entraînement, le modèle donnerait la bonne traduction. Bien sûr, ce n&amp;rsquo;est pas une indice fiable si cette phrase faisait partie des données d&amp;rsquo;entraînement (voir: la &lt;em&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=TIgfjmp-4BA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cross-validation&lt;/a&gt;&lt;/em&gt;). Notons que chaque position reçoit un peu de probabilité, même s&amp;rsquo;il est peu probable que ça soit la sortie de cette étape dans le temps &amp;ndash; ceci est une propriété du softmax très utile pour le processus d&amp;rsquo;entraînement.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Or, parce que le modèle produit les sorties une à la fois, on peut supposer que le modèle sélectionne le mot avec la probabilité la plus haute de cette distribution de probabilité, et qu&amp;rsquo;il jète le reste. C&amp;rsquo;est une stratégie possible (qui s&amp;rsquo;appelle le &lt;em&gt;greedy decoding&lt;/em&gt;, un décodage glouton). Une autre stratégie serait de garder, disons, les deux mots les plus probables (&lt;em&gt;I&lt;/em&gt; et &lt;em&gt;a&lt;/em&gt;, par exemple). Puis dans la prochaine étape, on roulerait le modèle deux fois: une fois en supposant que la première sortie était &lt;em&gt;I&lt;/em&gt;, et une autre fois en supposant que la première sortie était &lt;em&gt;a&lt;/em&gt;, et on garde la version qui a produit moins d&amp;rsquo;erreur en considérant les deux positions. On répète ça pour la deuxième et troisième position, etc. Cette méthode s&amp;rsquo;appelle un &lt;em&gt;beam-search&lt;/em&gt;, où dans notre exemple, &lt;code&gt;beam_size&lt;/code&gt; était deux (qui veut dire que en tout temps, deux hypothèses partielles, qui sont des traductions non-finies, sont gardées en mémoire), et &lt;code&gt;top_beams&lt;/code&gt; est deux aussi (qui veut dire que l&amp;rsquo;on va retourner deux traductions). Ces deux sont des hyperparamètres que l&amp;rsquo;on peut adjuster.&lt;/p&gt;
+&lt;h1 id=&#34;allez-et-transformez&#34;&gt;Allez et transformez&lt;/h1&gt;
+&lt;p&gt;J&amp;rsquo;espère que vous ayez trouvé cet article utile pour commencer à comprendre les concepts majeurs du &lt;em&gt;transformer&lt;/em&gt;. Si vous voulez en aller plus profondément, je suggère ces étapes suivantes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lire l&amp;rsquo;article &lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Attention is All You Need&lt;/a&gt;, le blog post sur le &lt;em&gt;transformer&lt;/em&gt; (&lt;a href=&#34;https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Transformer: A Novel Neural Network Architecture for Language Understanding&lt;/a&gt;), et &lt;a href=&#34;https://ai.googleblog.com/2017/06/accelerating-deep-learning-research.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;l&amp;rsquo;annonce Tensor2Tensor&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Regarder &lt;a href=&#34;https://www.youtube.com/watch?v=rBCqOTEfxvg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;la présentation de Łukasz Kaiser&lt;/a&gt; qui montre les détails du modèle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Jouer avec le &lt;a href=&#34;https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;notebook Jupyter fourni avec Tensor2Tensor&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Explorer &lt;a href=&#34;https://github.com/tensorflow/tensor2tensor&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tensor2Tensor&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Des œuvres suivants:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1706.03059&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Depthwise Separable Convolutions for Neural Machine Translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1706.05137&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;One Model To Learn Them All&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1801.09797&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Discrete Autoencoders for Sequence Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1801.10198&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Generating Wikipedia by Summarizing Long Sequences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1802.05751&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Image Transformer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1804.00247&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Training Tips for the Transformer Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1803.02155&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Self-Attention with Relative Position Representations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1803.03382&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fast Decoding in Sequence Models using Discrete Latent Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1804.04235&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adafactor: Adaptive Learning Rates with Sublinear Memory Cost&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;remerciments&#34;&gt;Remerciments&lt;/h1&gt;
+&lt;p&gt;Merci à &lt;a href=&#34;https://twitter.com/ilblackdragon&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Illia Polosukhin&lt;/a&gt;, &lt;a href=&#34;http://jakob.uszkoreit.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jakob Uszkoreit&lt;/a&gt;, &lt;a href=&#34;https://www.linkedin.com/in/llion-jones-9ab3064b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Llion Jones&lt;/a&gt;, &lt;a href=&#34;https://ai.google/research/people/LukaszKaiser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lukasz Kaiser&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/nikiparmar09&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Niki Parmar&lt;/a&gt;, and &lt;a href=&#34;https://dblp.org/pers/hd/s/Shazeer:Noam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Noam Shazeer&lt;/a&gt; pour avoir donné du feedback sur les versions initiales de cet article.&lt;/p&gt;
+&lt;p&gt;Vous pouvez contacter l&amp;rsquo;auteur sur &lt;a href=&#34;https://twitter.com/JayAlammar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter&lt;/a&gt; avec des corrections ou du feedback.&lt;/p&gt;
 </description>
     </item>
     
@@ -602,9 +741,7 @@ A Markdown aside is useful for displaying notices, hints, or definitions to your
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://a-coles.github.io/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
 &lt;ul&gt;
@@ -624,8 +761,7 @@ A Markdown aside is useful for displaying notices, hints, or definitions to your
 &lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
@@ -723,10 +859,21 @@ Three
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>bcp-latex</title>
+      <link>https://a-coles.github.io/project/bcplatex/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/project/bcplatex/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
     </item>
     
@@ -735,6 +882,32 @@ Three
       <link>https://a-coles.github.io/project/deeprhyme/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://a-coles.github.io/project/deeprhyme/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Order for Compline</title>
+      <link>https://a-coles.github.io/project/order-compline/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/project/order-compline/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Order for Mass</title>
+      <link>https://a-coles.github.io/project/order-mass/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://a-coles.github.io/project/order-mass/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;

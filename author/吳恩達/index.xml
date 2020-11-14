@@ -5,9 +5,13 @@
     <link>https://a-coles.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/</link>
       <atom:link href="https://a-coles.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/index.xml" rel="self" type="application/rss+xml" />
     <description>吳恩達</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright>
     <image>
+<<<<<<< HEAD
       <url>https://a-coles.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+=======
+      <url>https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_512x512_fill_lanczos_center_2.png</url>
+>>>>>>> tmp
       <title>吳恩達</title>
       <link>https://a-coles.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/</link>
     </image>
