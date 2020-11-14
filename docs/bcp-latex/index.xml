@@ -5,15 +5,9 @@
     <link>https://a-coles.github.io/docs/bcp-latex/</link>
       <atom:link href="https://a-coles.github.io/docs/bcp-latex/index.xml" rel="self" type="application/rss+xml" />
     <description>bcp-latex</description>
-<<<<<<< HEAD
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://a-coles.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-=======
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_512x512_fill_lanczos_center_2.png</url>
->>>>>>> tmp
       <title>bcp-latex</title>
       <link>https://a-coles.github.io/docs/bcp-latex/</link>
     </image>
@@ -42,12 +36,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then, we can compile this text file using LaTeX to get our final document, which would contain text like this:&lt;/p&gt;
 &lt;p&gt;$\textbf{Hello, world!}$&lt;/p&gt;
-<<<<<<< HEAD
-&lt;p&gt;You do not need to know LaTeX&amp;rsquo;s 
-&lt;a href=&#34;https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Bold.2C_italics_and_underlining&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;markup commands&lt;/a&gt; to follow this documentation, but an understanding of this paradigm will be helpful.&lt;/p&gt;
-=======
 &lt;p&gt;You do not need to know LaTeX&amp;rsquo;s &lt;a href=&#34;https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Bold.2C_italics_and_underlining&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;markup commands&lt;/a&gt; to follow this documentation, but an understanding of this paradigm will be helpful.&lt;/p&gt;
->>>>>>> tmp
 &lt;h2 id=&#34;what-is-bcp-latex&#34;&gt;What is &lt;code&gt;bcp-latex&lt;/code&gt;?&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;bcp-latex&lt;/code&gt; is a &lt;em&gt;package&lt;/em&gt; for LaTeX. It provides special typesetting tools for common liturgical situations (e.g. versicle and response, longer prayers, etc.) as well as formatting specifications for an entire document (e.g. font face, section headers, margins, etc.). The package is contained in a special file that we will point to from our liturgical document.&lt;/p&gt;
 </description>
@@ -190,27 +179,6 @@
 &lt;p&gt;To prepare our environment to work on LaTeX files, we need to install a few pieces of software. We will need the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-<<<<<<< HEAD
-&lt;p&gt;A LaTeX &lt;em&gt;distribution&lt;/em&gt;, which will provide the mechanism for converting our LaTeX files into final &lt;code&gt;.pdf&lt;/code&gt; files. We will use 
-&lt;a href=&#34;https://yihui.org/tinytex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TinyTeX&lt;/a&gt;, a lightweight LaTeX distribution. We will also install some &lt;em&gt;packages&lt;/em&gt; into our distribution, which add extra functionality.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A &lt;em&gt;text editor&lt;/em&gt;, which will make it easy to read and edit our LaTeX files. We will use 
-&lt;a href=&#34;https://www.sublimetext.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sublime Text&lt;/a&gt; and install a plugin called 
-&lt;a href=&#34;https://latextools.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeXTools&lt;/a&gt; that makes working with LaTeX files especially easy.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A &lt;em&gt;music engraving&lt;/em&gt; program, which will allow us to integrate musical scores into our LaTeX files. We will use 
-&lt;a href=&#34;https://lilypond.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LilyPond&lt;/a&gt;, which is designed for this purpose.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There is an installation script that aims to set up each of these automatically. You can find the installation script appropriate for your operating system (Windows, Mac, or Linux) at the latest release 
-&lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex/-/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Click on the script corresponding to your operating system and download it somewhere on your computer. Then, double click on the downloaded script to launch it.&lt;/p&gt;
-&lt;h2 id=&#34;installing-bcp-latex&#34;&gt;Installing &lt;code&gt;bcp-latex&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;bcp-latex&lt;/code&gt; package lives in a 
-&lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitLab repository&lt;/a&gt;. You can clone the repository to your computer this way:&lt;/p&gt;
-=======
 &lt;p&gt;A LaTeX &lt;em&gt;distribution&lt;/em&gt;, which will provide the mechanism for converting our LaTeX files into final &lt;code&gt;.pdf&lt;/code&gt; files. We will use &lt;a href=&#34;https://yihui.org/tinytex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TinyTeX&lt;/a&gt;, a lightweight LaTeX distribution. We will also install some &lt;em&gt;packages&lt;/em&gt; into our distribution, which add extra functionality.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -224,18 +192,11 @@
 &lt;p&gt;Click on the script corresponding to your operating system and download it somewhere on your computer. Then, double click on the downloaded script to launch it.&lt;/p&gt;
 &lt;h2 id=&#34;installing-bcp-latex&#34;&gt;Installing &lt;code&gt;bcp-latex&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;bcp-latex&lt;/code&gt; package lives in a &lt;a href=&#34;https://gitlab.com/cwtc/bcp-latex&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitLab repository&lt;/a&gt;. You can clone the repository to your computer this way:&lt;/p&gt;
->>>>>>> tmp
 &lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/cwtc/bcp-latex.git
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To use the package, ensure that &lt;code&gt;bcp.sty&lt;/code&gt; is in the same directory as your TeX document. If your project includes inline music, you should also ensure that &lt;code&gt;common_liturgy.ly&lt;/code&gt; is in the same directory as your TeX document.&lt;/p&gt;
 &lt;h2 id=&#34;installing-fonts&#34;&gt;Installing fonts&lt;/h2&gt;
-<<<<<<< HEAD
-&lt;p&gt;For best results imitating the style of the 1979 BCP, you can also install the 
-&lt;a href=&#34;https://www.myfonts.com/fonts/linotype/sabon/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sabon&lt;/a&gt; and 
-&lt;a href=&#34;https://www.fontsquirrel.com/fonts/junicode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Junicode&lt;/a&gt; fonts. The latter is free, while the former is copyrighted and cannot be distributed here. (It can be found online from many other sources, however.)&lt;/p&gt;
-=======
 &lt;p&gt;For best results imitating the style of the 1979 BCP, you can also install the &lt;a href=&#34;https://www.myfonts.com/fonts/linotype/sabon/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sabon&lt;/a&gt; and &lt;a href=&#34;https://www.fontsquirrel.com/fonts/junicode&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Junicode&lt;/a&gt; fonts. The latter is free, while the former is copyrighted and cannot be distributed here. (It can be found online from many other sources, however.)&lt;/p&gt;
->>>>>>> tmp
 </description>
     </item>
     
