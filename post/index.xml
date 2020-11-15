@@ -5,7 +5,7 @@
     <link>https://a-coles.github.io/post/</link>
       <atom:link href="https://a-coles.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
@@ -15,7 +15,7 @@
     <item>
       <title>BERT, ELMo, et cie, illustrés (Comment NLP a percé le mystère du transfer learning)</title>
       <link>https://a-coles.github.io/post/bert-illustre/</link>
-      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       <guid>https://a-coles.github.io/post/bert-illustre/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Cet article est une traduction de &lt;a href=&#34;http://jalammar.github.io/illustrated-bert/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)&lt;/a&gt; par Jay Alamar.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;L&amp;rsquo;année 2018 a été un point d&amp;rsquo;inflexion pour les modèles de l&amp;rsquo;apprentissage automatique qui gèrent du texte (ou, plus précisément, le &lt;em&gt;Natural Language Processing&lt;/em&gt; &amp;ndash; NLP en abrégé). Notre compréhension conceptuelle de la meilleure façon de représenter des mots et des phrases pour capturer les significations et relations est en évolution rapide. De plus, la communauté NLP publie des composants très puissants que l&amp;rsquo;on peut télécharger gratuitement pour utiliser dans nos propres &lt;em&gt;pipelines&lt;/em&gt; et modèles. (On a appelé ce moment dans le domaine &amp;ldquo;&lt;a href=&#34;http://ruder.io/nlp-imagenet/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;le moment ImageNet de NLP&lt;/a&gt;&amp;rdquo;, une référence aux développements similaires dans le domaine de &lt;em&gt;computer vision&lt;/em&gt; il y a quelques années qui ont rapidement accéléré le progrès dans ce domaine-là.)&lt;/p&gt;
@@ -240,7 +240,7 @@
     <item>
       <title>Le transformer illustré</title>
       <link>https://a-coles.github.io/post/transformer-illustre/</link>
-      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       <guid>https://a-coles.github.io/post/transformer-illustre/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Cet article est une traduction de &lt;a href=&#34;http://jalammar.github.io/illustrated-transformer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Illustrated Transformer&lt;/a&gt; par Jay Alamar.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Dans &lt;a href=&#34;https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;l&amp;rsquo;article précédent, on a vu l&#39;&lt;em&gt;attention&lt;/em&gt;&lt;/a&gt; &amp;ndash; une méthode omniprésente dans les modèles modernes de &lt;em&gt;deep learning&lt;/em&gt;. L&amp;rsquo;attention est un concept qui a amélioré la performance des applications de &lt;em&gt;neural machine translation&lt;/em&gt;. Dans cet article, on va regarder le &lt;em&gt;transformer&lt;/em&gt; &amp;ndash; un modèle qui utilise l&amp;rsquo;attention afin d&amp;rsquo;augmenter la vitesse avec laquelle ces modèles peuvent être entraînés. Le &lt;em&gt;transformer&lt;/em&gt; surpasse le modèle &lt;em&gt;Neural Machine Translation&lt;/em&gt; de Google pour des tâches spécifiques. Le bénéfice principale, pourtant, vient de la manière dont le &lt;em&gt;transformer&lt;/em&gt; peut être parallelisé. En fait, Google Cloud recommande d&amp;rsquo;utiliser le &lt;em&gt;transformer&lt;/em&gt; comme modèle de référence pour &lt;a href=&#34;https://cloud.google.com/tpu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;leur produit de Cloud TPU&lt;/a&gt;. Alors, essayons de demonter le modèle pour voir comment ça fonctionne.&lt;/p&gt;
