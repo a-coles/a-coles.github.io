@@ -76,6 +76,8 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
   
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
@@ -94,6 +96,8 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
       
     
 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
     
 
     
@@ -258,8 +262,8 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://a-coles.github.io/post/bert-illustre/">
 
@@ -271,17 +275,16 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Arlie Coles">
   <meta property="og:url" content="https://a-coles.github.io/post/bert-illustre/">
   <meta property="og:title" content="BERT, ELMo, et cie, illustrés (Comment NLP a percé le mystère du transfer learning) | Arlie Coles">
   <meta property="og:description" content="Cet article est une traduction de The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning) par Jay Alamar.
-L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rsquo;apprentissage automatique qui gèrent du texte (ou, plus précisément, le Natural Language Processing &ndash; NLP en abrégé)."><meta property="og:image" content="https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rsquo;apprentissage automatique qui gèrent du texte (ou, plus précisément, le Natural Language Processing &ndash; NLP en abrégé)."><meta property="og:image" content="https://a-coles.github.io/post/bert-illustre/featured.jpg">
+  <meta property="twitter:image" content="https://a-coles.github.io/post/bert-illustre/featured.jpg"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2019-07-12T00:00:00&#43;00:00">
@@ -314,6 +317,10 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
   },
   "headline": "BERT, ELMo, et cie, illustrés (Comment NLP a percé le mystère du transfer learning)",
   
+  "image": [
+    "https://a-coles.github.io/post/bert-illustre/featured.jpg"
+  ],
+  
   "datePublished": "2019-07-12T00:00:00Z",
   "dateModified": "2019-07-12T00:00:00Z",
   
@@ -327,7 +334,7 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
     "name": "Arlie Coles",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_192x192_fill_lanczos_center_2.png"
+      "url": "https://a-coles.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "Cet article est une traduction de The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning) par Jay Alamar.\nL\u0026rsquo;année 2018 a été un point d\u0026rsquo;inflexion pour les modèles de l\u0026rsquo;apprentissage automatique qui gèrent du texte (ou, plus précisément, le Natural Language Processing \u0026ndash; NLP en abrégé)."
@@ -751,7 +758,7 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    15 min read
   </span>
   
 
@@ -815,6 +822,197 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
 <p>Pour entraîner un tel modèle, on doit entraîner principalement le classificateur, avec des changements minimes comme conséquence au modèle BERT. Ce processus d&rsquo;entraînement s&rsquo;appelle du <em>fine-tuning</em>, et il a des racines dans le <a href="https://arxiv.org/abs/1511.01432" target="_blank" rel="noopener"><em>Semi-supervised Sequence Learning</em></a> et ULMFiT.</p>
 <p>Pour ceux qui ne connaissent pas bien ce sujet, puisque l&rsquo;on parle des classificateurs, on est dans le domaine de l&rsquo;apprentissage automatique <em>supervisé</em>. Ça veut dire que l&rsquo;on aurait besoin des données étiquettées pour entraîner un modèle. Pour cet exemple d&rsquo;un classificateur de spam, les données étiquettées serait une liste de messages courriels et leurs étiquettes (&ldquo;spam&rdquo; ou &ldquo;pas spam&rdquo; pour chaque message).</p>
 <p><img src="/img/illustrated-bert/spam-labeled-dataset.png" alt="example"></p>
+<p>Il y a beaucoup d&rsquo;autres exemples de cas d&rsquo;utilisation pour un tel modèle, y compris:</p>
+<ul>
+<li>L&rsquo;analyse de sentiment
+<ul>
+<li>À l&rsquo;entrée: une critique d&rsquo;un film ou d&rsquo;un produit. À la sortie: est-ce que la critique est positive ou négative?</li>
+<li>Exemple de données: <a href="https://nlp.stanford.edu/sentiment/" target="_blank" rel="noopener">SST</a></li>
+</ul>
+</li>
+<li>La vérification de faits
+<ul>
+<li>À l&rsquo;entrée: une phrase. À la sortie: &ldquo;affirmation&rdquo; ou &ldquo;pas affirmation&rdquo;</li>
+<li>Un exemple plus ambitieux/futuriste:
+<ul>
+<li>À l&rsquo;entrée: une phrase d&rsquo;affirmation. À la sortie: &ldquo;vrai&rdquo; ou &ldquo;faux&rdquo;</li>
+</ul>
+</li>
+<li><a href="https://fullfact.org/" target="_blank" rel="noopener">Full Fact</a> est un organisme qui construit des outils automatiques pour la vérification de faits pour le public. Une partie de leur <em>pipeline</em>  est un classificateur qui lit des articles d&rsquo;actualité et que détecte des affirmations (ça classifie le texte comme &ldquo;affirmation&rdquo; ou &ldquo;pas affirmation&rdquo;), qui peuvent être vérifiées plus tard (maintenant par les êtres humains, plus tard peut-être par l&rsquo;apprentissage automatique).</li>
+<li>Vidéo: <a href="https://www.youtube.com/watch?v=ddf0lgPCoSo" target="_blank" rel="noopener">Sentence embeddings for automated factchecking - Lev Konstantinovskiy</a>.</li>
+</ul>
+</li>
+</ul>
+<h1 id="larchitecture-du-modèle">L&rsquo;architecture du modèle</h1>
+<p>Maintenant que l&rsquo;on a un exemple d&rsquo;utilisation de BERT sous la main, regardons de plus près comment ça marche.</p>
+<p><img src="/img/illustrated-bert/bert-base-bert-large.png" alt="example"></p>
+<p>L&rsquo;article présente deux tailles de modèle pour BERT:</p>
+<ul>
+<li>BERT BASE &ndash; celui-ci est comparable en taille à l&rsquo;OpenAI Transformer; on peut ainsi comparer leurs performances</li>
+<li>BERT LARGE &ndash; un ridiculement grand modèle qui a donné les résultats de pointe rapportés dans l&rsquo;article</li>
+</ul>
+<p>BERT est, en gros, une pile d&rsquo;encodeur entraînée du <em>transformer</em>. C&rsquo;est un bon moment de vous diriger vers l&rsquo;article précédent, <a href="../transformer-illustre">Le transformer illustré</a>, qui explique le modèle <em>transformer</em> &ndash; un concept de base pour BERT et les concepts suivants.</p>
+<p><img src="/img/illustrated-bert/bert-base-bert-large-encoders.png" alt="example"></p>
+<p>Les deux tailles de modèle de BERT ont un grand numéro de couches d&rsquo;encodeur (que l&rsquo;article appelle des <em>blocs de transformer</em>) &ndash; il y en a douze pour la version BASE, et vingt-quatre pour la version LARGE. Ils ont aussi des plus grands réseaux <em>feed-forward</em> (768 et 1024 unités cachées respectivement), et plus de têtes d&rsquo;attention (12 et 16 respectivement) que la configuration de défaut dans l&rsquo;implémentation de référence du <em>transformer</em> dans l&rsquo;article original (6 couches d&rsquo;encodeur, 512 unités cachées, et 8 têtes d&rsquo;attention).</p>
+<h2 id="à-lentrée-du-modèle">À l&rsquo;entrée du modèle</h2>
+<p>Le premier <em>token</em> à l&rsquo;entrée est un <em>token</em> spécial, <code>[CLS]</code>, pour des raisons qui vont s&rsquo;éclaircir plus tard. <code>[CLS]</code> ici signifie &ldquo;classification&rdquo;.</p>
+<p>Comme l&rsquo;encodeur &ldquo;vanille&rdquo; du <em>transformer</em>, BERT prend une séquence de mots à l&rsquo;entrée, qui coulent vers le haut de la pile. Chaque couche applique une <em>self-attention</em> et passe ses résultats dans un réseau <em>feed-forward</em> avant de les donner au prochain encodeur.</p>
+<p><img src="/img/illustrated-bert/bert-encoders-input.png" alt="example"></p>
+<p>En termes d&rsquo;architecture, ce que l&rsquo;on voit est identique au <em>transformer</em> jusqu&rsquo;à ce point (à part la taille, ce qui est simplement une configuration que l&rsquo;on peut modifier). C&rsquo;est à la sortie que l&rsquo;on commence à voir de la divergence.</p>
+<h2 id="à-la-sortie-du-modèle">À la sortie du modèle</h2>
+<p>Chaque position donne à la sortie un vecteur de taille <code>hidden_size</code> (768 dans BERT BASE). Pour l&rsquo;exemple de classification de phrase que l&rsquo;on a vu plus tôt, on se concentre uniquement sur la sortie de la première position (que l&rsquo;on a passé le token spécial <code>[CLS]</code>).</p>
+<p><img src="/img/illustrated-bert/bert-output-vector.png" alt="example"></p>
+<p>Ce vecteur peut maintenant être utilisé comme l&rsquo;entrée d&rsquo;un classificateur de notre choix. Cet article donne de bons resultats en utilisant seulement un réseau d&rsquo;une seule couche comme classificateur.</p>
+<p><img src="/img/illustrated-bert/bert-classifier.png" alt="example"></p>
+<p>Si l&rsquo;on a plus d&rsquo;étiquettes (par exemple, si notre service courriel peut étiquetter les messages comme &ldquo;spam&rdquo;, &ldquo;pas spam&rdquo;, &ldquo;social&rdquo; et &ldquo;promotion&rdquo;), on peut simplement adjuster le réseau classificateur pour avoir plus de neurones à la sortie qui vont ensuite passer dans le softmax.</p>
+<h1 id="des-parallèles-avec-les-réseaux-convolutionnels">Des parallèles avec les réseaux convolutionnels</h1>
+<p>Pour ceux et celles avec la connaissance en <em>computer vision</em>, cette échange de vecteurs devrait vous rappeller de ce qui arrive entre la partie convolutionnelle d&rsquo;un réseau comme VGGNet et la partie <em>fully-connected</em> de classification à la fin du réseau.</p>
+<p><img src="/img/illustrated-bert/vgg-net-classifier.png" alt="example"></p>
+<h1 id="un-nouvel-âge-dembedding">Un nouvel âge d'<em>embedding</em></h1>
+<p>Ces nouveaux développements portent avec eux un changement de la manière dont les mots sont encodés. Jusqu&rsquo;à maintenant, les <em>embeddings</em> de mots ont été une force majeure dans la gestion des modèles NLP. Des méthodes comme Word2Vec et GloVE ont été largement utilisés pour ces tâches. Revoyons comment ces méthodes s&rsquo;utilisent avant de voir ce qui a changé.</p>
+<h2 id="résumé-dembedding">Résumé d'<em>embedding</em></h2>
+<p>Afin que des mots puissent être traités par des modèles d&rsquo;apprentissage automatique, ils ont besoin d&rsquo;une représentation numérique que ces modèles peuvent utiliser dans leur calcul. Word2Vec a montré que l&rsquo;on peut utiliser un vecteur (une liste de chiffres) pour représenter les mots d&rsquo;une manière qui capture les relations sémantiques (c&rsquo;est-à-dire, liées à la signifiance). Ça pourrait inclure la capacité de dire si les mots sont similaires, opposés, ou qu&rsquo;un pair de mots comme <em>Stockholm</em> et <em>Suède</em> ont la même relation entre eux que <em>Cairo</em> et <em>Egypte</em>. On peut aussi capturer les relations <em>syntaxiques</em> (basées sur la grammaire), e.g. la relation entre <em>avait</em> et <em>a</em> est pareil que la relation entre <em>était</em> et <em>est</em>.</p>
+<p>Le domaine s&rsquo;est rapidement rendu compte que c&rsquo;est une bonne idée d&rsquo;utiliser des <em>embeddings</em> déjà entraînés sur des grandes quantités de données de texte, au lieu de les entraîné en même temps que le reste du modèle, sur des données souvent beaucoup plus petites. Alors il est devenu possible de télécharger une liste de mots et leurs <em>embeddings</em> générés par le pré-entraînement avec Word2Vec ou GloVE. Voilà un exemple de l'<em>embedding</em> GloVE du mot <em>stick</em> (avec une taille de vecteur de 200):</p>
+<p><img src="/img/illustrated-bert/glove-embedding.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">L'<em>embedding</em> du mot <em>stick</em> &ndash; un vecteur de 200 flottants (arrondis à deux décimaux). Il continue jusqu&rsquo;à 200 valeurs.</th>
+</tr>
+</thead>
+</table>
+<p>Puisqu&rsquo;ils sont larges et plein de chiffres, j&rsquo;utilise la forme de base suivanate dans mes figures pour montrer des vecteurs:</p>
+<p><img src="/img/illustrated-bert/vector-boxes.png" alt="example"></p>
+<h2 id="elmo-le-contexte-importe">ELMo: Le contexte importe</h2>
+<p>Si l&rsquo;on utilise cette représentation GloVE, le mot <em>stick</em> serait représenté par ce vecteur &ndash; peu importe le contexte. &ldquo;Attendez une minute,&rdquo; ont dit beaucoup de chercheurs en NLP (<a href="https://arxiv.org/abs/1705.00108" target="_blank" rel="noopener">Peters et. al., 2017</a>, <a href="https://arxiv.org/abs/1708.00107" target="_blank" rel="noopener">McCann et. al., 2017</a>, et encore une fois <a href="https://arxiv.org/pdf/1802.05365.pdf" target="_blank" rel="noopener">Peters et. al., 2018 dans l&rsquo;article ELMo</a>), &ldquo;le mot <em>stick</em> a beaucoup de significations possibles, en fonction d&rsquo;où il s&rsquo;utilise. Pourquoi ne pas lui donner un <em>embedding</em> basé sur le contexte où il se trouve? Ça capturait non seulement la signification du mot en contexte, mais aussi des autres informations contextuelles.&rdquo; Et donc, les <em>embeddings contextualisés</em> sont nés.</p>
+<p><img src="/img/illustrated-bert/elmo-embedding-robin-williams.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Des <em>embeddings</em> contextualisés de mots peuvent donner aux mots des <em>embeddings</em> différents en fonction de la signification en contexte dans la phrase. <a href="https://www.youtube.com/watch?v=OwwdgsN9wF8" target="_blank" rel="noopener">RIP Robin Williams</a>.</th>
+</tr>
+</thead>
+</table>
+<p>Au lieu d&rsquo;utiliser un <em>embedding</em> figé pour chaque mot, ELMo regarde la phrase entière avant d&rsquo;assigner un <em>embedding</em> à chaque mot. Il utilise un LSTM bidirectionnel entraîné sur une tâche spécifique pour pouvoir créer ces <em>embeddings</em>.</p>
+<p><img src="/img/illustrated-bert/elmo-word-embedding.png" alt="example"></p>
+<p>ELMo représentait une étape significative vers le pré-entraînement dans le contexte du NLP. Le LSTM de ELMo serait entraîné sur des données massives de la même langue que nos données, puis on peut l&rsquo;utiliser comme composant des autres modèles qui doivent gérer du langage.</p>
+<p>Quel est le secret d&rsquo;ELMo?</p>
+<p>ELMo a gagné sa compréhension de langage de son entraînement, où il devait prédire le prochain mot dans une séquence de mots &ndash; cette tâche s&rsquo;appelle du <em>language modeling</em>. C&rsquo;est pratique parce que l&rsquo;on a des quantités massives de données texte, et un modèle peut apprendre à partir de ça, sans étiquettes.</p>
+<p><img src="/img/illustrated-bert/Bert-language-modeling.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Une étape dans le processus de pré-entraînement d&rsquo;ELMo. Étant donné <em>Let&rsquo;s stick to</em> à l&rsquo;entrée, prédisons le prochain mot le plus probable &ndash; une tâche de <em>language modeling</em>. Quand il est entraîné sur beaucoup de données, le modèle commence à apprendre les motifs dans le langage. Il est peu probable qu&rsquo;il devine le mot prochain dans cet exemple. De manière plus réaliste, après un mot comme <em>hang</em>, il va assigner une probablité plus haute à un mot comme <em>out</em> (pour donner <em>hang out</em> en anglais, un mot composé), plutôt qu&rsquo;à <em>camera</em> (un mot totalement non-lié).</th>
+</tr>
+</thead>
+</table>
+<p>On peut voir l&rsquo;état caché de chaque étape du LSTM déroulé derrière la tête d&rsquo;Elmo. Ils deviennent utiles dans le processus d'<em>embedding</em> après ce pré-entraînement.</p>
+<p>En fait, ELMo va une étape plus loin en entraînant un LSTM bidirectionnel &ndash; donc son modèle de langue n&rsquo;a qu&rsquo;une idée du mot prochain, mais aussi du mot précédent.</p>
+<p><img src="/img/illustrated-bert/elmo-forward-backward-language-model-embedding.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Des <a href="https://www.slideshare.net/shuntaroy/a-review-of-deep-contextualized-word-representations-peters-2018" target="_blank" rel="noopener">bons diapositifs</a> sur ELMo</th>
+</tr>
+</thead>
+</table>
+<p>ELMo produit l'<em>embedding</em> contextualisé en groupant les états cachés (et l'<em>embedding</em> initial) d&rsquo;une certaine manière (une concatenation suivie par une somme pondérée).</p>
+<p><img src="/img/illustrated-bert/elmo-embedding.png" alt="example"></p>
+<h1 id="ulm-fit-lintégration-du-transfer-learning-en-nlp">ULM-FiT: l&rsquo;intégration du <em>transfer learning</em> en NLP</h1>
+<p>ULM-FiT a introduit des méthodes efficaces pour utiliser beaucoup de ce que le modèle apprend pendant le pré-entraînement &ndash; plus que seulement les <em>embeddings</em>, et plus que seulement les <em>embeddings</em> contextualisés. ULM-FiT a introduit un modèle de langue et un processus pour faire du <em>fine-tuning</em> sur ce modèle de langue pour plusieurs tâches.</p>
+<p>Enfin, le NLP a eu une manière de faire du <em>transfer learning</em> avec autant d&rsquo;efficacité que le <em>computer vision</em>.</p>
+<h1 id="le-transformer-au-delà-des-lstm">Le transformer: au-delà des LSTM</h1>
+<p>La sortie de l&rsquo;article sur les <em>transformers</em> et son code, ainsi que ses resultats sur des tâches comme la <em>machine translation</em>, ont poussé quelques-uns dans le domaine de penser aux <em>transformers</em> comme remplaçant les LSTM. Cette idée a été renforcée par le fait que les <em>transformers</em> gèrent des dépendances de long terme mieux que les LSTM.</p>
+<p>La structure encodeur-decodeur du <em>transformer</em> l&rsquo;a rendu idéal pour la <em>machine translation</em>. Mais comment peut-on l&rsquo;utiliser pour une classification de phrase? Comment peut-on l&rsquo;utiliser pour pré-entraîner un modèle de langue qui pourrait être adjusté par le <em>fine-tuning</em> pour des autres tâches? (Le domaine appelle ce genre de tâche supervisée qui utilise un modèle ou un composant pré-entraîné une tâche <em>en aval</em>.)</p>
+<h1 id="openai-transformer-pré-entraîner-un-décodeur-de-transformer-pour-du-language-modeling">OpenAI Transformer: pré-entraîner un décodeur de <em>transformer</em> pour du <em>language modeling</em></h1>
+<p>Il se trouve que l&rsquo;on n&rsquo;a pas besoin d&rsquo;un <em>transformer</em> entier pour adopter le <em>transfer learning</em> et un <em>language model</em> capable de recevoir du <em>fine-tuning</em> pour des tâches de NLP. On peut partir simplement avec le décodeur du <em>transformer</em>. Le décodeur est un bon choix parce qu&rsquo;il est un choix naturel pour le <em>language modeling</em> (la prédiction du mot suivant), puisqu&rsquo;il est fait pour masquer les <em>tokens</em> futurs &ndash; un comportement de valeur quand on génère une traduction un mot à la fois.</p>
+<p><img src="/img/illustrated-bert/openai-transformer-1.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">L&rsquo;OpenAI Transformer se compose de la pile décodeur du <em>transformer</em>.</th>
+</tr>
+</thead>
+</table>
+<p>Le modèle empile douze couches de décodeur. Puisqu&rsquo;il n&rsquo;y a pas d&rsquo;encodeur dans cette configuration, ces couches de décodeur n&rsquo;auraient pas la sous-couche d&rsquo;attention encodeur-décodeur que l&rsquo;on voit dans les couches de décodeur d&rsquo;un <em>transformer</em> &ldquo;vanille&rdquo;. Il y aurait encore la couche de <em>self-attention</em>, pourtant, en verson masquée pour qu&rsquo;elle ne regarde pas les <em>tokens</em> futurs.</p>
+<p>Avec cette structure, on peut continuer à l&rsquo;entraînement du modèle sur la même tâche de <em>language modeling</em>: prédisons le mot prochain, en utilisant des données massives sans étiquettes. Tout simplement, on jète le texte de 7,000 livres dans le modèle pour qu&rsquo;il apprenne! Les livres sont idéaux pour ce genre de tâche parce que ça permet au modèle d&rsquo;apprendre l&rsquo;association entre les informations liées même si elles sont séparées par beaucoup de texte. Cet effet n&rsquo;est pas possible quand on entraîne avec des Tweets ou des articles.</p>
+<p><img src="/img/illustrated-bert/openai-transformer-language-modeling.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">L&rsquo;OpenAI Transformer est maintenant prêt à être entraîné à prédire le prochain mot sur des données de 7,000 livres.</th>
+</tr>
+</thead>
+</table>
+<h1 id="transfer-learning-aux-tâches-en-aval"><em>Transfer learning</em> aux tâches en aval</h1>
+<p>Maintenant que l&rsquo;OpenAI Transformer est pré-entraîné et que ses couches ont été adjustées pour gérer du langage de manière raisonable, on peut commencer à l&rsquo;utiliser pour des tâches en aval. Regardons d&rsquo;abord une classification de phrase (on veut classifier un courriel comme &ldquo;spam&rdquo; ou &ldquo;pas spam&rdquo;):</p>
+<p><img src="/img/illustrated-bert/openai-transformer-sentence-classification.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Comment utiliser un OpenAI Transformer pré-entraîné pour la classification de phrase</th>
+</tr>
+</thead>
+</table>
+<p>L&rsquo;article OpenAI expose les grandes lignes de plusieurs transformations à l&rsquo;entrée pour gérer les données d&rsquo;entrée de plusieurs sortes de tâches. L&rsquo;image suivant de l&rsquo;article montre les structures des modèles et les transformations d&rsquo;entrée pour faire des tâches différentes.</p>
+<p><img src="/img/illustrated-bert/openai-input-transformations.png" alt="example"></p>
+<p>C&rsquo;est astucieux, n&rsquo;est-ce pas?</p>
+<h1 id="bert-des-décodeurs-aux-encodeurs">BERT: des décodeurs aux encodeurs</h1>
+<p>L&rsquo;OpenAI Transformer nous a donné un modèle pré-entraîné basé sur le <em>transformer</em> sur lequel on peut faire du <em>fine-tuning</em>. Mais on a manqué quelque chose dans cette transition des LSTM aux <em>transformers</em>. Le modèle de langue de ELMo était bidirectionnel, mais l&rsquo;OpenAI Transformer n&rsquo;entraîne qu&rsquo;un <em>language model</em> unidirectionnel. Pourrait-on construire un modèle basé sur un <em>transformer</em> dont le <em>language model</em> regarde en avant et en arrière (dans le jargon téchnique &ndash; qui est conditionné sur le contexte gauche et droit)?</p>
+<p>&ldquo;Vous verrez bien,&rdquo; a repliqué BERT.</p>
+<h2 id="un-language-model-masqué">Un <em>language model</em> masqué</h2>
+<p>&ldquo;On va utiliser des encodeurs du <em>transformer</em>,&rdquo; a dit <a href="https://en.wikipedia.org/wiki/Bert_%28Sesame_Street%29" target="_blank" rel="noopener">BERT</a>.</p>
+<p>&ldquo;C&rsquo;est fou!&rdquo; a repliqué <a href="https://en.wikipedia.org/wiki/Ernie_%28Sesame_Street%29" target="_blank" rel="noopener">Ernie</a>. &ldquo;Tout le monde sait que le conditionnement bidirectionnel permettrait à chaque mot de se voir de manière indirecte dans un contexte aux multiples couches.&rdquo;</p>
+<p>&ldquo;On va utiliser des masques,&rdquo; a dit BERT avec confiance.</p>
+<p><img src="/img/illustrated-bert/BERT-language-modeling-masked-lm.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">La tâche astucieuse du <em>language modeling</em> de BERT met un masque sur 15% de mots à l&rsquo;entrée, et demande au modèle de prédire le mot qui manque.</th>
+</tr>
+</thead>
+</table>
+<p>Trouver la bonne tâche pour entraîner une pile d&rsquo;encodeur de <em>transformer</em> est un problème complèxe que BERT résout en adoptant un concept de <em>language model</em> masqué, tiré de la littérature précédente (où ça s&rsquo;appelle une tâche de Cloze).</p>
+<p>En addition à masquer 15% de l&rsquo;entrée, BERT mêle les choses un peu pour améliorer le <em>fine-tuning</em> plus tard. Quelquefois, il remplace de manière aléatoire un mot par un autre mot et il demande au modèle de prédire le bon mot dans cette position.</p>
+<h2 id="des-tâches-de-deux-phrases">Des tâches de deux phrases</h2>
+<p>Si vous montez pour regarder les transformations d&rsquo;entrée de l&rsquo;OpenAI Transformer pour gérer des tâches différentes, vous remarquerez que quelques tâches exigent que le modèle dise quelque chose d&rsquo;intelligent à propos de deux phrases (e.g. est-ce qu&rsquo;elles sont simplement des paraphrases l&rsquo;une de l&rsquo;autre? Étant donnée une page Wikipedia comme entrée, et une question à propos de la page comme une autre entrée, est-ce que l&rsquo;on peut répondre à cette question?)</p>
+<p>Pour améliorer la performance de BERT sur les relations entre des multiples phrases, la tâche de pré-entraînement inclut une autre tâche: étant deux phrases (A et B), est-ce qu&rsquo;il est probable que B suit A, ou pas?</p>
+<p><img src="/img/illustrated-bert/bert-next-sentence-prediction.png" alt="example"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">La deuxième tâche du pré-entraînement de BERT est une tâche de classification de deux phrases. La <em>tokenization</em> dans cette figure est en fait sur-simplifié, puisque BERT utilise en réalité des WordPieces comme <em>token</em> plutôt que les mots en tant que tels &ndash; alors, quelques mots sont décomposés en plus petits morceaux.</th>
+</tr>
+</thead>
+</table>
+<h2 id="des-modèles-spécifiques-aux-tâches">Des modèles spécifiques aux tâches</h2>
+<p>L&rsquo;article BERT montre plusieurs manières d&rsquo;utiliser BERT pour des tâches différentes.</p>
+<p><img src="/img/illustrated-bert/bert-tasks.png" alt="example"></p>
+<h2 id="bert-pour-lextraction-de-feature">BERT pour l&rsquo;extraction de <em>feature</em></h2>
+<p>L&rsquo;approche <em>fine-tuning</em> n&rsquo;est pas la seule manière d&rsquo;utiliser BERT. Exactement comme ELMo, on peut utiliser le BERT pré-entraîné pour créer des <em>embeddings</em> contextualisés. Ensuite, on peut donner ces <em>embeddings</em> au modèle existant. L&rsquo;article montre que cette approche donne des résultats qui ne sont pas beacoup pires que l&rsquo;approche <em>fine-tuning</em> sur une tâche telle que le <em>named-entity recognition</em> (la reconnaissance des entités).</p>
+<p><img src="/img/illustrated-bert/bert-contexualized-embeddings.png" alt="example"></p>
+<p>Quel vecteur fonctionne le mieux comme <em>embedding</em> contextualisé? Je pense qu&rsquo;il dépendrait de la tâche. L&rsquo;article examine six choix (en comparaison avec le modèle <em>fine-tune</em> qui a donné un score de 96.4):</p>
+<p><img src="/img/illustrated-bert/bert-feature-extraction-contextualized-embeddings.png" alt="example"></p>
+<h1 id="faites-un-tour-avec-bert">Faites un tour avec BERT</h1>
+<p>La meilleure façon d&rsquo;essayer BERT est via le notebook <a href="https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb" target="_blank" rel="noopener">BERT FineTuning with Cloud TPUs</a> de Google Colab. Si vous n&rsquo;avez pas encore utilisé des Cloud TPU, c&rsquo;est aussi un bon point de départ pour les essayer aussi, vu que le code BERT fonctionne sur TPU, CPU, et GPU.</p>
+<p>La prochaine étape serait de regarder <a href="https://github.com/google-research/bert" target="_blank" rel="noopener">le code de BERT</a>:</p>
+<ul>
+<li>
+<p>Le modèle se construit dans <a href="https://github.com/google-research/bert/blob/master/modeling.py" target="_blank" rel="noopener">modeling.py</a> (<code>class BertModel</code>) et c&rsquo;est plus ou moins identique à un encodeur de <em>transformer</em> &ldquo;vanille&rdquo;.</p>
+</li>
+<li>
+<p><a href="https://github.com/google-research/bert/blob/master/run_classifier.py" target="_blank" rel="noopener">run_classifier.py</a> est un exemplaire du processus <em>fine-tuning</em>. Il construit aussi la couche de classification pour le modèle supervisé. Si vous voulez construire votre propre classificateur, examine la méthode <code>create_model()</code> dans ce fichier.</p>
+</li>
+<li>
+<p>Plusieurs modèles pré-entraînés sont disponibles à télécharger. Ils comprennent BERT BASE et BERT LARGE, ainsi que plusieurs langues y compris l&rsquo;anglais, le chinois, et un modèle multilingue de 102 langues entraîné sur Wikipedia.</p>
+</li>
+<li>
+<p>BERT ne regarde pas les mots entiers comme <em>token</em>. Plutôt, il regarde les WordPieces. <a href="https://github.com/google-research/bert/blob/master/tokenization.py" target="_blank" rel="noopener">tokenization.py</a> est le <em>tokenizer</em> qui transforme les mots en WordPieces appropriés pour BERT.</p>
+</li>
+</ul>
+<p>Vous pouvez aussi regarder <a href="https://github.com/huggingface/pytorch-pretrained-BERT" target="_blank" rel="noopener">l&rsquo;implémentation PyTorch de BERT</a>. Le <em>library</em> <a href="https://github.com/allenai/allennlp" target="_blank" rel="noopener">AllenNLP</a> utilise cette implémentation pour <a href="https://github.com/allenai/allennlp/pull/2067" target="_blank" rel="noopener">permettre l&rsquo;utilisation des <em>embeddings</em> BERT</a> avec n&rsquo;importe quel modèle.</p>
+<h1 id="remerciments">Remerciments</h1>
+<p>Merci à <a href="https://github.com/jacobdevlin-google" target="_blank" rel="noopener">Jacob Devlin</a>, <a href="https://twitter.com/nlpmattg" target="_blank" rel="noopener">Matt Gardner</a>, <a href="https://github.com/kentonl" target="_blank" rel="noopener">Kenton Lee</a>, <a href="https://twitter.com/markneumannnn" target="_blank" rel="noopener">Mark Neumann</a>, et <a href="https://twitter.com/mattthemathman" target="_blank" rel="noopener">Matthew Peters</a> pour avoir donné du feedback sur les versions initiales de cet article.</p>
 
     </div>
 
@@ -936,7 +1134,7 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
   <div class="media author-card content-widget-hr">
     
       
-      <a href="https://a-coles.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/arlie-coles/avatar_hu4b3583fb51557b5455309f33fcaf34d1_562870_270x270_fill_q90_lanczos_center.jpg" alt="Arlie Coles"></a>
+      <a href="https://a-coles.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/arlie-coles/avatar_hu4b3583fb51557b5455309f33fcaf34d1_562870_270x270_fill_q75_lanczos_center.jpg" alt="Arlie Coles"></a>
     
 
     <div class="media-body">
@@ -1134,6 +1332,8 @@ L&rsquo;année 2018 a été un point d&rsquo;inflexion pour les modèles de l&rs
     
 
     
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
     
 
     

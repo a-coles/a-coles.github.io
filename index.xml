@@ -5,9 +5,9 @@
     <link>https://a-coles.github.io/</link>
       <atom:link href="https://a-coles.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Arlie Coles</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arlie Coles 2020</copyright><lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://a-coles.github.io/images/icon_hudb056696e92e647bf1ee07e997d0566e_1084_512x512_fill_lanczos_center_2.png</url>
+      <url>https://a-coles.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Arlie Coles</title>
       <link>https://a-coles.github.io/</link>
     </image>
@@ -308,26 +308,6 @@
     </item>
     
     <item>
-      <title>Example Talk</title>
-      <link>https://a-coles.github.io/talk/example/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://a-coles.github.io/talk/example/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Fast RL Speaker Accent Detection</title>
       <link>https://a-coles.github.io/project/speakeraccentrl/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
@@ -374,6 +354,197 @@
 &lt;p&gt;Pour entraîner un tel modèle, on doit entraîner principalement le classificateur, avec des changements minimes comme conséquence au modèle BERT. Ce processus d&amp;rsquo;entraînement s&amp;rsquo;appelle du &lt;em&gt;fine-tuning&lt;/em&gt;, et il a des racines dans le &lt;a href=&#34;https://arxiv.org/abs/1511.01432&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Semi-supervised Sequence Learning&lt;/em&gt;&lt;/a&gt; et ULMFiT.&lt;/p&gt;
 &lt;p&gt;Pour ceux qui ne connaissent pas bien ce sujet, puisque l&amp;rsquo;on parle des classificateurs, on est dans le domaine de l&amp;rsquo;apprentissage automatique &lt;em&gt;supervisé&lt;/em&gt;. Ça veut dire que l&amp;rsquo;on aurait besoin des données étiquettées pour entraîner un modèle. Pour cet exemple d&amp;rsquo;un classificateur de spam, les données étiquettées serait une liste de messages courriels et leurs étiquettes (&amp;ldquo;spam&amp;rdquo; ou &amp;ldquo;pas spam&amp;rdquo; pour chaque message).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/spam-labeled-dataset.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Il y a beaucoup d&amp;rsquo;autres exemples de cas d&amp;rsquo;utilisation pour un tel modèle, y compris:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L&amp;rsquo;analyse de sentiment
+&lt;ul&gt;
+&lt;li&gt;À l&amp;rsquo;entrée: une critique d&amp;rsquo;un film ou d&amp;rsquo;un produit. À la sortie: est-ce que la critique est positive ou négative?&lt;/li&gt;
+&lt;li&gt;Exemple de données: &lt;a href=&#34;https://nlp.stanford.edu/sentiment/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SST&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;La vérification de faits
+&lt;ul&gt;
+&lt;li&gt;À l&amp;rsquo;entrée: une phrase. À la sortie: &amp;ldquo;affirmation&amp;rdquo; ou &amp;ldquo;pas affirmation&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Un exemple plus ambitieux/futuriste:
+&lt;ul&gt;
+&lt;li&gt;À l&amp;rsquo;entrée: une phrase d&amp;rsquo;affirmation. À la sortie: &amp;ldquo;vrai&amp;rdquo; ou &amp;ldquo;faux&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fullfact.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Full Fact&lt;/a&gt; est un organisme qui construit des outils automatiques pour la vérification de faits pour le public. Une partie de leur &lt;em&gt;pipeline&lt;/em&gt;  est un classificateur qui lit des articles d&amp;rsquo;actualité et que détecte des affirmations (ça classifie le texte comme &amp;ldquo;affirmation&amp;rdquo; ou &amp;ldquo;pas affirmation&amp;rdquo;), qui peuvent être vérifiées plus tard (maintenant par les êtres humains, plus tard peut-être par l&amp;rsquo;apprentissage automatique).&lt;/li&gt;
+&lt;li&gt;Vidéo: &lt;a href=&#34;https://www.youtube.com/watch?v=ddf0lgPCoSo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sentence embeddings for automated factchecking - Lev Konstantinovskiy&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;larchitecture-du-modèle&#34;&gt;L&amp;rsquo;architecture du modèle&lt;/h1&gt;
+&lt;p&gt;Maintenant que l&amp;rsquo;on a un exemple d&amp;rsquo;utilisation de BERT sous la main, regardons de plus près comment ça marche.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-base-bert-large.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;article présente deux tailles de modèle pour BERT:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BERT BASE &amp;ndash; celui-ci est comparable en taille à l&amp;rsquo;OpenAI Transformer; on peut ainsi comparer leurs performances&lt;/li&gt;
+&lt;li&gt;BERT LARGE &amp;ndash; un ridiculement grand modèle qui a donné les résultats de pointe rapportés dans l&amp;rsquo;article&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BERT est, en gros, une pile d&amp;rsquo;encodeur entraînée du &lt;em&gt;transformer&lt;/em&gt;. C&amp;rsquo;est un bon moment de vous diriger vers l&amp;rsquo;article précédent, &lt;a href=&#34;../transformer-illustre&#34;&gt;Le transformer illustré&lt;/a&gt;, qui explique le modèle &lt;em&gt;transformer&lt;/em&gt; &amp;ndash; un concept de base pour BERT et les concepts suivants.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-base-bert-large-encoders.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Les deux tailles de modèle de BERT ont un grand numéro de couches d&amp;rsquo;encodeur (que l&amp;rsquo;article appelle des &lt;em&gt;blocs de transformer&lt;/em&gt;) &amp;ndash; il y en a douze pour la version BASE, et vingt-quatre pour la version LARGE. Ils ont aussi des plus grands réseaux &lt;em&gt;feed-forward&lt;/em&gt; (768 et 1024 unités cachées respectivement), et plus de têtes d&amp;rsquo;attention (12 et 16 respectivement) que la configuration de défaut dans l&amp;rsquo;implémentation de référence du &lt;em&gt;transformer&lt;/em&gt; dans l&amp;rsquo;article original (6 couches d&amp;rsquo;encodeur, 512 unités cachées, et 8 têtes d&amp;rsquo;attention).&lt;/p&gt;
+&lt;h2 id=&#34;à-lentrée-du-modèle&#34;&gt;À l&amp;rsquo;entrée du modèle&lt;/h2&gt;
+&lt;p&gt;Le premier &lt;em&gt;token&lt;/em&gt; à l&amp;rsquo;entrée est un &lt;em&gt;token&lt;/em&gt; spécial, &lt;code&gt;[CLS]&lt;/code&gt;, pour des raisons qui vont s&amp;rsquo;éclaircir plus tard. &lt;code&gt;[CLS]&lt;/code&gt; ici signifie &amp;ldquo;classification&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Comme l&amp;rsquo;encodeur &amp;ldquo;vanille&amp;rdquo; du &lt;em&gt;transformer&lt;/em&gt;, BERT prend une séquence de mots à l&amp;rsquo;entrée, qui coulent vers le haut de la pile. Chaque couche applique une &lt;em&gt;self-attention&lt;/em&gt; et passe ses résultats dans un réseau &lt;em&gt;feed-forward&lt;/em&gt; avant de les donner au prochain encodeur.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-encoders-input.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;En termes d&amp;rsquo;architecture, ce que l&amp;rsquo;on voit est identique au &lt;em&gt;transformer&lt;/em&gt; jusqu&amp;rsquo;à ce point (à part la taille, ce qui est simplement une configuration que l&amp;rsquo;on peut modifier). C&amp;rsquo;est à la sortie que l&amp;rsquo;on commence à voir de la divergence.&lt;/p&gt;
+&lt;h2 id=&#34;à-la-sortie-du-modèle&#34;&gt;À la sortie du modèle&lt;/h2&gt;
+&lt;p&gt;Chaque position donne à la sortie un vecteur de taille &lt;code&gt;hidden_size&lt;/code&gt; (768 dans BERT BASE). Pour l&amp;rsquo;exemple de classification de phrase que l&amp;rsquo;on a vu plus tôt, on se concentre uniquement sur la sortie de la première position (que l&amp;rsquo;on a passé le token spécial &lt;code&gt;[CLS]&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-output-vector.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ce vecteur peut maintenant être utilisé comme l&amp;rsquo;entrée d&amp;rsquo;un classificateur de notre choix. Cet article donne de bons resultats en utilisant seulement un réseau d&amp;rsquo;une seule couche comme classificateur.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-classifier.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si l&amp;rsquo;on a plus d&amp;rsquo;étiquettes (par exemple, si notre service courriel peut étiquetter les messages comme &amp;ldquo;spam&amp;rdquo;, &amp;ldquo;pas spam&amp;rdquo;, &amp;ldquo;social&amp;rdquo; et &amp;ldquo;promotion&amp;rdquo;), on peut simplement adjuster le réseau classificateur pour avoir plus de neurones à la sortie qui vont ensuite passer dans le softmax.&lt;/p&gt;
+&lt;h1 id=&#34;des-parallèles-avec-les-réseaux-convolutionnels&#34;&gt;Des parallèles avec les réseaux convolutionnels&lt;/h1&gt;
+&lt;p&gt;Pour ceux et celles avec la connaissance en &lt;em&gt;computer vision&lt;/em&gt;, cette échange de vecteurs devrait vous rappeller de ce qui arrive entre la partie convolutionnelle d&amp;rsquo;un réseau comme VGGNet et la partie &lt;em&gt;fully-connected&lt;/em&gt; de classification à la fin du réseau.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/vgg-net-classifier.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;un-nouvel-âge-dembedding&#34;&gt;Un nouvel âge d&#39;&lt;em&gt;embedding&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;Ces nouveaux développements portent avec eux un changement de la manière dont les mots sont encodés. Jusqu&amp;rsquo;à maintenant, les &lt;em&gt;embeddings&lt;/em&gt; de mots ont été une force majeure dans la gestion des modèles NLP. Des méthodes comme Word2Vec et GloVE ont été largement utilisés pour ces tâches. Revoyons comment ces méthodes s&amp;rsquo;utilisent avant de voir ce qui a changé.&lt;/p&gt;
+&lt;h2 id=&#34;résumé-dembedding&#34;&gt;Résumé d&#39;&lt;em&gt;embedding&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Afin que des mots puissent être traités par des modèles d&amp;rsquo;apprentissage automatique, ils ont besoin d&amp;rsquo;une représentation numérique que ces modèles peuvent utiliser dans leur calcul. Word2Vec a montré que l&amp;rsquo;on peut utiliser un vecteur (une liste de chiffres) pour représenter les mots d&amp;rsquo;une manière qui capture les relations sémantiques (c&amp;rsquo;est-à-dire, liées à la signifiance). Ça pourrait inclure la capacité de dire si les mots sont similaires, opposés, ou qu&amp;rsquo;un pair de mots comme &lt;em&gt;Stockholm&lt;/em&gt; et &lt;em&gt;Suède&lt;/em&gt; ont la même relation entre eux que &lt;em&gt;Cairo&lt;/em&gt; et &lt;em&gt;Egypte&lt;/em&gt;. On peut aussi capturer les relations &lt;em&gt;syntaxiques&lt;/em&gt; (basées sur la grammaire), e.g. la relation entre &lt;em&gt;avait&lt;/em&gt; et &lt;em&gt;a&lt;/em&gt; est pareil que la relation entre &lt;em&gt;était&lt;/em&gt; et &lt;em&gt;est&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Le domaine s&amp;rsquo;est rapidement rendu compte que c&amp;rsquo;est une bonne idée d&amp;rsquo;utiliser des &lt;em&gt;embeddings&lt;/em&gt; déjà entraînés sur des grandes quantités de données de texte, au lieu de les entraîné en même temps que le reste du modèle, sur des données souvent beaucoup plus petites. Alors il est devenu possible de télécharger une liste de mots et leurs &lt;em&gt;embeddings&lt;/em&gt; générés par le pré-entraînement avec Word2Vec ou GloVE. Voilà un exemple de l&#39;&lt;em&gt;embedding&lt;/em&gt; GloVE du mot &lt;em&gt;stick&lt;/em&gt; (avec une taille de vecteur de 200):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/glove-embedding.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;L&#39;&lt;em&gt;embedding&lt;/em&gt; du mot &lt;em&gt;stick&lt;/em&gt; &amp;ndash; un vecteur de 200 flottants (arrondis à deux décimaux). Il continue jusqu&amp;rsquo;à 200 valeurs.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Puisqu&amp;rsquo;ils sont larges et plein de chiffres, j&amp;rsquo;utilise la forme de base suivanate dans mes figures pour montrer des vecteurs:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/vector-boxes.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;elmo-le-contexte-importe&#34;&gt;ELMo: Le contexte importe&lt;/h2&gt;
+&lt;p&gt;Si l&amp;rsquo;on utilise cette représentation GloVE, le mot &lt;em&gt;stick&lt;/em&gt; serait représenté par ce vecteur &amp;ndash; peu importe le contexte. &amp;ldquo;Attendez une minute,&amp;rdquo; ont dit beaucoup de chercheurs en NLP (&lt;a href=&#34;https://arxiv.org/abs/1705.00108&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peters et. al., 2017&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1708.00107&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;McCann et. al., 2017&lt;/a&gt;, et encore une fois &lt;a href=&#34;https://arxiv.org/pdf/1802.05365.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peters et. al., 2018 dans l&amp;rsquo;article ELMo&lt;/a&gt;), &amp;ldquo;le mot &lt;em&gt;stick&lt;/em&gt; a beaucoup de significations possibles, en fonction d&amp;rsquo;où il s&amp;rsquo;utilise. Pourquoi ne pas lui donner un &lt;em&gt;embedding&lt;/em&gt; basé sur le contexte où il se trouve? Ça capturait non seulement la signification du mot en contexte, mais aussi des autres informations contextuelles.&amp;rdquo; Et donc, les &lt;em&gt;embeddings contextualisés&lt;/em&gt; sont nés.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/elmo-embedding-robin-williams.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Des &lt;em&gt;embeddings&lt;/em&gt; contextualisés de mots peuvent donner aux mots des &lt;em&gt;embeddings&lt;/em&gt; différents en fonction de la signification en contexte dans la phrase. &lt;a href=&#34;https://www.youtube.com/watch?v=OwwdgsN9wF8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RIP Robin Williams&lt;/a&gt;.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Au lieu d&amp;rsquo;utiliser un &lt;em&gt;embedding&lt;/em&gt; figé pour chaque mot, ELMo regarde la phrase entière avant d&amp;rsquo;assigner un &lt;em&gt;embedding&lt;/em&gt; à chaque mot. Il utilise un LSTM bidirectionnel entraîné sur une tâche spécifique pour pouvoir créer ces &lt;em&gt;embeddings&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/elmo-word-embedding.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ELMo représentait une étape significative vers le pré-entraînement dans le contexte du NLP. Le LSTM de ELMo serait entraîné sur des données massives de la même langue que nos données, puis on peut l&amp;rsquo;utiliser comme composant des autres modèles qui doivent gérer du langage.&lt;/p&gt;
+&lt;p&gt;Quel est le secret d&amp;rsquo;ELMo?&lt;/p&gt;
+&lt;p&gt;ELMo a gagné sa compréhension de langage de son entraînement, où il devait prédire le prochain mot dans une séquence de mots &amp;ndash; cette tâche s&amp;rsquo;appelle du &lt;em&gt;language modeling&lt;/em&gt;. C&amp;rsquo;est pratique parce que l&amp;rsquo;on a des quantités massives de données texte, et un modèle peut apprendre à partir de ça, sans étiquettes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/Bert-language-modeling.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Une étape dans le processus de pré-entraînement d&amp;rsquo;ELMo. Étant donné &lt;em&gt;Let&amp;rsquo;s stick to&lt;/em&gt; à l&amp;rsquo;entrée, prédisons le prochain mot le plus probable &amp;ndash; une tâche de &lt;em&gt;language modeling&lt;/em&gt;. Quand il est entraîné sur beaucoup de données, le modèle commence à apprendre les motifs dans le langage. Il est peu probable qu&amp;rsquo;il devine le mot prochain dans cet exemple. De manière plus réaliste, après un mot comme &lt;em&gt;hang&lt;/em&gt;, il va assigner une probablité plus haute à un mot comme &lt;em&gt;out&lt;/em&gt; (pour donner &lt;em&gt;hang out&lt;/em&gt; en anglais, un mot composé), plutôt qu&amp;rsquo;à &lt;em&gt;camera&lt;/em&gt; (un mot totalement non-lié).&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;On peut voir l&amp;rsquo;état caché de chaque étape du LSTM déroulé derrière la tête d&amp;rsquo;Elmo. Ils deviennent utiles dans le processus d&#39;&lt;em&gt;embedding&lt;/em&gt; après ce pré-entraînement.&lt;/p&gt;
+&lt;p&gt;En fait, ELMo va une étape plus loin en entraînant un LSTM bidirectionnel &amp;ndash; donc son modèle de langue n&amp;rsquo;a qu&amp;rsquo;une idée du mot prochain, mais aussi du mot précédent.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/elmo-forward-backward-language-model-embedding.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Des &lt;a href=&#34;https://www.slideshare.net/shuntaroy/a-review-of-deep-contextualized-word-representations-peters-2018&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bons diapositifs&lt;/a&gt; sur ELMo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;ELMo produit l&#39;&lt;em&gt;embedding&lt;/em&gt; contextualisé en groupant les états cachés (et l&#39;&lt;em&gt;embedding&lt;/em&gt; initial) d&amp;rsquo;une certaine manière (une concatenation suivie par une somme pondérée).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/elmo-embedding.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;ulm-fit-lintégration-du-transfer-learning-en-nlp&#34;&gt;ULM-FiT: l&amp;rsquo;intégration du &lt;em&gt;transfer learning&lt;/em&gt; en NLP&lt;/h1&gt;
+&lt;p&gt;ULM-FiT a introduit des méthodes efficaces pour utiliser beaucoup de ce que le modèle apprend pendant le pré-entraînement &amp;ndash; plus que seulement les &lt;em&gt;embeddings&lt;/em&gt;, et plus que seulement les &lt;em&gt;embeddings&lt;/em&gt; contextualisés. ULM-FiT a introduit un modèle de langue et un processus pour faire du &lt;em&gt;fine-tuning&lt;/em&gt; sur ce modèle de langue pour plusieurs tâches.&lt;/p&gt;
+&lt;p&gt;Enfin, le NLP a eu une manière de faire du &lt;em&gt;transfer learning&lt;/em&gt; avec autant d&amp;rsquo;efficacité que le &lt;em&gt;computer vision&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;le-transformer-au-delà-des-lstm&#34;&gt;Le transformer: au-delà des LSTM&lt;/h1&gt;
+&lt;p&gt;La sortie de l&amp;rsquo;article sur les &lt;em&gt;transformers&lt;/em&gt; et son code, ainsi que ses resultats sur des tâches comme la &lt;em&gt;machine translation&lt;/em&gt;, ont poussé quelques-uns dans le domaine de penser aux &lt;em&gt;transformers&lt;/em&gt; comme remplaçant les LSTM. Cette idée a été renforcée par le fait que les &lt;em&gt;transformers&lt;/em&gt; gèrent des dépendances de long terme mieux que les LSTM.&lt;/p&gt;
+&lt;p&gt;La structure encodeur-decodeur du &lt;em&gt;transformer&lt;/em&gt; l&amp;rsquo;a rendu idéal pour la &lt;em&gt;machine translation&lt;/em&gt;. Mais comment peut-on l&amp;rsquo;utiliser pour une classification de phrase? Comment peut-on l&amp;rsquo;utiliser pour pré-entraîner un modèle de langue qui pourrait être adjusté par le &lt;em&gt;fine-tuning&lt;/em&gt; pour des autres tâches? (Le domaine appelle ce genre de tâche supervisée qui utilise un modèle ou un composant pré-entraîné une tâche &lt;em&gt;en aval&lt;/em&gt;.)&lt;/p&gt;
+&lt;h1 id=&#34;openai-transformer-pré-entraîner-un-décodeur-de-transformer-pour-du-language-modeling&#34;&gt;OpenAI Transformer: pré-entraîner un décodeur de &lt;em&gt;transformer&lt;/em&gt; pour du &lt;em&gt;language modeling&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;Il se trouve que l&amp;rsquo;on n&amp;rsquo;a pas besoin d&amp;rsquo;un &lt;em&gt;transformer&lt;/em&gt; entier pour adopter le &lt;em&gt;transfer learning&lt;/em&gt; et un &lt;em&gt;language model&lt;/em&gt; capable de recevoir du &lt;em&gt;fine-tuning&lt;/em&gt; pour des tâches de NLP. On peut partir simplement avec le décodeur du &lt;em&gt;transformer&lt;/em&gt;. Le décodeur est un bon choix parce qu&amp;rsquo;il est un choix naturel pour le &lt;em&gt;language modeling&lt;/em&gt; (la prédiction du mot suivant), puisqu&amp;rsquo;il est fait pour masquer les &lt;em&gt;tokens&lt;/em&gt; futurs &amp;ndash; un comportement de valeur quand on génère une traduction un mot à la fois.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/openai-transformer-1.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;L&amp;rsquo;OpenAI Transformer se compose de la pile décodeur du &lt;em&gt;transformer&lt;/em&gt;.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Le modèle empile douze couches de décodeur. Puisqu&amp;rsquo;il n&amp;rsquo;y a pas d&amp;rsquo;encodeur dans cette configuration, ces couches de décodeur n&amp;rsquo;auraient pas la sous-couche d&amp;rsquo;attention encodeur-décodeur que l&amp;rsquo;on voit dans les couches de décodeur d&amp;rsquo;un &lt;em&gt;transformer&lt;/em&gt; &amp;ldquo;vanille&amp;rdquo;. Il y aurait encore la couche de &lt;em&gt;self-attention&lt;/em&gt;, pourtant, en verson masquée pour qu&amp;rsquo;elle ne regarde pas les &lt;em&gt;tokens&lt;/em&gt; futurs.&lt;/p&gt;
+&lt;p&gt;Avec cette structure, on peut continuer à l&amp;rsquo;entraînement du modèle sur la même tâche de &lt;em&gt;language modeling&lt;/em&gt;: prédisons le mot prochain, en utilisant des données massives sans étiquettes. Tout simplement, on jète le texte de 7,000 livres dans le modèle pour qu&amp;rsquo;il apprenne! Les livres sont idéaux pour ce genre de tâche parce que ça permet au modèle d&amp;rsquo;apprendre l&amp;rsquo;association entre les informations liées même si elles sont séparées par beaucoup de texte. Cet effet n&amp;rsquo;est pas possible quand on entraîne avec des Tweets ou des articles.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/openai-transformer-language-modeling.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;L&amp;rsquo;OpenAI Transformer est maintenant prêt à être entraîné à prédire le prochain mot sur des données de 7,000 livres.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;transfer-learning-aux-tâches-en-aval&#34;&gt;&lt;em&gt;Transfer learning&lt;/em&gt; aux tâches en aval&lt;/h1&gt;
+&lt;p&gt;Maintenant que l&amp;rsquo;OpenAI Transformer est pré-entraîné et que ses couches ont été adjustées pour gérer du langage de manière raisonable, on peut commencer à l&amp;rsquo;utiliser pour des tâches en aval. Regardons d&amp;rsquo;abord une classification de phrase (on veut classifier un courriel comme &amp;ldquo;spam&amp;rdquo; ou &amp;ldquo;pas spam&amp;rdquo;):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/openai-transformer-sentence-classification.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Comment utiliser un OpenAI Transformer pré-entraîné pour la classification de phrase&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;L&amp;rsquo;article OpenAI expose les grandes lignes de plusieurs transformations à l&amp;rsquo;entrée pour gérer les données d&amp;rsquo;entrée de plusieurs sortes de tâches. L&amp;rsquo;image suivant de l&amp;rsquo;article montre les structures des modèles et les transformations d&amp;rsquo;entrée pour faire des tâches différentes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/openai-input-transformations.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;C&amp;rsquo;est astucieux, n&amp;rsquo;est-ce pas?&lt;/p&gt;
+&lt;h1 id=&#34;bert-des-décodeurs-aux-encodeurs&#34;&gt;BERT: des décodeurs aux encodeurs&lt;/h1&gt;
+&lt;p&gt;L&amp;rsquo;OpenAI Transformer nous a donné un modèle pré-entraîné basé sur le &lt;em&gt;transformer&lt;/em&gt; sur lequel on peut faire du &lt;em&gt;fine-tuning&lt;/em&gt;. Mais on a manqué quelque chose dans cette transition des LSTM aux &lt;em&gt;transformers&lt;/em&gt;. Le modèle de langue de ELMo était bidirectionnel, mais l&amp;rsquo;OpenAI Transformer n&amp;rsquo;entraîne qu&amp;rsquo;un &lt;em&gt;language model&lt;/em&gt; unidirectionnel. Pourrait-on construire un modèle basé sur un &lt;em&gt;transformer&lt;/em&gt; dont le &lt;em&gt;language model&lt;/em&gt; regarde en avant et en arrière (dans le jargon téchnique &amp;ndash; qui est conditionné sur le contexte gauche et droit)?&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Vous verrez bien,&amp;rdquo; a repliqué BERT.&lt;/p&gt;
+&lt;h2 id=&#34;un-language-model-masqué&#34;&gt;Un &lt;em&gt;language model&lt;/em&gt; masqué&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;On va utiliser des encodeurs du &lt;em&gt;transformer&lt;/em&gt;,&amp;rdquo; a dit &lt;a href=&#34;https://en.wikipedia.org/wiki/Bert_%28Sesame_Street%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BERT&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;C&amp;rsquo;est fou!&amp;rdquo; a repliqué &lt;a href=&#34;https://en.wikipedia.org/wiki/Ernie_%28Sesame_Street%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ernie&lt;/a&gt;. &amp;ldquo;Tout le monde sait que le conditionnement bidirectionnel permettrait à chaque mot de se voir de manière indirecte dans un contexte aux multiples couches.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;On va utiliser des masques,&amp;rdquo; a dit BERT avec confiance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/BERT-language-modeling-masked-lm.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;La tâche astucieuse du &lt;em&gt;language modeling&lt;/em&gt; de BERT met un masque sur 15% de mots à l&amp;rsquo;entrée, et demande au modèle de prédire le mot qui manque.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;Trouver la bonne tâche pour entraîner une pile d&amp;rsquo;encodeur de &lt;em&gt;transformer&lt;/em&gt; est un problème complèxe que BERT résout en adoptant un concept de &lt;em&gt;language model&lt;/em&gt; masqué, tiré de la littérature précédente (où ça s&amp;rsquo;appelle une tâche de Cloze).&lt;/p&gt;
+&lt;p&gt;En addition à masquer 15% de l&amp;rsquo;entrée, BERT mêle les choses un peu pour améliorer le &lt;em&gt;fine-tuning&lt;/em&gt; plus tard. Quelquefois, il remplace de manière aléatoire un mot par un autre mot et il demande au modèle de prédire le bon mot dans cette position.&lt;/p&gt;
+&lt;h2 id=&#34;des-tâches-de-deux-phrases&#34;&gt;Des tâches de deux phrases&lt;/h2&gt;
+&lt;p&gt;Si vous montez pour regarder les transformations d&amp;rsquo;entrée de l&amp;rsquo;OpenAI Transformer pour gérer des tâches différentes, vous remarquerez que quelques tâches exigent que le modèle dise quelque chose d&amp;rsquo;intelligent à propos de deux phrases (e.g. est-ce qu&amp;rsquo;elles sont simplement des paraphrases l&amp;rsquo;une de l&amp;rsquo;autre? Étant donnée une page Wikipedia comme entrée, et une question à propos de la page comme une autre entrée, est-ce que l&amp;rsquo;on peut répondre à cette question?)&lt;/p&gt;
+&lt;p&gt;Pour améliorer la performance de BERT sur les relations entre des multiples phrases, la tâche de pré-entraînement inclut une autre tâche: étant deux phrases (A et B), est-ce qu&amp;rsquo;il est probable que B suit A, ou pas?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-next-sentence-prediction.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;La deuxième tâche du pré-entraînement de BERT est une tâche de classification de deux phrases. La &lt;em&gt;tokenization&lt;/em&gt; dans cette figure est en fait sur-simplifié, puisque BERT utilise en réalité des WordPieces comme &lt;em&gt;token&lt;/em&gt; plutôt que les mots en tant que tels &amp;ndash; alors, quelques mots sont décomposés en plus petits morceaux.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;des-modèles-spécifiques-aux-tâches&#34;&gt;Des modèles spécifiques aux tâches&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;article BERT montre plusieurs manières d&amp;rsquo;utiliser BERT pour des tâches différentes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-tasks.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bert-pour-lextraction-de-feature&#34;&gt;BERT pour l&amp;rsquo;extraction de &lt;em&gt;feature&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;approche &lt;em&gt;fine-tuning&lt;/em&gt; n&amp;rsquo;est pas la seule manière d&amp;rsquo;utiliser BERT. Exactement comme ELMo, on peut utiliser le BERT pré-entraîné pour créer des &lt;em&gt;embeddings&lt;/em&gt; contextualisés. Ensuite, on peut donner ces &lt;em&gt;embeddings&lt;/em&gt; au modèle existant. L&amp;rsquo;article montre que cette approche donne des résultats qui ne sont pas beacoup pires que l&amp;rsquo;approche &lt;em&gt;fine-tuning&lt;/em&gt; sur une tâche telle que le &lt;em&gt;named-entity recognition&lt;/em&gt; (la reconnaissance des entités).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-contexualized-embeddings.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quel vecteur fonctionne le mieux comme &lt;em&gt;embedding&lt;/em&gt; contextualisé? Je pense qu&amp;rsquo;il dépendrait de la tâche. L&amp;rsquo;article examine six choix (en comparaison avec le modèle &lt;em&gt;fine-tune&lt;/em&gt; qui a donné un score de 96.4):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://a-coles.github.io/img/illustrated-bert/bert-feature-extraction-contextualized-embeddings.png&#34; alt=&#34;example&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;faites-un-tour-avec-bert&#34;&gt;Faites un tour avec BERT&lt;/h1&gt;
+&lt;p&gt;La meilleure façon d&amp;rsquo;essayer BERT est via le notebook &lt;a href=&#34;https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BERT FineTuning with Cloud TPUs&lt;/a&gt; de Google Colab. Si vous n&amp;rsquo;avez pas encore utilisé des Cloud TPU, c&amp;rsquo;est aussi un bon point de départ pour les essayer aussi, vu que le code BERT fonctionne sur TPU, CPU, et GPU.&lt;/p&gt;
+&lt;p&gt;La prochaine étape serait de regarder &lt;a href=&#34;https://github.com/google-research/bert&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;le code de BERT&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Le modèle se construit dans &lt;a href=&#34;https://github.com/google-research/bert/blob/master/modeling.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;modeling.py&lt;/a&gt; (&lt;code&gt;class BertModel&lt;/code&gt;) et c&amp;rsquo;est plus ou moins identique à un encodeur de &lt;em&gt;transformer&lt;/em&gt; &amp;ldquo;vanille&amp;rdquo;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/google-research/bert/blob/master/run_classifier.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;run_classifier.py&lt;/a&gt; est un exemplaire du processus &lt;em&gt;fine-tuning&lt;/em&gt;. Il construit aussi la couche de classification pour le modèle supervisé. Si vous voulez construire votre propre classificateur, examine la méthode &lt;code&gt;create_model()&lt;/code&gt; dans ce fichier.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plusieurs modèles pré-entraînés sont disponibles à télécharger. Ils comprennent BERT BASE et BERT LARGE, ainsi que plusieurs langues y compris l&amp;rsquo;anglais, le chinois, et un modèle multilingue de 102 langues entraîné sur Wikipedia.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BERT ne regarde pas les mots entiers comme &lt;em&gt;token&lt;/em&gt;. Plutôt, il regarde les WordPieces. &lt;a href=&#34;https://github.com/google-research/bert/blob/master/tokenization.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tokenization.py&lt;/a&gt; est le &lt;em&gt;tokenizer&lt;/em&gt; qui transforme les mots en WordPieces appropriés pour BERT.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vous pouvez aussi regarder &lt;a href=&#34;https://github.com/huggingface/pytorch-pretrained-BERT&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;l&amp;rsquo;implémentation PyTorch de BERT&lt;/a&gt;. Le &lt;em&gt;library&lt;/em&gt; &lt;a href=&#34;https://github.com/allenai/allennlp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AllenNLP&lt;/a&gt; utilise cette implémentation pour &lt;a href=&#34;https://github.com/allenai/allennlp/pull/2067&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;permettre l&amp;rsquo;utilisation des &lt;em&gt;embeddings&lt;/em&gt; BERT&lt;/a&gt; avec n&amp;rsquo;importe quel modèle.&lt;/p&gt;
+&lt;h1 id=&#34;remerciments&#34;&gt;Remerciments&lt;/h1&gt;
+&lt;p&gt;Merci à &lt;a href=&#34;https://github.com/jacobdevlin-google&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jacob Devlin&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/nlpmattg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Matt Gardner&lt;/a&gt;, &lt;a href=&#34;https://github.com/kentonl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kenton Lee&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/markneumannnn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mark Neumann&lt;/a&gt;, et &lt;a href=&#34;https://twitter.com/mattthemathman&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Matthew Peters&lt;/a&gt; pour avoir donné du feedback sur les versions initiales de cet article.&lt;/p&gt;
 </description>
     </item>
     
@@ -700,135 +871,6 @@
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://a-coles.github.io/publication/iscan/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Slides</title>
-      <link>https://a-coles.github.io/slides/example/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://a-coles.github.io/slides/example/</guid>
-      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
-&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
-&lt;li&gt;Supports speaker notes&lt;/li&gt;
-&lt;li&gt;Mobile friendly slides&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
-&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code block:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
-if porridge == &amp;quot;blueberry&amp;quot;:
-    print(&amp;quot;Eating...&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
-&lt;p&gt;Block math:&lt;/p&gt;
-&lt;p&gt;$$
-f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
-&lt;p&gt;Make content appear incrementally&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-Three
-&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
-&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{% /speaker_note %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
-&lt;aside class=&#34;notes&#34;&gt;
-  &lt;ul&gt;
-&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
-&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/aside&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
-&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
-&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
-&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
-&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
-&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-
-&lt;section data-noprocess data-shortcode-slide
-  
-      
-      data-background-image=&#34;/img/boards.jpg&#34;
-  &gt;
-
-&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
-&lt;p&gt;Customize the slide style and background&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
-{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
-{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
-&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
     </item>
     
     <item>
