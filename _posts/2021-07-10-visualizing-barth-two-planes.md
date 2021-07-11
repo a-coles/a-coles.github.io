@@ -7,7 +7,7 @@ show_author_profile: false
 sharing: true
 license: false
 cover: ../../../assets/images/posts/planes1.PNG
-image: http://127.0.0.1:4000/assets/images/posts/planes1.PNG
+image: https://a-coles.github.io/assets/images/posts/planes1.PNG
 summary: I finally dove into the towering theologian Karl Barth's (1886-1968) writings and was surprised at the amount of geometry that factors into his theology.
 ---
 
