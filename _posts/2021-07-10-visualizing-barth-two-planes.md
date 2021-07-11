@@ -7,7 +7,10 @@ show_author_profile: false
 sharing: true
 license: false
 cover: ../../../assets/images/posts/planes1.PNG
+summary: I finally dove into the towering theologian Karl Barth's (1886-1968) writings and was surprised at the amount of geometry that factors into his theology.
 ---
+
+<!-- New blog post! Taking a look at the geometry of Karl Barth in the Epistle to the Romans (what a read!) and speculating on the mathematical implications of his intersecting planes and visible and invisible points. -->
 
 I finally dove into the towering theologian [Karl Barth](https://en.wikipedia.org/wiki/Karl_Barth)'s (1886 - 1968) writings and was surprised at the amount of geometry that factors into his theology. <!--more--> Here's a look at one of his more extended math metaphors.
 
