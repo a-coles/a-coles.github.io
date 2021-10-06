@@ -17,5 +17,17 @@ title: Publications
 		
 ### Non-journal publications
 
-* **Arlie Coles** (2018). Forced Phonetic Alignment by Neural Network. *Undergraduate thesis.* [Link](https://www.cs.mcgill.ca/~acoles/Forced_Phonetic_Alignment_Coles.pdf)
+* **Arlie Coles** (2018). Forced Phonetic Alignment by Neural Network. *Undergraduate thesis.* ([Link](https://www.cs.mcgill.ca/~acoles/Forced_Phonetic_Alignment_Coles.pdf))
   * *Abstract:* Integration of Kaldi’s nnet2 deep neural networks into the Montreal Forced Aligner, permitting the automatic forced alignment of speech audio and a corresponding transcript in time using a Deep Neural Network-Hidden Markov Model architecture.
+
+## Non-academic work
+
+### Publications
+
+* **Arlie Coles** (2021, July 30). *The Scriptural BCP: Reclaiming the textual tradition with technology.* The North American Anglican. ([Link](https://northamanglican.com/the-scriptural-bcp-reclaiming-the-textual-tradition-with-technology/))
+
+* **Arlie Coles**, Diana Verseghy (2021, Oct 1). *The Scriptural BCP.* Prayer Book Society of Canada. ([Link](https://prayerbook.ca/the-scriptural-bcp/))
+
+### Multimedia
+
+* **Arlie Coles**, Tyler Hummel (2021, Aug 20). *The Joys of Anglicanism w/Arlie Coles*. The AntiSocial Network. (Link to [video](https://www.youtube.com/watch?v=9HzBzljZrD8), [podcast](https://www.buzzsprout.com/1333813/9055248-antisocial-theology-the-joys-of-anglicanism-w-arlie-coles))
