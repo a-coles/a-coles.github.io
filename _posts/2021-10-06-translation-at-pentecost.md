@@ -76,7 +76,7 @@ Much has been made of the *speaking in other tongues as the Spirit enabled them*
 
 This kind of understanding is the mirror image and restoration of the confusion that reigned at the Tower of Babel. By the Holy Ghost, proper communion among Christian people was restored, depicted clearly in the understanding of a common message despite uncommon origins.
 
-But there's more. I posit that what happened at Pentecost *was* an act of translation. With the emphasis on the hearing and not the speaking, we can also notice that each listener hears each speaker *in his own tongue*. When the Holy Ghost translated this speech into each listener's native language, God valorized and sactified the task of translation. Its capacity to unlock and reunify, to suddenly speak deeply into an intimate part of someone's very cognition, was used as the primary physical metaphor for the mysterious creation of the Church. Every translator who has ever existed is a little image thereof.
+But there's more. I posit that what happened at Pentecost *was* an act of translation. With the emphasis on the hearing and not the speaking, we can also notice that each listener hears each speaker *in his own tongue*. When the Holy Ghost translated this speech into each listener's native language, God valorized and sanctified the task of translation. Its capacity to unlock and reunify, to suddenly speak deeply into an intimate part of someone's very cognition, was used as the primary physical metaphor for the mysterious creation of the Church. Every translator who has ever existed is a little image thereof.
 
 ## All back and then some
 
